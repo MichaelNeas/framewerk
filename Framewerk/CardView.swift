@@ -16,50 +16,53 @@ struct CardView: View {
     var removal: (() -> Void)? = nil
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(
-                    Color.white
-                        .opacity(1 - Double(abs(offset.width / 50)))
-                )
-                .background(
-                    RoundedRectangle(cornerRadius: 25, style: .continuous)
-                        .fill(Color.blue)
-                )
-                .shadow(radius: 10)
-            VStack {
-                Text(card.question)
-                    .font(.largeTitle)
+        GeometryReader { geometry in
+            ZStack {
+                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                    .fill(
+                        Color(UIColor.systemGray6)
+                            .opacity(1 - Double(abs(self.offset.width / 500)) - Double(abs(self.offset.height / 500)))
+                    )
+                    .background(
+                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+                            .fill(Color(UIColor.systemBlue))
+                    )
+                    .shadow(radius: 10)
+                VStack {
+                    Text(self.card.question)
+                        .font(.largeTitle)
 
-                if isShowingAnswer {
-                    Text(card.answer)
-                        .font(.title)
-                        .foregroundColor(.secondary)
-                }
-            }
-            .padding(20)
-            .multilineTextAlignment(.center)
-        }
-        .frame(width: 450, height: 250)
-        .rotationEffect(.degrees(Double(offset.width / 10)))
-        .offset(x: offset.width, y: offset.height)
-        .opacity(2 - Double(abs(offset.width / 100)))
-        .gesture(
-            DragGesture()
-                .onChanged { gesture in
-                    self.offset = gesture.translation
-                }
-
-                .onEnded { _ in
-                    if abs(self.offset.width) > 100 {
-                        self.removal?()
-                    } else {
-                        self.offset = .zero
+                    if self.isShowingAnswer {
+                        Spacer()
+                        Text(self.card.answer)
+                            .font(.title)
+                            .foregroundColor(.secondary)
+                        Spacer()
                     }
                 }
-        ).animation(.spring())
-        .onTapGesture {
-            self.isShowingAnswer.toggle()
+                .padding(20)
+                .multilineTextAlignment(.center)
+            }
+            .frame(width: max(geometry.size.width - 500, 350), height: max(geometry.size.height/2, 250))
+            .rotationEffect(.degrees(Double(self.offset.width / 10)))
+            .offset(x: self.offset.width, y: self.offset.height)
+            .gesture(
+                DragGesture()
+                    .onChanged { gesture in
+                        self.offset = gesture.translation
+                    }
+
+                    .onEnded { _ in
+                        if abs(self.offset.width) > 150 || abs(self.offset.height) > 150 {
+                            self.removal?()
+                        } else {
+                            self.offset = .zero
+                        }
+                    }
+            ).animation(.spring())
+            .onTapGesture {
+                self.isShowingAnswer.toggle()
+            }
         }
     }
 }

@@ -9,31 +9,41 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var cards = [Card](repeating: Card.accelerate, count: 10)
+    @State private var cards = [Card](repeating: Card.accelerate, count: 50)
+    
+    var isLandscape: Bool {
+        UIApplication.shared.windows
+        .first?
+        .windowScene?
+        .interfaceOrientation
+        .isLandscape ?? false
+    }
     
     var body: some View {
-        VStack {
-            Text("🍎 Frameworks")
-                .font(.largeTitle)
-                .padding(.top, 50)
-            Spacer()
-            ZStack {
-                VStack {
-                    ZStack {
-                        ForEach(0..<cards.count, id: \.self) { index in
-                            CardView(card: self.cards[index]) {
-                               withAnimation {
-                                   self.removeCard(at: index)
-                               }
+        GeometryReader { geometry in
+            VStack {
+                Spacer(minLength: self.isLandscape ? 6 : 50)
+                Text("🍎 Frameworks")
+                    .font(.largeTitle)
+                Spacer()
+                ZStack {
+                    VStack {
+                        ZStack {
+                            ForEach(0..<self.cards.count, id: \.self) { index in
+                                CardView(card: self.cards[index]) {
+                                   withAnimation {
+                                       self.removeCard(at: index)
+                                   }
+                                }
+                                .stacked(at: index, in: self.cards.count)
                             }
-                            .stacked(at: index, in: self.cards.count)
                         }
                     }
                 }
-            }
-            Spacer()
-            Spacer()
-        }.background(Color.orange).edgesIgnoringSafeArea(.all)
+                Spacer()
+            }.frame(width: geometry.size.width, height: geometry.size.height)
+        }
+        .background(Color(UIColor.systemOrange)).edgesIgnoringSafeArea(.all)
     }
     
     func removeCard(at index: Int) {
@@ -50,6 +60,6 @@ struct ContentView_Previews: PreviewProvider {
 extension View {
     func stacked(at position: Int, in total: Int) -> some View {
         let offset = CGFloat(total - position)
-        return self.offset(CGSize(width: 0, height: offset * 5))
+        return self.offset(CGSize(width: 0, height: -(1/offset) * 50))
     }
 }
