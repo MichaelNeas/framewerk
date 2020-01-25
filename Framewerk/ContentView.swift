@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var cards = [Card](repeating: Card.accelerate, count: 50)
+    @ObservedObject var viewModel = ContentViewModel()
     
     var isLandscape: Bool {
         UIApplication.shared.windows
@@ -19,37 +19,39 @@ struct ContentView: View {
         .isLandscape ?? false
     }
     
-    var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Spacer(minLength: self.isLandscape ? 6 : 50)
-                Text("🍎 Frameworks")
-                    .font(.largeTitle)
-                Spacer()
-                ZStack {
-                    VStack {
-                        ZStack {
-                            ForEach(0..<self.cards.count, id: \.self) { index in
-                                CardView(card: self.cards[index]) {
-                                   withAnimation {
-                                       self.removeCard(at: index)
-                                   }
-                                }
-                                .stacked(at: index, in: self.cards.count)
-                            }
-                        }
-                    }
-                }
-                Spacer()
-            }.frame(width: geometry.size.width, height: geometry.size.height)
-        }
-        .background(Color(UIColor.systemOrange)).edgesIgnoringSafeArea(.all)
+    init() {
+        UINavigationBar.appearance().tintColor = .clear
+        UINavigationBar.appearance().barTintColor = UIColor.systemOrange
+        UINavigationBar.appearance().backgroundColor = UIColor.systemOrange
     }
     
-    func removeCard(at index: Int) {
-        cards.remove(at: index)
+    var body: some View {
+        NavigationView {
+            GeometryReader { geometry in
+                VStack {
+                    ZStack {
+                        ForEach(self.viewModel.cards) { card in
+                            CardView(card: card) {
+                                withAnimation {
+                                    self.viewModel.removeCard()
+                                }
+                            }
+                            .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count)
+                        }
+                    }
+                    Spacer()
+                }.frame(width: geometry.size.width, height: geometry.size.height)
+            }
+            .navigationBarItems(trailing: Button(action: self.viewModel.fetchCards) {
+                Image(systemName: "flame")
+                    .foregroundColor(.black)
+            })
+            .navigationBarTitle("🍎 Frameworks", displayMode: .inline)
+            .background(Color(UIColor.systemOrange)).edgesIgnoringSafeArea(.all)
+        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

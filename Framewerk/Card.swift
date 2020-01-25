@@ -8,11 +8,8 @@
 
 import Foundation
 
-struct Card {
+struct Card: Codable, Identifiable, Equatable {
+    let id = UUID()
     let question: String
     let answer: String
-
-    static var accelerate: Card {
-        return Card(question: "What is Accelerate?", answer: "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption.")
-    }
 }
