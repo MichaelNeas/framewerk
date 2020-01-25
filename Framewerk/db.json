@@ -1,58 +1,147 @@
 [
     {
-        "question": "What is Accelerate?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Accelerate",
+        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption.",
+        "link": "https://developer.apple.com/documentation/accelerate"
     },
     {
-        "question": "What is Acceler8?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "CryptoKit",
+        "answer": "Perform cryptographic operations securely and efficiently.",
+        "link": "https://developer.apple.com/documentation/cryptokit"
     },
     {
-        "question": "What is Accelerat1?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "AuthenticationServices",
+        "answer": "Make it easy for users to log into apps and services.",
+        "link": "https://developer.apple.com/documentation/authenticationservices"
     },
     {
-        "question": "What is Acceler2?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "CFNetwork",
+        "answer": "Access network services and handle changes in network configurations. Build on abstractions of network protocols to simplify tasks such as working with BSD sockets, administering HTTP and FTP servers, and managing Bonjour services.",
+        "link": "https://developer.apple.com/documentation/cfnetwork"
     },
     {
-        "question": "What is Accelerat3?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Collaboration",
+        "answer": "Find and access identities, that is, users and groups. Display the Identity Picker, which lets users create and select identities.",
+        "link": "https://developer.apple.com/documentation/collaboration"
     },
     {
-        "question": "What is Acceler4?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Compression",
+        "answer": "Leverage common compression algorithms for lossless data compression.",
+        "link": "https://developer.apple.com/documentation/compression"
     },
     {
-        "question": "What is 5?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Core Bluetooth",
+        "answer": "Communicate with Bluetooth low energy and BR/EDR (“Classic”) Devices.",
+        "link": "https://developer.apple.com/documentation/corebluetooth"
     },
     {
-        "question": "What is 63426?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Core NFC",
+        "answer": "Detect NFC tags, read messages that contain NDEF data, and save data to writable tags.",
+        "link": "https://developer.apple.com/documentation/corenfc"
     },
     {
-        "question": "What is 754?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Core Services",
+        "answer": "Access and manage key operating system services, such as launch and identity services.",
+        "link": "https://developer.apple.com/documentation/coreservices"
     },
     {
-        "question": "What is 74343242357?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Core Telephony",
+        "answer": "Access information about a user’s cellular service provider, such as its unique identifier and whether the carrier allows VoIP.",
+        "link": "https://developer.apple.com/documentation/coretelephony"
     },
     {
-        "question": "What is 754?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Core WLAN",
+        "answer": "Query AirPort interfaces and choose wireless networks.",
+        "link": "https://developer.apple.com/documentation/corewlan"
     },
     {
-        "question": "What is 754222?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "CryptoTokenKit",
+        "answer": "Access security tokens and the cryptographic assets they store.",
+        "link": "https://developer.apple.com/documentation/cryptotokenkit"
     },
     {
-        "question": "What is 73457?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "DarwinNotify",
+        "answer": "Send and receive Darwin notifications.",
+        "link": "https://developer.apple.com/documentation/darwinnotify"
     },
     {
-        "question": "What is 73442342312?",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption."
+        "question": "Device Management",
+        "answer": "Manage your organization's devices remotely.",
+        "link": "https://developer.apple.com/documentation/devicemanagement"
+    },
+    {
+        "question": "DiskArbitration",
+        "answer": "Provides mechanisms for registering for mount/unmount notification and blocking mount/unmount events.",
+        "link": "https://developer.apple.com/documentation/diskarbitration"
+    },
+    {
+        "question": "Dispatch",
+        "answer": "Execute code concurrently on multicore hardware by submitting work to dispatch queues managed by the system.",
+        "link": "https://developer.apple.com/documentation/dispatch"
+    },
+    {
+        "question": "dnssd",
+        "answer": "Discover, publish, and resolve network services on a local area or wide area network.",
+        "link": "https://developer.apple.com/documentation/dnssd?language=objc"
+    },
+    {
+        "question": "DriverKit",
+        "answer": "Develop device drivers that run in user space.",
+        "link": "https://developer.apple.com/documentation/driverkit"
+    },
+    {
+        "question": "EndpointSecurity",
+        "answer": "Develop system extensions that enhance user security.",
+        "link": "https://developer.apple.com/documentation/endpointsecurity"
+    },
+    {
+        "question": "ExceptionHandling",
+        "answer": "Monitor and debug exceptional conditions in code.",
+        "link": "https://developer.apple.com/documentation/exceptionhandling"
+    },
+    {
+        "question": "ExecutionPolicy",
+        "answer": "",
+        "link": "https://developer.apple.com/documentation/executionpolicy"
+    },
+    {
+        "question": "ExternalAccessory",
+        "answer": "Communicate with accessories connected to a device by the Apple Lightning connector, or connected wirelessly through Bluetooth.",
+        "link": "https://developer.apple.com/documentation/externalaccessory"
+    },
+    {
+        "question": "FinderSync",
+        "answer": "Enhance the Finder’s user interface by adding badges, shortcut menu items, and toolbar buttons.",
+        "link": "https://developer.apple.com/documentation/findersync"
+    },
+    {
+        "question": "ForceFeedback",
+        "answer": "Control force feedback devices attached to the system. Develop plug-ins that enable communication with force feedback hardware.",
+        "link": "https://developer.apple.com/documentation/forcefeedback"
+    },
+    {
+        "question": "FWAUserLib",
+        "answer": "Interface with FireWire audio devices to manage connections, audio engines, and audio and MIDI streams.",
+        "link": "https://developer.apple.com/documentation/fwauserlib"
+    },
+    {
+        "question": "GSS",
+        "answer": "Conduct secure, authenticated network transactions.",
+        "link": "https://developer.apple.com/documentation/gss"
+    },
+    {
+        "question": "HIDDriverKit",
+        "answer": "Develop drivers for human-interface devices, such as keyboards, pointing devices, and digitizers like pens and touch pads.",
+        "link": "https://developer.apple.com/documentation/hiddriverkit"
+    },
+    {
+        "question": "Hypervisor",
+        "answer": "Build virtualization solutions on top of a lightweight hypervisor, without the need for third-party kernel extensions.",
+        "link": "https://developer.apple.com/documentation/hypervisor"
+    },
+    {
+        "question": "InputMethodKit",
+        "answer": "Develop input methods and manage communication with client applications, candidates windows, and input method modes.",
+        "link": "https://developer.apple.com/documentation/inputmethodkit"
     }
 ]

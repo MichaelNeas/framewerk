@@ -12,4 +12,5 @@ struct Card: Codable, Identifiable, Equatable {
     let id = UUID()
     let question: String
     let answer: String
+    let link: URL
 }

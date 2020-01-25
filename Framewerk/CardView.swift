@@ -18,13 +18,13 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .fill(
                         Color(UIColor.systemGray6)
                             .opacity(1 - Double(abs(self.offset.width / 500)) - Double(abs(self.offset.height / 500)))
                     )
                     .background(
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
                             .fill(Color(UIColor.systemBlue))
                     )
                     .shadow(radius: 10)
@@ -34,13 +34,29 @@ struct CardView: View {
                         .foregroundColor(Color(UIColor() { (trait) -> UIColor in
                             trait.userInterfaceStyle == .dark ? .white : .black
                         }))
+                        .lineLimit(1)
+                        .allowsTightening(true)
+                        .minimumScaleFactor(0.3)
 
                     if self.isShowingAnswer {
-                        Spacer()
                         Text(self.card.answer)
                             .font(.title)
                             .foregroundColor(.secondary)
-                        Spacer()
+                            .lineLimit(nil)
+                            .allowsTightening(true)
+                            .minimumScaleFactor(0.5)
+                            .frame(width: max(geometry.size.width - 500, 350) - 50, height: max(geometry.size.height/2, 250) - 100)
+                            .transition(.opacity)
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                UIApplication.shared.open(self.card.link)
+                            }) {
+                                Image(systemName: "info.circle")
+                                    .font(.title)
+                                    .foregroundColor(Color(UIColor.systemIndigo))
+                            }.transition(.opacity)
+                        }
                     }
                 }
                 .padding(20)
@@ -72,6 +88,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card(question: "Preview Question?", answer: "Preview Answer"))
+        CardView(card: Card(question: "Preview Question?", answer: "Preview Answer", link: URL(string: "google.com")!))
     }
 }
