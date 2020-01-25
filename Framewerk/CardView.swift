@@ -31,6 +31,9 @@ struct CardView: View {
                 VStack {
                     Text(self.card.question)
                         .font(.largeTitle)
+                        .foregroundColor(Color(UIColor() { (trait) -> UIColor in
+                            trait.userInterfaceStyle == .dark ? .white : .black
+                        }))
 
                     if self.isShowingAnswer {
                         Spacer()

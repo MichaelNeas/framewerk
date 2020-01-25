@@ -23,6 +23,7 @@ struct ContentView: View {
         UINavigationBar.appearance().tintColor = .clear
         UINavigationBar.appearance().barTintColor = UIColor.systemOrange
         UINavigationBar.appearance().backgroundColor = UIColor.systemOrange
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue-Thin", size: 28)!, .foregroundColor: UIColor.black]
     }
     
     var body: some View {
@@ -39,12 +40,13 @@ struct ContentView: View {
                             .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count)
                         }
                     }
-                    Spacer()
                 }.frame(width: geometry.size.width, height: geometry.size.height)
             }
             .navigationBarItems(trailing: Button(action: self.viewModel.fetchCards) {
-                Image(systemName: "flame")
+                Image(systemName: "tornado")
+                    .font(Font(UIFont(name: "HelveticaNeue-Thin", size: 28)!))
                     .foregroundColor(.black)
+                    .padding(.bottom, 8)
             })
             .navigationBarTitle("🍎 Frameworks", displayMode: .inline)
             .background(Color(UIColor.systemOrange)).edgesIgnoringSafeArea(.all)
