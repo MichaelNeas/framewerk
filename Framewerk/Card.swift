@@ -8,6 +8,16 @@
 
 import Foundation
 
+struct FramewerkCardData: Codable {
+    let appFrameworks: [Card]
+    let graphicsAndGames: [Card]
+    let system: [Card]
+    
+    var allCards: [Card] {
+        appFrameworks + graphicsAndGames + system
+    }
+}
+
 struct Card: Codable, Identifiable, Equatable {
     let id = UUID()
     let question: String

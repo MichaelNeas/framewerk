@@ -22,8 +22,8 @@ class ContentViewModel: ObservableObject {
     func fetchCards() {
         if let localJSONURL = Bundle.main.url(forResource: "db", withExtension: "json"),
             let jsonData = try? Data(contentsOf: localJSONURL),
-            let cards = try? decoder.decode([Card].self, from: jsonData) {
-            let shuffled = cards.shuffled()
+            let framewerkData = try? decoder.decode(FramewerkCardData.self, from: jsonData) {
+            let shuffled = framewerkData.allCards.shuffled()
             self.cards = Array(shuffled.prefix(upTo: 10))
             self.bank = Array(shuffled.suffix(from: 10))
         }

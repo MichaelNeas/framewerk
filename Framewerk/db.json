@@ -1,147 +1,473 @@
-[
-    {
-        "question": "Accelerate",
-        "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption.",
-        "link": "https://developer.apple.com/documentation/accelerate"
-    },
-    {
-        "question": "CryptoKit",
-        "answer": "Perform cryptographic operations securely and efficiently.",
-        "link": "https://developer.apple.com/documentation/cryptokit"
-    },
-    {
-        "question": "AuthenticationServices",
-        "answer": "Make it easy for users to log into apps and services.",
-        "link": "https://developer.apple.com/documentation/authenticationservices"
-    },
-    {
-        "question": "CFNetwork",
-        "answer": "Access network services and handle changes in network configurations. Build on abstractions of network protocols to simplify tasks such as working with BSD sockets, administering HTTP and FTP servers, and managing Bonjour services.",
-        "link": "https://developer.apple.com/documentation/cfnetwork"
-    },
-    {
-        "question": "Collaboration",
-        "answer": "Find and access identities, that is, users and groups. Display the Identity Picker, which lets users create and select identities.",
-        "link": "https://developer.apple.com/documentation/collaboration"
-    },
-    {
-        "question": "Compression",
-        "answer": "Leverage common compression algorithms for lossless data compression.",
-        "link": "https://developer.apple.com/documentation/compression"
-    },
-    {
-        "question": "Core Bluetooth",
-        "answer": "Communicate with Bluetooth low energy and BR/EDR (“Classic”) Devices.",
-        "link": "https://developer.apple.com/documentation/corebluetooth"
-    },
-    {
-        "question": "Core NFC",
-        "answer": "Detect NFC tags, read messages that contain NDEF data, and save data to writable tags.",
-        "link": "https://developer.apple.com/documentation/corenfc"
-    },
-    {
-        "question": "Core Services",
-        "answer": "Access and manage key operating system services, such as launch and identity services.",
-        "link": "https://developer.apple.com/documentation/coreservices"
-    },
-    {
-        "question": "Core Telephony",
-        "answer": "Access information about a user’s cellular service provider, such as its unique identifier and whether the carrier allows VoIP.",
-        "link": "https://developer.apple.com/documentation/coretelephony"
-    },
-    {
-        "question": "Core WLAN",
-        "answer": "Query AirPort interfaces and choose wireless networks.",
-        "link": "https://developer.apple.com/documentation/corewlan"
-    },
-    {
-        "question": "CryptoTokenKit",
-        "answer": "Access security tokens and the cryptographic assets they store.",
-        "link": "https://developer.apple.com/documentation/cryptotokenkit"
-    },
-    {
-        "question": "DarwinNotify",
-        "answer": "Send and receive Darwin notifications.",
-        "link": "https://developer.apple.com/documentation/darwinnotify"
-    },
-    {
-        "question": "Device Management",
-        "answer": "Manage your organization's devices remotely.",
-        "link": "https://developer.apple.com/documentation/devicemanagement"
-    },
-    {
-        "question": "DiskArbitration",
-        "answer": "Provides mechanisms for registering for mount/unmount notification and blocking mount/unmount events.",
-        "link": "https://developer.apple.com/documentation/diskarbitration"
-    },
-    {
-        "question": "Dispatch",
-        "answer": "Execute code concurrently on multicore hardware by submitting work to dispatch queues managed by the system.",
-        "link": "https://developer.apple.com/documentation/dispatch"
-    },
-    {
-        "question": "dnssd",
-        "answer": "Discover, publish, and resolve network services on a local area or wide area network.",
-        "link": "https://developer.apple.com/documentation/dnssd?language=objc"
-    },
-    {
-        "question": "DriverKit",
-        "answer": "Develop device drivers that run in user space.",
-        "link": "https://developer.apple.com/documentation/driverkit"
-    },
-    {
-        "question": "EndpointSecurity",
-        "answer": "Develop system extensions that enhance user security.",
-        "link": "https://developer.apple.com/documentation/endpointsecurity"
-    },
-    {
-        "question": "ExceptionHandling",
-        "answer": "Monitor and debug exceptional conditions in code.",
-        "link": "https://developer.apple.com/documentation/exceptionhandling"
-    },
-    {
-        "question": "ExecutionPolicy",
-        "answer": "",
-        "link": "https://developer.apple.com/documentation/executionpolicy"
-    },
-    {
-        "question": "ExternalAccessory",
-        "answer": "Communicate with accessories connected to a device by the Apple Lightning connector, or connected wirelessly through Bluetooth.",
-        "link": "https://developer.apple.com/documentation/externalaccessory"
-    },
-    {
-        "question": "FinderSync",
-        "answer": "Enhance the Finder’s user interface by adding badges, shortcut menu items, and toolbar buttons.",
-        "link": "https://developer.apple.com/documentation/findersync"
-    },
-    {
-        "question": "ForceFeedback",
-        "answer": "Control force feedback devices attached to the system. Develop plug-ins that enable communication with force feedback hardware.",
-        "link": "https://developer.apple.com/documentation/forcefeedback"
-    },
-    {
-        "question": "FWAUserLib",
-        "answer": "Interface with FireWire audio devices to manage connections, audio engines, and audio and MIDI streams.",
-        "link": "https://developer.apple.com/documentation/fwauserlib"
-    },
-    {
-        "question": "GSS",
-        "answer": "Conduct secure, authenticated network transactions.",
-        "link": "https://developer.apple.com/documentation/gss"
-    },
-    {
-        "question": "HIDDriverKit",
-        "answer": "Develop drivers for human-interface devices, such as keyboards, pointing devices, and digitizers like pens and touch pads.",
-        "link": "https://developer.apple.com/documentation/hiddriverkit"
-    },
-    {
-        "question": "Hypervisor",
-        "answer": "Build virtualization solutions on top of a lightweight hypervisor, without the need for third-party kernel extensions.",
-        "link": "https://developer.apple.com/documentation/hypervisor"
-    },
-    {
-        "question": "InputMethodKit",
-        "answer": "Develop input methods and manage communication with client applications, candidates windows, and input method modes.",
-        "link": "https://developer.apple.com/documentation/inputmethodkit"
-    }
-]
+{
+    "appFrameworks": [
+        {
+            "question": "AppKit",
+            "answer": "Construct and manage a graphical, event-driven user interface for your macOS app.",
+            "link": "https://developer.apple.com/documentation/appkit"
+        },
+        {
+            "question": "Bundle Resources",
+            "answer": "Resources located in an app, framework, or plugin bundle.",
+            "link": "https://developer.apple.com/documentation/bundleresources"
+        },
+        {
+            "question": "Foundation",
+            "answer": "Access essential data types, collections, and operating-system services to define the base layer of functionality for your app.",
+            "link": "https://developer.apple.com/documentation/foundation"
+        },
+        {
+            "question": "Swift",
+            "answer": "Build apps using a powerful open language.",
+            "link": "https://developer.apple.com/documentation/swift"
+        },
+        {
+            "question": "SwiftUI",
+            "answer": "Declare the user interface and behavior for your app on every platform.",
+            "link": "https://developer.apple.com/documentation/swiftui"
+        },
+        {
+            "question": "TVML",
+            "answer": "Use Apple TV Markup Language to create individual pages inside of a client-server app.",
+            "link": "https://developer.apple.com/documentation/tvml"
+        },
+        {
+            "question": "TVMLKit",
+            "answer": "Create client-server apps by incorporating JavaScript and TVML files in your binary app.",
+            "link": "https://developer.apple.com/documentation/tvmlkit"
+        },
+        {
+            "question": "TVMLKit JS",
+            "answer": "Create tvOS client-server apps using web technologies to stream media and respond to events.",
+            "link": "https://developer.apple.com/documentation/tvmljs"
+        },
+        {
+            "question": "TVUIKit",
+            "answer": "Show common user interface elements from Apple TV in your native app.",
+            "link": "https://developer.apple.com/documentation/tvuikit"
+        },
+        {
+            "question": "UIKit",
+            "answer": "Construct and manage a graphical, event-driven user interface for your iOS or tvOS app.",
+            "link": "https://developer.apple.com/documentation/uikit"
+        },
+        {
+            "question": "WatchKit",
+            "answer": "Build apps that leverage watchOS features like background tasks, extended runtime sessions, and access to the Digital Crown.",
+            "link": "https://developer.apple.com/documentation/watchkit"
+        }
+    ],
+    "graphicsAndGames": [
+        {
+            "question": "AGL",
+            "answer": "Create and manage OpenGL rendering contexts for use in macOS, and perform operations on drawable objects.",
+            "link": "https://developer.apple.com/documentation/agl"
+        },
+        {
+            "question": "ARKit",
+            "answer": "Integrate iOS device camera and motion features to produce augmented reality experiences in your app or game. ",
+            "link": "https://developer.apple.com/documentation/arkit"
+        },
+        {
+            "question": "ColorSync",
+            "answer": "",
+            "link": "https://developer.apple.com/documentation/colorsync"
+        },
+        {
+            "question": "Core Animation",
+            "answer": "Render, compose, and animate visual elements.",
+            "link": "https://developer.apple.com/documentation/quartzcore"
+        },
+        {
+            "question": "Core Graphics",
+            "answer": "Harness the power of Quartz technology to perform lightweight 2D rendering with high-fidelity output. Handle path-based drawing, antialiased rendering, gradients, images, color management, PDF documents, and more.",
+            "link": "https://developer.apple.com/documentation/coregraphics"
+        },
+        {
+            "question": "Core Image",
+            "answer": "Use built-in or custom filters to process still and video images.",
+            "link": "https://developer.apple.com/documentation/coreimage"
+        },
+        {
+            "question": "Game Controller",
+            "answer": "Support hardware game controllers in your game.",
+            "link": "https://developer.apple.com/documentation/gamecontroller"
+        },
+        {
+            "question": "GameKit",
+            "answer": "Create experiences that keep players coming back to your game. Add leaderboards, achievements, matchmaking, challenges, and more.",
+            "link": "https://developer.apple.com/documentation/gamekit"
+        },
+        {
+            "question": "GameplayKit",
+            "answer": "Architect and organize your game logic. Incorporate common gameplay behaviors such as random number generation, artificial intelligence, pathfinding, and agent behavior.",
+            "link": "https://developer.apple.com/documentation/gameplaykit"
+        },
+        {
+            "question": "GLKit",
+            "answer": "Speed up OpenGL ES or OpenGL app development. Use math libraries, background texture loading, pre-created shader effects, and a standard view and view controller to implement your rendering loop.",
+            "link": "https://developer.apple.com/documentation/glkit"
+        },
+        {
+            "question": "Image I/O",
+            "answer": "Read and write most image file formats. Manage color and access image metadata.",
+            "link": "https://developer.apple.com/documentation/imageio"
+        },
+        {
+            "question": "Metal",
+            "answer": "Render advanced 3D graphics and perform data-parallel computations using graphics processors.",
+            "link": "https://developer.apple.com/documentation/metal"
+        },
+        {
+            "question": "Metal Performance Shaders",
+            "answer": "Optimize graphics and compute performance with kernels that are fine-tuned for the unique characteristics of each Metal GPU family.",
+            "link": "https://developer.apple.com/documentation/metalperformanceshaders"
+        },
+        {
+            "question": "MetalKit",
+            "answer": "Build Metal apps quicker and easier, using far less code. Render graphics in a standard Metal view, load textures from many sources, and work efficiently with models provided by Model I/O.",
+            "link": "https://developer.apple.com/documentation/metalkit"
+        },
+        {
+            "question": "Model I/O",
+            "answer": "Import, export, and manipulate 3D models using a common infrastructure that integrates MetalKit, GLKit, and SceneKit.",
+            "link": "https://developer.apple.com/documentation/modelio"
+        },
+        {
+            "question": "OpenGL ES",
+            "answer": "Create 3D and 2D graphics effects with this compact, efficient subset of OpenGL.",
+            "link": "https://developer.apple.com/documentation/opengles"
+        },
+        {
+            "question": "PDFKit",
+            "answer": "Display and manipulate PDF documents in your applications.",
+            "link": "https://developer.apple.com/documentation/pdfkit"
+        },
+        {
+            "question": "PencilKit",
+            "answer": "Capture touch input as an opaque drawing and display that content from your app.",
+            "link": "https://developer.apple.com/documentation/pencilkit"
+        },
+        {
+            "question": "Quartz",
+            "answer": "Allow users to browse, edit, and save images, using slideshows and Core Image filters.",
+            "link": "https://developer.apple.com/documentation/quartz"
+        },
+        {
+            "question": "RealityKit",
+            "answer": "Simulate and render 3D content for use in your augmented reality apps.",
+            "link": "https://developer.apple.com/documentation/realitykit"
+        },
+        {
+            "question": "ReplayKit",
+            "answer": "Record or stream video from the screen, and audio from the app and microphone.",
+            "link": "https://developer.apple.com/documentation/replaykit"
+        },
+        {
+            "question": "SceneKit",
+            "answer": "Create 3D games and add 3D content to apps using high-level scene descriptions. Easily add animations, physics simulation, particle effects, and realistic physically based rendering.",
+            "link": "https://developer.apple.com/documentation/scenekit"
+        },
+        {
+            "question": "SpriteKit",
+            "answer": "Add high-performance 2D content with smooth animations to your app, or create a game with a high-level set of 2D game-based tools.",
+            "link": "https://developer.apple.com/documentation/spritekit"
+        },
+        {
+            "question": "Vision",
+            "answer": "Apply computer vision algorithms to perform a variety of tasks on input images and video.",
+            "link": "https://developer.apple.com/documentation/vision"
+        }
+    ],
+    "system": [
+        {
+            "question": "Accelerate",
+            "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption.",
+            "link": "https://developer.apple.com/documentation/accelerate"
+        },
+        {
+            "question": "CryptoKit",
+            "answer": "Perform cryptographic operations securely and efficiently.",
+            "link": "https://developer.apple.com/documentation/cryptokit"
+        },
+        {
+            "question": "AuthenticationServices",
+            "answer": "Make it easy for users to log into apps and services.",
+            "link": "https://developer.apple.com/documentation/authenticationservices"
+        },
+        {
+            "question": "CFNetwork",
+            "answer": "Access network services and handle changes in network configurations. Build on abstractions of network protocols to simplify tasks such as working with BSD sockets, administering HTTP and FTP servers, and managing Bonjour services.",
+            "link": "https://developer.apple.com/documentation/cfnetwork"
+        },
+        {
+            "question": "Collaboration",
+            "answer": "Find and access identities, that is, users and groups. Display the Identity Picker, which lets users create and select identities.",
+            "link": "https://developer.apple.com/documentation/collaboration"
+        },
+        {
+            "question": "Compression",
+            "answer": "Leverage common compression algorithms for lossless data compression.",
+            "link": "https://developer.apple.com/documentation/compression"
+        },
+        {
+            "question": "Core Bluetooth",
+            "answer": "Communicate with Bluetooth low energy and BR/EDR (“Classic”) Devices.",
+            "link": "https://developer.apple.com/documentation/corebluetooth"
+        },
+        {
+            "question": "Core NFC",
+            "answer": "Detect NFC tags, read messages that contain NDEF data, and save data to writable tags.",
+            "link": "https://developer.apple.com/documentation/corenfc"
+        },
+        {
+            "question": "Core Services",
+            "answer": "Access and manage key operating system services, such as launch and identity services.",
+            "link": "https://developer.apple.com/documentation/coreservices"
+        },
+        {
+            "question": "Core Telephony",
+            "answer": "Access information about a user’s cellular service provider, such as its unique identifier and whether the carrier allows VoIP.",
+            "link": "https://developer.apple.com/documentation/coretelephony"
+        },
+        {
+            "question": "Core WLAN",
+            "answer": "Query AirPort interfaces and choose wireless networks.",
+            "link": "https://developer.apple.com/documentation/corewlan"
+        },
+        {
+            "question": "CryptoTokenKit",
+            "answer": "Access security tokens and the cryptographic assets they store.",
+            "link": "https://developer.apple.com/documentation/cryptotokenkit"
+        },
+        {
+            "question": "DarwinNotify",
+            "answer": "Send and receive Darwin notifications.",
+            "link": "https://developer.apple.com/documentation/darwinnotify"
+        },
+        {
+            "question": "Device Management",
+            "answer": "Manage your organization's devices remotely.",
+            "link": "https://developer.apple.com/documentation/devicemanagement"
+        },
+        {
+            "question": "DiskArbitration",
+            "answer": "Provides mechanisms for registering for mount/unmount notification and blocking mount/unmount events.",
+            "link": "https://developer.apple.com/documentation/diskarbitration"
+        },
+        {
+            "question": "Dispatch",
+            "answer": "Execute code concurrently on multicore hardware by submitting work to dispatch queues managed by the system.",
+            "link": "https://developer.apple.com/documentation/dispatch"
+        },
+        {
+            "question": "dnssd",
+            "answer": "Discover, publish, and resolve network services on a local area or wide area network.",
+            "link": "https://developer.apple.com/documentation/dnssd?language=objc"
+        },
+        {
+            "question": "DriverKit",
+            "answer": "Develop device drivers that run in user space.",
+            "link": "https://developer.apple.com/documentation/driverkit"
+        },
+        {
+            "question": "EndpointSecurity",
+            "answer": "Develop system extensions that enhance user security.",
+            "link": "https://developer.apple.com/documentation/endpointsecurity"
+        },
+        {
+            "question": "ExceptionHandling",
+            "answer": "Monitor and debug exceptional conditions in code.",
+            "link": "https://developer.apple.com/documentation/exceptionhandling"
+        },
+        {
+            "question": "ExecutionPolicy",
+            "answer": "",
+            "link": "https://developer.apple.com/documentation/executionpolicy"
+        },
+        {
+            "question": "ExternalAccessory",
+            "answer": "Communicate with accessories connected to a device by the Apple Lightning connector, or connected wirelessly through Bluetooth.",
+            "link": "https://developer.apple.com/documentation/externalaccessory"
+        },
+        {
+            "question": "FinderSync",
+            "answer": "Enhance the Finder’s user interface by adding badges, shortcut menu items, and toolbar buttons.",
+            "link": "https://developer.apple.com/documentation/findersync"
+        },
+        {
+            "question": "ForceFeedback",
+            "answer": "Control force feedback devices attached to the system. Develop plug-ins that enable communication with force feedback hardware.",
+            "link": "https://developer.apple.com/documentation/forcefeedback"
+        },
+        {
+            "question": "FWAUserLib",
+            "answer": "Interface with FireWire audio devices to manage connections, audio engines, and audio and MIDI streams.",
+            "link": "https://developer.apple.com/documentation/fwauserlib"
+        },
+        {
+            "question": "GSS",
+            "answer": "Conduct secure, authenticated network transactions.",
+            "link": "https://developer.apple.com/documentation/gss"
+        },
+        {
+            "question": "HIDDriverKit",
+            "answer": "Develop drivers for human-interface devices, such as keyboards, pointing devices, and digitizers like pens and touch pads.",
+            "link": "https://developer.apple.com/documentation/hiddriverkit"
+        },
+        {
+            "question": "Hypervisor",
+            "answer": "Build virtualization solutions on top of a lightweight hypervisor, without the need for third-party kernel extensions.",
+            "link": "https://developer.apple.com/documentation/hypervisor"
+        },
+        {
+            "question": "InputMethodKit",
+            "answer": "Develop input methods and manage communication with client applications, candidates windows, and input method modes.",
+            "link": "https://developer.apple.com/documentation/inputmethodkit"
+        },
+        {
+            "question": "IOBluetooth",
+            "answer": "Gain user-space access to Bluetooth devices.",
+            "link": "https://developer.apple.com/documentation/iobluetooth"
+        },
+        {
+            "question": "IOBluetoothUI",
+            "answer": "Present an interface through which users can pair their devices with other Bluetooth devices.",
+            "link": "https://developer.apple.com/documentation/iobluetoothui"
+        },
+        {
+            "question": "IOKit",
+            "answer": "Gain user-space access to hardware devices and drivers.",
+            "link": "https://developer.apple.com/documentation/iokit"
+        },
+        {
+            "question": "IOSurface",
+            "answer": "Share hardware-accelerated buffer data (framebuffers and textures) across multiple processes. Manage image memory more efficiently.",
+            "link": "https://developer.apple.com/documentation/iosurface"
+        },
+        {
+            "question": "IOUSBHost",
+            "answer": "Find and access identities, that is, users and groups. Display the Identity Picker, which lets users create and select identities.",
+            "link": "https://developer.apple.com/documentation/iousbhost"
+        },
+        {
+            "question": "Kernel",
+            "answer": "Develop kernel-resident device drivers and kernel extensions.",
+            "link": "https://developer.apple.com/documentation/kernel"
+        },
+        {
+            "question": "LatentSemanticMapping",
+            "answer": "The Latent Semantic Mapping framework supports the classification of text and other token-based content into developer-defined categories.",
+            "link": "https://developer.apple.com/documentation/latentsemanticmapping"
+        },
+        {
+            "question": "Local Authentication",
+            "answer": "Authenticate users biometrically or with a passphrase they already know.",
+            "link": "https://developer.apple.com/documentation/localauthentication"
+        },
+        {
+            "question": "MetricKit",
+            "answer": "Aggregate and analyze per-device reports on power and performance metrics.",
+            "link": "https://developer.apple.com/documentation/metrickit"
+        },
+        {
+            "question": "MobileCoreServices",
+            "answer": "Use uniform type identifier (UTI) information to create and manipulate data that can be exchanged between your app and other apps and services.",
+            "link": "https://developer.apple.com/documentation/mobilecoreservices"
+        },
+        {
+            "question": "Network",
+            "answer": "Create network connections to send and receive data using transport and security protocols.",
+            "link": "https://developer.apple.com/documentation/network"
+        },
+        {
+            "question": "NetworkExtension",
+            "answer": "Customize and extend core networking features.",
+            "link": "https://developer.apple.com/documentation/networkextension"
+        },
+        {
+            "question": "NetworkingDriverKit",
+            "answer": "Develop drivers for Ethernet networking devices.",
+            "link": "https://developer.apple.com/documentation/networkingdriverkit"
+        },
+        {
+            "question": "Objective-C Runtime",
+            "answer": "Gain low-level access to the Objective-C runtime and the Objective-C root types.",
+            "link": "https://developer.apple.com/documentation/objectivec"
+        },
+        {
+            "question": "OpenDirectory",
+            "answer": "Authenticate users, and search for contact information in Open Directory and LDAP directories.",
+            "link": "https://developer.apple.com/documentation/opendirectory"
+        },
+        {
+            "question": "os",
+            "answer": "Initiate activity tracing and unified logging operations that make problem diagnosis easier when debugging.",
+            "link": "https://developer.apple.com/documentation/os"
+        },
+        {
+            "question": "OSLog",
+            "answer": "A unified logging system for the reading of historical data.",
+            "link": "https://developer.apple.com/documentation/os"
+        },
+        {
+            "question": "Security",
+            "answer": "Secure the data your app manages, and control access to your app.",
+            "link": "https://developer.apple.com/documentation/security"
+        },
+        {
+            "question": "SecurityFoundation",
+            "answer": "Restrict a user’s access to particular features in your Mac app or daemon.",
+            "link": "https://developer.apple.com/documentation/securityfoundation"
+        },
+        {
+            "question": "SecurityInterface",
+            "answer": "Provide user interface elements for security features such as authorization, access to digital certificates, and access to items in keychains.",
+            "link": "https://developer.apple.com/documentation/securityinterface"
+        },
+        {
+            "question": "SerialDriverKit",
+            "answer": "",
+            "link": "https://developer.apple.com/documentation/serialdriverkit"
+        },
+        {
+            "question": "ServiceManagement",
+            "answer": "Load and unload launchd services. Read and modify launchd dictionaries from within an app.",
+            "link": "https://developer.apple.com/documentation/servicemanagement"
+        },
+        {
+            "question": "simd",
+            "answer": "Instruction set for processing multiple elements that perform the same operation on multiple data points simultaneously.",
+            "link": "https://developer.apple.com/documentation/simd"
+        },
+        {
+            "question": "SystemConfiguration",
+            "answer": "Allow applications to access a device’s network configuration settings. Determine the reachability of the device, such as whether Wi-Fi or cell connectivity are active.",
+            "link": "https://developer.apple.com/documentation/systemconfiguration"
+        },
+        {
+            "question": "SystemExtensions",
+            "answer": "Install and manage user space code that extends the capabilities of macOS.",
+            "link": "https://developer.apple.com/documentation/systemextensions"
+        },
+        {
+            "question": "USBDriverKit",
+            "answer": "Develop drivers for USB-based devices.",
+            "link": "https://developer.apple.com/documentation/usbdriverkit"
+        },
+        {
+            "question": "USBSerialDriverKit",
+            "answer": "Develop drivers for serial IO devices connected to your Mac.",
+            "link": "https://developer.apple.com/documentation/usbserialdriverkit"
+        },
+        {
+            "question": "vmnet",
+            "answer": "Connect with network interfaces to read and write packets on guest operating systems.",
+            "link": "https://developer.apple.com/documentation/vmnet"
+        },
+        {
+            "question": "XPC",
+            "answer": "Access a low-level (libSystem) interprocess communication mechanism that is based on serialized property lists.",
+            "link": "https://developer.apple.com/documentation/xpc"
+        }
+    ]
+}
