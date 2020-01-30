@@ -21,9 +21,9 @@ struct ContentView: View {
     
     init() {
         UINavigationBar.appearance().tintColor = .clear
-        UINavigationBar.appearance().barTintColor = UIColor.systemOrange
-        UINavigationBar.appearance().backgroundColor = UIColor.systemOrange
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue-Thin", size: 28)!, .foregroundColor: UIColor.black]
+        UINavigationBar.appearance().barTintColor = UIColor.systemGray
+        UINavigationBar.appearance().backgroundColor = UIColor.systemGray
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue", size: 28)!, .foregroundColor: UIColor.black]
     }
     
     var body: some View {
@@ -44,12 +44,12 @@ struct ContentView: View {
             }
             .navigationBarItems(trailing: Button(action: self.viewModel.fetchCards) {
                 Image(systemName: "tornado")
-                    .font(Font(UIFont(name: "HelveticaNeue-Thin", size: 28)!))
+                    .font(Font(UIFont(name: "HelveticaNeue", size: 28)!))
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
             })
             .navigationBarTitle("🍎 Frameworks", displayMode: .inline)
-            .background(Color(UIColor.systemOrange)).edgesIgnoringSafeArea(.all)
+            .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }
     }
 }
