@@ -56,6 +56,360 @@
             "link": "https://developer.apple.com/documentation/watchkit"
         }
     ],
+    "appServices": [
+        {
+            "question": "Accounts",
+            "answer": "Help users access and manage their external accounts from within your app, without requiring them to enter login credentials.",
+            "link": "https://developer.apple.com/documentation/accounts"
+        },
+        {
+            "question": "AddressBook",
+            "answer": "Access the centralized database for storing users’ contacts.",
+            "link": "https://developer.apple.com/documentation/addressbook"
+        },
+        {
+            "question": "AddressBookUI",
+            "answer": "Access users’ contacts and display them in a graphical interface.",
+            "link": "https://developer.apple.com/documentation/addressbookui"
+        },
+        {
+            "question": "AdSupport",
+            "answer": "Provide apps with access to an advertising identifier and a flag indicating whether a device is using limited ad tracking.",
+            "link": "https://developer.apple.com/documentation/adsupport"
+        },
+        {
+            "question": "App Store Receipts",
+            "answer": "Validate app and in-app purchase receipts with the App Store.",
+            "link": "https://developer.apple.com/documentation/appstorereceipts"
+        },
+        {
+            "question": "App Store Server Notifications",
+            "answer": "Monitor subscription events in real time with server notifications from the App Store.",
+            "link": "https://developer.apple.com/documentation/appstoreservernotifications"
+        },
+        {
+            "question": "ApplicationServices",
+            "answer": "Perform common application tasks.",
+            "link": "https://developer.apple.com/documentation/applicationservices"
+        },
+        {
+            "question": "BackgroundTasks",
+            "answer": "Request the system to launch your app in the background to run tasks.",
+            "link": "https://developer.apple.com/documentation/backgroundtasks"
+        },
+        {
+            "question": "Business Chat",
+            "answer": "Chat with your customers using the Messages app.",
+            "link": "https://developer.apple.com/documentation/businesschat"
+        },
+        {
+            "question": "Business Chat REST API",
+            "answer": "Support your clients and their customers by integrating your messaging platform with the Business Chat service.",
+            "link": "https://developer.apple.com/documentation/businesschatapi"
+        },
+        {
+            "question": "CallKit",
+            "answer": "Display the system-calling UI for your app’s VoIP services, and coordinate your calling services with other apps and the system.",
+            "link": "https://developer.apple.com/documentation/callkit"
+        },
+        {
+            "question": "CareKit",
+            "answer": "Create apps that help people better understand and manage their health.",
+            "link": "https://developer.apple.com/documentation/carekit"
+        },
+        {
+            "question": "CarPlay",
+            "answer": "Add CarPlay support to your navigation app.",
+            "link": "https://developer.apple.com/documentation/carplay"
+        },
+        {
+            "question": "ClassKit",
+            "answer": "Enable teachers to assign activities from your app’s content and to view student progress.",
+            "link": "https://developer.apple.com/documentation/classkit"
+        },
+        {
+            "question": "ClockKit",
+            "answer": "Display app-specific data in the complications on the clock face.",
+            "link": "https://developer.apple.com/documentation/clockkit"
+        },
+        {
+            "question": "CloudKit",
+            "answer": "Store structured app and user data in iCloud containers that can be shared by all users of your app.",
+            "link": "https://developer.apple.com/documentation/cloudkit"
+        },
+        {
+            "question": "Combine",
+            "answer": "Customize handling of asynchronous events by combining event-processing operators.",
+            "link": "https://developer.apple.com/documentation/combine"
+        },
+        {
+            "question": "Contacts",
+            "answer": "Access the user's contacts and format and localize contact information.",
+            "link": "https://developer.apple.com/documentation/contacts"
+        },
+        {
+            "question": "ContactsUI",
+            "answer": "Display information about users’ contacts in a graphical interface.",
+            "link": "https://developer.apple.com/documentation/contactsui"
+        },
+        {
+            "question": "Core Data",
+            "answer": "Persist or cache data and support undo on a single device.",
+            "link": "https://developer.apple.com/documentation/coredata"
+        },
+        {
+            "question": "Core Foundation",
+            "answer": "Access low-level functions, primitive data types, and various collection types that are bridged seamlessly with the Foundation framework.",
+            "link": "https://developer.apple.com/documentation/corefoundation"
+        },
+        {
+            "question": "Core Location",
+            "answer": "Obtain the geographic location and orientation of a device.",
+            "link": "https://developer.apple.com/documentation/corelocation"
+        },
+        {
+            "question": "Core ML",
+            "answer": "Integrate machine learning models into your app.",
+            "link": "https://developer.apple.com/documentation/coreml"
+        },
+        {
+            "question": "Core Motion",
+            "answer": "Process accelerometer, gyroscope, pedometer, and environment-related events.",
+            "link": "https://developer.apple.com/documentation/coremotion"
+        },
+        {
+            "question": "Core Spotlight",
+            "answer": "Index your app so users can search the content from Spotlight and Safari.",
+            "link": "https://developer.apple.com/documentation/corespotlight"
+        },
+        {
+            "question": "Core Text",
+            "answer": "Create text layouts, optimize font handling, and access font metrics and glyph data.",
+            "link": "https://developer.apple.com/documentation/coretext"
+        },
+        {
+            "question": "Create ML",
+            "answer": "Create machine learning models for use in your app.",
+            "link": "https://developer.apple.com/documentation/createml"
+        },
+        {
+            "question": "DeviceCheck",
+            "answer": "Access per-device, per-developer data that your associated server can use in its business logic.",
+            "link": "https://developer.apple.com/documentation/devicecheck"
+        },
+        {
+            "question": "EventKit",
+            "answer": "Create, view, and edit calendar and reminder events.",
+            "link": "https://developer.apple.com/documentation/eventkit"
+        },
+        {
+            "question": "EventKitUI",
+            "answer": "Display an interface for viewing, selecting, and editing calendar events and reminders.",
+            "link": "https://developer.apple.com/documentation/eventkitui"
+        },
+        {
+            "question": "FileProvider",
+            "answer": "Implement a File Provider extension so that other apps can access the documents and directories stored and managed by your containing app.",
+            "link": "https://developer.apple.com/documentation/fileprovider"
+        },
+        {
+            "question": "FileProviderUI",
+            "answer": "Add actions to the document browser's context menu.",
+            "link": "https://developer.apple.com/documentation/fileproviderui"
+        },
+        {
+            "question": "HealthKit",
+            "answer": "Access and share health and fitness data while maintaining the user’s privacy and control.",
+            "link": "https://developer.apple.com/documentation/healthkit"
+        },
+        {
+            "question": "HomeKit",
+            "answer": "Communicate with, configure, and control home automation accessories.",
+            "link": "https://developer.apple.com/documentation/homekit"
+        },
+        {
+            "question": "iAd",
+            "answer": "Track and attribute app downloads that originate from Apple Search Ads campaigns.",
+            "link": "https://developer.apple.com/documentation/iad"
+        },
+        {
+            "question": "JavaScriptCore",
+            "answer": "Evaluate JavaScript programs from within an app, and support JavaScript scripting of your app.",
+            "link": "https://developer.apple.com/documentation/javascriptcore"
+        },
+        {
+            "question": "MapKit",
+            "answer": "Display map or satellite imagery from your app's interface, call out points of interest, and determine placemark information for map coordinates.",
+            "link": "https://developer.apple.com/documentation/mapkit"
+        },
+        {
+            "question": "Messages",
+            "answer": "Create app extensions that allow users to send text, stickers, media files, and interactive messages.",
+            "link": "https://developer.apple.com/documentation/messages"
+        },
+        {
+            "question": "MessageUI",
+            "answer": "Create a user interface for composing email and text messages, so users can edit and send messages without leaving your app.",
+            "link": "https://developer.apple.com/documentation/messageui"
+        },
+        {
+            "question": "MultipeerConnectivity",
+            "answer": "Support peer-to-peer connectivity and the discovery of nearby devices.",
+            "link": "https://developer.apple.com/documentation/multipeerconnectivity"
+        },
+        {
+            "question": "Natural Language",
+            "answer": "Analyze natural language text and deduce its language-specific metadata.",
+            "link": "https://developer.apple.com/documentation/naturallanguage"
+        },
+        {
+            "question": "NewsstandKit",
+            "answer": "Browse and download newspaper and magazine assets in the background.",
+            "link": "https://developer.apple.com/documentation/newsstandkit"
+        },
+        {
+            "question": "NotificationCenter",
+            "answer": "Create and manage widgets for the Today view.",
+            "link": "https://developer.apple.com/documentation/notificationcenter"
+        },
+        {
+            "question": "PassKit (Apple Pay and Wallet)",
+            "answer": "Request and process Apple Pay payments in your app. Create, distribute, and update passes for the Wallet app.",
+            "link": "https://developer.apple.com/documentation/passkit"
+        },
+        {
+            "question": "PreferencePanes",
+            "answer": "Integrate your app's custom preferences into the System Preferences app.",
+            "link": "https://developer.apple.com/documentation/preferencepanes"
+        },
+        {
+            "question": "PushKit",
+            "answer": "Respond to push notifications related to your app’s complications, file providers, and VoIP services.",
+            "link": "https://developer.apple.com/documentation/pushkit"
+        },
+        {
+            "question": "QuickLook",
+            "answer": "",
+            "link": "https://developer.apple.com/documentation/quicklook"
+        },
+        {
+            "question": "QuickLookThumbnailing",
+            "answer": "Generate thumbnails for common file types and add a Thumbnail Extension to your app to enable others to create thumbnails of your custom files.",
+            "link": "https://developer.apple.com/documentation/quicklookthumbnailing"
+        },
+        {
+            "question": "SafariServices",
+            "answer": "Enable web views and services in your app.",
+            "link": "https://developer.apple.com/documentation/safariservices"
+        },
+        {
+            "question": "SiriKit",
+            "answer": "Handle user requests for your app’s services that originate from Siri or Maps.",
+            "link": "https://developer.apple.com/documentation/sirikit"
+        },
+        {
+            "question": "SMS and Call Reporting",
+            "answer": "SMS and Call Reporting provides extensions to manage unwanted communication.",
+            "link": "https://developer.apple.com/documentation/sms_and_call_reporting"
+        },
+        {
+            "question": "Social",
+            "answer": "Post content to supported social networking services, using standard system interfaces.",
+            "link": "https://developer.apple.com/documentation/social"
+        },
+        {
+            "question": "Speech",
+            "answer": "Perform speech recognition on live or prerecorded audio, receive transcriptions, alternative interpretations, and confidence levels of the results.",
+            "link": "https://developer.apple.com/documentation/speech"
+        },
+        {
+            "question": "StoreKit",
+            "answer": "Support in-app purchases and interactions with the App Store.",
+            "link": "https://developer.apple.com/documentation/storekit"
+        },
+        {
+            "question": "TVServices",
+            "answer": "Help users discover your app by providing top shelf content and a description of your tvOS app.",
+            "link": "https://developer.apple.com/documentation/tvservices"
+        },
+        {
+            "question": "UserNotifications",
+            "answer": "Push user-facing notifications to the user's device from a server, or generate them locally from your app.",
+            "link": "https://developer.apple.com/documentation/usernotifications"
+        },
+        {
+            "question": "UserNotificationsUI",
+            "answer": "Customize the interface that displays local and remote notifications.",
+            "link": "https://developer.apple.com/documentation/usernotificationsui"
+        },
+        {
+            "question": "WatchConnectivity",
+            "answer": "Implement two-way communication between an iOS app and its paired watchOS app.",
+            "link": "https://developer.apple.com/documentation/watchconnectivity"
+        },
+        {
+            "question": "WebKit",
+            "answer": "Display web content in windows. Implement browser features such as following user-activated links, managing a back-forward list, and managing a history of recently visited pages.",
+            "link": "https://developer.apple.com/documentation/webkit"
+        }
+    ],
+    "developerTools": [
+        {
+            "question": "Automator",
+            "answer": "Develop actions that can be loaded and run by the Automator app. View, edit, and run Automator workflows in your app.",
+            "link": "https://developer.apple.com/documentation/automator"
+        },
+        {
+            "question": "Code Diagnostics",
+            "answer": "Enable runtime checks to detect and avoid bugs in your code.",
+            "link": "https://developer.apple.com/documentation/code_diagnostics"
+        },
+        {
+            "question": "InstallerJS",
+            "answer": "Manage and customize the installation and distribution experience.",
+            "link": "https://developer.apple.com/documentation/installerjs"
+        },
+        {
+            "question": "Playground Support",
+            "answer": "Share playground data, manage live views, and control the execution of a playground.",
+            "link": "https://developer.apple.com/documentation/playgroundsupport"
+        },
+        {
+            "question": "PlaygroundBluetooth",
+            "answer": "Display and manage connections to Bluetooth peripherals in Swift Playgrounds.",
+            "link": "https://developer.apple.com/documentation/playgroundbluetooth"
+        },
+        {
+            "question": "ScriptingBridge",
+            "answer": "Automate scriptable apps by sending and receiving Apple events.",
+            "link": "https://developer.apple.com/documentation/scriptingbridge"
+        },
+        {
+            "question": "Swift Packages",
+            "answer": "Create reusable code, organize it in a lightweight way, and share it across Xcode projects and with other developers.",
+            "link": "https://developer.apple.com/documentation/swift_packages"
+        },
+        {
+            "question": "Swift Playgrounds",
+            "answer": "Create interactive learning experiences for the Swift Playgrounds app.",
+            "link": "https://developer.apple.com/documentation/swift_playgrounds"
+        },
+        {
+            "question": "Xcode",
+            "answer": "Build, test, and submit your app with Apple's integrated development environment.",
+            "link": "https://developer.apple.com/documentation/xcode"
+        },
+        {
+            "question": "XcodeKit",
+            "answer": "Create extensions to add commands to the Xcode source editor.",
+            "link": "https://developer.apple.com/documentation/xcodekit"
+        },
+        {
+            "question": "XCTest",
+            "answer": "Create and run unit tests, performance tests, and UI tests for your Xcode project.",
+            "link": "https://developer.apple.com/documentation/xctest"
+        }
+    ],
     "graphicsAndGames": [
         {
             "question": "AGL",
@@ -64,7 +418,7 @@
         },
         {
             "question": "ARKit",
-            "answer": "Integrate iOS device camera and motion features to produce augmented reality experiences in your app or game. ",
+            "answer": "Integrate iOS device camera and motion features to produce augmented reality experiences in your app or game.",
             "link": "https://developer.apple.com/documentation/arkit"
         },
         {
@@ -176,6 +530,143 @@
             "question": "Vision",
             "answer": "Apply computer vision algorithms to perform a variety of tasks on input images and video.",
             "link": "https://developer.apple.com/documentation/vision"
+        }
+    ],
+    "media": [
+        {
+            "question": "Apple News",
+            "answer": "Design, create, and publish signature content for Apple News.",
+            "link": "https://developer.apple.com/documentation/apple_news"
+        },
+        {
+            "question": "Apple Search Ads",
+            "answer": "Drive app discovery by creating and managing campaigns with the Apple Search Ads Campaign Management API.",
+            "link": "https://developer.apple.com/documentation/apple_search_ads"
+        },
+        {
+            "question": "AssetsLibrary",
+            "answer": "Access the assets in a user’s media library.",
+            "link": "https://developer.apple.com/documentation/assetslibrary"
+        },
+        {
+            "question": "AudioToolbox",
+            "answer": "Record or play audio, convert formats, parse audio streams, and configure your audio session.",
+            "link": "https://developer.apple.com/documentation/audiotoolbox"
+        },
+        {
+            "question": "AudioUnit",
+            "answer": "Add sophisticated audio manipulation and processing capabilities to your app. Create audio unit extensions that generate or modify audio in a host app.",
+            "link": "https://developer.apple.com/documentation/audiounit"
+        },
+        {
+            "question": "AVFoundation",
+            "answer": "Work with audiovisual assets, control device cameras, process audio, and configure system audio interactions.",
+            "link": "https://developer.apple.com/documentation/avfoundation"
+        },
+        {
+            "question": "AVKit",
+            "answer": "Create view-level services for media playback, complete with user controls, chapter navigation, and support for subtitles and closed captioning.",
+            "link": "https://developer.apple.com/documentation/avkit"
+        },
+        {
+            "question": "Core Audio",
+            "answer": "Use the Core Audio framework to interact with device’s audio hardware.",
+            "link": "https://developer.apple.com/documentation/coreaudio"
+        },
+        {
+            "question": "Core Audio Kit",
+            "answer": "Add user interfaces to audio units.",
+            "link": "https://developer.apple.com/documentation/coreaudiokit"
+        },
+        {
+            "question": "Core Audio Types",
+            "answer": "Use specialized data types to interact with audio streams, complex buffers, and audiovisual timestamps.",
+            "link": "https://developer.apple.com/documentation/coreaudiotypes"
+        },
+        {
+            "question": "Core Haptics",
+            "answer": "Compose and play haptic patterns to customize your iOS app's haptic feedback.",
+            "link": "https://developer.apple.com/documentation/corehaptics"
+        },
+        {
+            "question": "Core Media",
+            "answer": "Represent time-based audio-visual assets with essential data types.",
+            "link": "https://developer.apple.com/documentation/coremedia"
+        },
+        {
+            "question": "Core MIDI",
+            "answer": "Communicate with MIDI devices such as hardware keyboards and synthesizers.",
+            "link": "https://developer.apple.com/documentation/coremidi"
+        },
+        {
+            "question": "Core Video",
+            "answer": "Process digital video—including manipulation of individual frames—using a pipeline-based API and support for both Metal and OpenGL.",
+            "link": "https://developer.apple.com/documentation/corevideo"
+        },
+        {
+            "question": "ImageCaptureCore",
+            "answer": "ImageCaptureCore enables your app to browse for media devices and control them programatically.",
+            "link": "https://developer.apple.com/documentation/imagecapturecore"
+        },
+        {
+            "question": "iTunesLibrary",
+            "answer": "Retrieve the properties of the media in the user’s iTunes library.",
+            "link": "https://developer.apple.com/documentation/ituneslibrary"
+        },
+        {
+            "question": "Media Player",
+            "answer": "Find and play songs, audio podcasts, audio books, and more from within your app.",
+            "link": "https://developer.apple.com/documentation/mediaplayer"
+        },
+        {
+            "question": "MediaAccessibility",
+            "answer": "Coordinate the presentation of closed-captioned data for your app's media files.",
+            "link": "https://developer.apple.com/documentation/mediaaccessibility"
+        },
+        {
+            "question": "MediaLibrary",
+            "answer": "Access read-only collections of the user’s multimedia content.",
+            "link": "https://developer.apple.com/documentation/medialibrary"
+        },
+        {
+            "question": "PhotoKit",
+            "answer": "Work with image and video assets managed by the Photos app, including those from iCloud Photos and Live Photos.",
+            "link": "https://developer.apple.com/documentation/photokit"
+        },
+        {
+            "question": "Professional Video Applications",
+            "answer": "Exchange data with Final Cut Pro X, and create effects plug-ins for Final Cut Pro and Motion.",
+            "link": "https://developer.apple.com/documentation/professional_video_applications"
+        },
+        {
+            "question": "QTKit",
+            "answer": "Perform basic manipulation of media such as movie playback and editing. Import and export standard media formats.",
+            "link": "https://developer.apple.com/documentation/qtkit"
+        },
+        {
+            "question": "ScreenSaver",
+            "answer": "Animate screen savers, and interact with the screen saver infrastructure. Use functions that help you produce random values and centering rectangles.",
+            "link": "https://developer.apple.com/documentation/screensaver"
+        },
+        {
+            "question": "SoundAnalysis",
+            "answer": "Analyze streamed and file-based audio to classify it as a particular type.",
+            "link": "https://developer.apple.com/documentation/soundanalysis"
+        },
+        {
+            "question": "VideoToolbox",
+            "answer": "Work directly with hardware-accelerated video encoding and decoding capabilities.",
+            "link": "https://developer.apple.com/documentation/videotoolbox"
+        },
+        {
+            "question": "VisionKit",
+            "answer": "Use the iOS camera to scan documents like those you capture in the Notes app.",
+            "link": "https://developer.apple.com/documentation/visionkit"
+        },
+        {
+            "question": "HTTP Live Streaming",
+            "answer": "Send audio and video to iOS, tvOS, and macOS devices.",
+            "link": "https://developer.apple.com/documentation/http_live_streaming"
         }
     ],
     "system": [
@@ -468,6 +959,73 @@
             "question": "XPC",
             "answer": "Access a low-level (libSystem) interprocess communication mechanism that is based on serialized property lists.",
             "link": "https://developer.apple.com/documentation/xpc"
+        }
+    ],
+    "web": [
+        {
+            "question": "App Store Connect API",
+            "answer": "Automate tasks on the Apple Developer website and App Store Connect.",
+            "link": "https://developer.apple.com/documentation/appstoreconnectapi"
+        },
+        {
+            "question": "Apple Music API",
+            "answer": "Integrate streaming music with Apple Music content.",
+            "link": "https://developer.apple.com/documentation/applemusicapi"
+        },
+        {
+            "question": "Apple Pay on the Web",
+            "answer": "Support Apple Pay on your website with JavaScript-based APIs.",
+            "link": "https://developer.apple.com/documentation/apple_pay_on_the_web"
+        },
+        {
+            "question": "CloudKit JS",
+            "answer": "Provide access from your web app to your CloudKit app’s containers and databases.",
+            "link": "https://developer.apple.com/documentation/cloudkitjs"
+        },
+        {
+            "question": "LinkPresentation",
+            "answer": "Fetch, provide, and present rich links in your app.",
+            "link": "https://developer.apple.com/documentation/linkpresentation"
+        },
+        {
+            "question": "LivePhotosKit JS",
+            "answer": "Play Live Photos on the web.",
+            "link": "https://developer.apple.com/documentation/livephotoskitjs"
+        },
+        {
+            "question": "MapKit JS",
+            "answer": "Embed interactive Apple maps on your website, annotate points of interest, and perform geo-related searches.",
+            "link": "https://developer.apple.com/documentation/mapkitjs"
+        },
+        {
+            "question": "Maps Web Snapshots",
+            "answer": "Create a static image of a map from a URL.",
+            "link": "https://developer.apple.com/documentation/snapshots"
+        },
+        {
+            "question": "MusicKit JS",
+            "answer": "Add an Apple Music player to your web app.",
+            "link": "https://developer.apple.com/documentation/musickitjs"
+        },
+        {
+            "question": "Safari Extensions JS",
+            "answer": "Extend the browsing experience with injected scripts and style sheets for web content, custom buttons in the Safari toolbar, and contextual menu items.",
+            "link": "https://developer.apple.com/documentation/safariextensions"
+        },
+        {
+            "question": "Sign in with Apple JS",
+            "answer": "Provide users a fast, secure way to sign into your web service with their Apple ID.",
+            "link": "https://developer.apple.com/documentation/signinwithapplejs"
+        },
+        {
+            "question": "Sign in with Apple REST API",
+            "answer": "Communicate between your app servers and Apple’s authentication servers.",
+            "link": "https://developer.apple.com/documentation/signinwithapplerestapi"
+        },
+        {
+            "question": "WebKit JS",
+            "answer": "Access and modify DOM elements within a webpage, including touch events and visual effects.",
+            "link": "https://developer.apple.com/documentation/webkitjs"
         }
     ]
 }

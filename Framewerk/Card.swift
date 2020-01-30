@@ -10,11 +10,15 @@ import Foundation
 
 struct FramewerkCardData: Codable {
     let appFrameworks: [Card]
+    let appServices: [Card]
+    let developerTools: [Card]
     let graphicsAndGames: [Card]
+    let media: [Card]
     let system: [Card]
+    let web: [Card]
     
     var allCards: [Card] {
-        appFrameworks + graphicsAndGames + system
+        appFrameworks + appServices + developerTools + graphicsAndGames + media + system + web
     }
 }
 
