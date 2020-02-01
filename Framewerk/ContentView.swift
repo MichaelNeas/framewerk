@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = ContentViewModel()
+    @State var initialOffset: CGFloat = -1000.0
     
     var isLandscape: Bool {
         UIApplication.shared.windows
@@ -37,7 +38,13 @@ struct ContentView: View {
                                     self.viewModel.removeCard()
                                 }
                             }
-                            .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count)
+                            .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count, initialOffset: self.initialOffset)
+                            
+                        }
+                    }
+                    .onAppear {
+                        withAnimation(Animation.spring().delay(5.0)) {
+                            self.initialOffset = 0.0
                         }
                     }
                 }.frame(width: geometry.size.width, height: geometry.size.height)
@@ -62,8 +69,8 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 extension View {
-    func stacked(at position: Int, in total: Int) -> some View {
+    func stacked(at position: Int, in total: Int, initialOffset: CGFloat) -> some View {
         let offset = CGFloat(total - position)
-        return self.offset(CGSize(width: 0, height: -(1/offset) * 50))
+        return self.offset(CGSize(width: initialOffset, height: -(1/offset) * 50))
     }
 }
