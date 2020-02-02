@@ -39,11 +39,10 @@ struct ContentView: View {
                                 }
                             }
                             .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count, initialOffset: self.initialOffset)
-                            
                         }
                     }
                     .onAppear {
-                        withAnimation(Animation.spring().delay(5.0)) {
+                        withAnimation(Animation.spring()) {
                             self.initialOffset = 0.0
                         }
                     }
