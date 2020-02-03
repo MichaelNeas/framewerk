@@ -56,7 +56,7 @@ struct ContentView: View {
             })
             .navigationBarTitle("🍎 Frameworks", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
