@@ -24,7 +24,7 @@ struct ContentView: View {
         UINavigationBar.appearance().tintColor = .clear
         UINavigationBar.appearance().barTintColor = UIColor.systemGray
         UINavigationBar.appearance().backgroundColor = UIColor.systemGray
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue", size: 28)!, .foregroundColor: UIColor.black]
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue", size: 24)!, .foregroundColor: UIColor.black]
     }
     
     var body: some View {
@@ -48,13 +48,18 @@ struct ContentView: View {
                     }
                 }.frame(width: geometry.size.width, height: geometry.size.height)
             }
-            .navigationBarItems(trailing: Button(action: self.viewModel.fetchCards) {
-                Image(systemName: "tornado")
-                    .font(Font(UIFont(name: "HelveticaNeue", size: 28)!))
+            .navigationBarItems(leading: Button(action: self.viewModel.fetchCards) {
+                Image(systemName: "square.stack.3d.up")
+                    .font(Font(UIFont(name: "HelveticaNeue", size: 20)!))
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
+            }, trailing: Button(action: self.viewModel.fetchCards) {
+                Image(systemName: "goforward")
+                .font(Font(UIFont(name: "HelveticaNeue", size: 18)!))
+                .foregroundColor(.black)
+                .padding(.bottom, 8)
             })
-            .navigationBarTitle("🍎 Frameworks", displayMode: .inline)
+            .navigationBarTitle("Frameworks", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
     }
