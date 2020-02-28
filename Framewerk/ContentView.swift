@@ -48,7 +48,7 @@ struct ContentView: View {
                     }
                 }.frame(width: geometry.size.width, height: geometry.size.height)
             }
-            .navigationBarItems(leading: Button(action: self.viewModel.fetchCards) {
+            .navigationBarItems(leading: NavigationLink(destination: CardList()) {
                 Image(systemName: "square.stack.3d.up")
                     .font(Font(UIFont(name: "HelveticaNeue", size: 20)!))
                     .foregroundColor(.black)
