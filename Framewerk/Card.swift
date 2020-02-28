@@ -22,9 +22,13 @@ struct FramewerkCardData: Codable {
     }
 }
 
-struct Card: Codable, Identifiable, Equatable {
+struct Card: Codable, Identifiable, Equatable, Comparable {
     let id = UUID()
     let question: String
     let answer: String
     let link: URL
+    
+    static func < (lhs: Card, rhs: Card) -> Bool {
+        lhs.question < rhs.question
+    }
 }

@@ -9,17 +9,23 @@
 import SwiftUI
 
 struct CardList: View {
-    @ObservedObject var viewModel = ContentViewModel()
+    var cards: [Card]
+    
+    init(cards: [Card]){
+        self.cards = cards.sorted()
+    }
     
     var body: some View {
-        List(self.viewModel.bank) { card in
+        List(self.cards) { card in
             Text(card.question)
+            .listRowBackground(Color(UIColor.systemGray))
         }
+        .navigationBarTitle("Cards", displayMode: .inline)
     }
 }
 
 struct CardList_Previews: PreviewProvider {
     static var previews: some View {
-        CardList()
+        CardList(cards: [])
     }
 }

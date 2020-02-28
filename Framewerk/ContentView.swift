@@ -21,10 +21,12 @@ struct ContentView: View {
     }
     
     init() {
-        UINavigationBar.appearance().tintColor = .clear
+        UINavigationBar.appearance().tintColor = .black
         UINavigationBar.appearance().barTintColor = UIColor.systemGray
         UINavigationBar.appearance().backgroundColor = UIColor.systemGray
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue", size: 24)!, .foregroundColor: UIColor.black]
+        UITableView.appearance().backgroundColor = .systemGray
+        UITableViewCell.appearance().backgroundColor = .systemGray
     }
     
     var body: some View {
@@ -48,7 +50,7 @@ struct ContentView: View {
                     }
                 }.frame(width: geometry.size.width, height: geometry.size.height)
             }
-            .navigationBarItems(leading: NavigationLink(destination: CardList()) {
+            .navigationBarItems(leading: NavigationLink(destination: CardList(cards: viewModel.bank)) {
                 Image(systemName: "square.stack.3d.up")
                     .font(Font(UIFont(name: "HelveticaNeue", size: 20)!))
                     .foregroundColor(.black)
