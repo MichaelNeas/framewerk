@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CardList: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var cards: [Card]
     
     init(cards: Binding<[Card]>){
@@ -23,7 +24,11 @@ struct CardList: View {
                 }
             }.onDelete(perform: delete)
         }
-        .navigationBarItems(trailing: EditButton())
+        .navigationBarItems(leading: Button(action: {
+           self.presentationMode.wrappedValue.dismiss()
+        }) {
+            Image(systemName: "rectangle.stack").padding(.bottom, 8)
+        }, trailing: EditButton())
         .navigationBarTitle("Cards", displayMode: .inline)
     }
     

@@ -9,31 +9,44 @@
 import SwiftUI
 
 struct CardDetail: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var card: Card
     @State var textHeight: CGFloat = 150
     @State var link: String
     
     var body: some View {
         Form {
-            Section(header: Text("Title").bold().foregroundColor(.black)) {
+            Section(header: CardDetailTitle(title: "Title")) {
                 TextField("Title", text: $card.question).padding()
             }
-            Section(header: Text("Description").bold().foregroundColor(.black)) {
+            Section(header:  CardDetailTitle(title: "Description")) {
                 ScrollView {
                     TextView(placeholder: "Card Solution", text: $card.answer, minHeight: 100.0, calculatedHeight: $textHeight)
-                }.frame(minHeight: self.textHeight, maxHeight: self.textHeight).padding()
+                        .frame(minHeight: self.textHeight, maxHeight: self.textHeight).padding()
+                }
             }
-            Section(header: Text("Link").bold().foregroundColor(.black)) {
+            Section(header: CardDetailTitle(title: "Link")) {
                 TextField("Link", text: $link).padding()
             }
         }
         .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.bottom)
-        .navigationBarTitle("Edit")
         .navigationBarItems(trailing:
-            Button(action: {}) {
+            Button(action: {
+               self.presentationMode.wrappedValue.dismiss()
+            }) {
                 Text("Save")
             }
         )
+    }
+}
+
+struct CardDetailTitle: View {
+    var title: String
+    var body: some View {
+        Text(title)
+            .bold()
+            .foregroundColor(.black)
+            .font(.headline)
     }
 }
 
