@@ -9,24 +9,25 @@
 import SwiftUI
 
 struct CardList: View {
-    var cards: [Card]
+    @Binding var cards: [Card]
     
-    init(cards: [Card]){
-        self.cards = cards.sorted()
+    init(cards: Binding<[Card]>){
+        self._cards = cards
     }
     
     var body: some View {
-        List(self.cards) { card in
-            NavigationLink(destination: CardDetail(card: card, link: card.link.absoluteString)) {
-                Text(card.question)
-            }
+        List {
+            ForEach(self.cards, id: \.id) { card in
+                NavigationLink(destination: CardDetail(card: card, link: card.link.absoluteString)) {
+                    Text(card.question)
+                }
+            }.onDelete(perform: delete)
         }
+        .navigationBarItems(trailing: EditButton())
         .navigationBarTitle("Cards", displayMode: .inline)
     }
-}
-
-struct CardList_Previews: PreviewProvider {
-    static var previews: some View {
-        CardList(cards: [])
+    
+    func delete(at offsets: IndexSet) {
+        cards.remove(atOffsets: offsets)
     }
 }

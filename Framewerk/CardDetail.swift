@@ -15,18 +15,19 @@ struct CardDetail: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Title").foregroundColor(.black)) {
-                TextField("Title", text: $card.question)
+            Section(header: Text("Title").bold().foregroundColor(.black)) {
+                TextField("Title", text: $card.question).padding()
             }
-            Section(header: Text("Description").foregroundColor(.black)) {
+            Section(header: Text("Description").bold().foregroundColor(.black)) {
                 ScrollView {
                     TextView(placeholder: "Card Solution", text: $card.answer, minHeight: 100.0, calculatedHeight: $textHeight)
-                }.frame(minHeight: self.textHeight, maxHeight: self.textHeight)
+                }.frame(minHeight: self.textHeight, maxHeight: self.textHeight).padding()
             }
-            Section(header: Text("Link").foregroundColor(.black)) {
-                TextField("Link", text: $link)
+            Section(header: Text("Link").bold().foregroundColor(.black)) {
+                TextField("Link", text: $link).padding()
             }
-        }.background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.bottom)
+        }
+        .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.bottom)
         .navigationBarTitle("Edit")
         .navigationBarItems(trailing:
             Button(action: {}) {

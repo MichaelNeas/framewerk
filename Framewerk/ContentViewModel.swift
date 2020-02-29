@@ -11,9 +11,10 @@ import SwiftUI
 class ContentViewModel: ObservableObject {
     
     @Published var cards = [Card]()
+    @Published var bank = [Card]()
+    @Published var all = [Card]()
     
     let decoder = JSONDecoder()
-    var bank = [Card]()
     
     init() {
         fetchCards()
@@ -26,6 +27,7 @@ class ContentViewModel: ObservableObject {
             let shuffled = framewerkData.allCards.shuffled()
             self.cards = Array(shuffled.prefix(upTo: 10))
             self.bank = Array(shuffled.suffix(from: 10))
+            self.all = framewerkData.allCards.sorted()
         }
     }
     
