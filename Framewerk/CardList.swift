@@ -17,8 +17,9 @@ struct CardList: View {
     
     var body: some View {
         List(self.cards) { card in
-            Text(card.question)
-            .listRowBackground(Color(UIColor.systemGray))
+            NavigationLink(destination: CardDetail(card: card)) {
+                Text(card.question)
+            }
         }
         .navigationBarTitle("Cards", displayMode: .inline)
     }

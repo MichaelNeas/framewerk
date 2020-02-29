@@ -22,13 +22,45 @@ struct FramewerkCardData: Codable {
     }
 }
 
-struct Card: Codable, Identifiable, Equatable, Comparable {
+class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
     let id = UUID()
-    let question: String
-    let answer: String
-    let link: URL
+    @Published var question: String
+    @Published var answer: String
+    @Published var link: URL
+    
+    enum CodingKeys: CodingKey {
+        case question, answer, link
+    }
+    
+    init(question: String, answer: String, link: URL) {
+        self.question = question
+        self.answer = answer
+        self.link = link
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        question = try container.decode(String.self, forKey: .question)
+        answer = try container.decode(String.self, forKey: .answer)
+        link = try container.decode(URL.self, forKey: .link)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(question, forKey: .question)
+        try container.encode(answer, forKey: .answer)
+        try container.encode(link, forKey: .link)
+    }
     
     static func < (lhs: Card, rhs: Card) -> Bool {
         lhs.question < rhs.question
     }
+    
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    static let test: Card = Card(question: "Test", answer: "test answer", link: URL(string: "google.com")!)
 }
