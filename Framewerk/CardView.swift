@@ -71,7 +71,6 @@ struct CardView: View {
                     .onChanged { gesture in
                         self.offset = gesture.translation
                     }
-
                     .onEnded { gesture in
                         if (abs(self.offset.width) > 150 ||
                             abs(self.offset.height) > 150) ||
