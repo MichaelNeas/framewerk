@@ -64,21 +64,25 @@ struct CardView: View {
             }
             .frame(width: max(geometry.size.width - 500, 350), height: max(geometry.size.height/2, 250))
             .rotationEffect(.degrees(Double(self.offset.width / 10)))
-            .offset(x: self.offset.width, y: self.offset.height)
+            .animation(.spring())
+            .offset(self.offset)
             .gesture(
                 DragGesture()
                     .onChanged { gesture in
                         self.offset = gesture.translation
                     }
 
-                    .onEnded { _ in
-                        if abs(self.offset.width) > 150 || abs(self.offset.height) > 150 {
+                    .onEnded { gesture in
+                        if (abs(self.offset.width) > 150 ||
+                            abs(self.offset.height) > 150) ||
+                            abs(gesture.predictedEndTranslation.width) > 200 ||
+                            abs(gesture.predictedEndTranslation.height) > 200 {
                             self.removal?()
                         } else {
                             self.offset = .zero
                         }
                     }
-            ).animation(.spring())
+            )
             .onTapGesture {
                 self.isShowingAnswer.toggle()
             }
