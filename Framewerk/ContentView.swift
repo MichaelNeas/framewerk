@@ -40,6 +40,7 @@ struct ContentView: View {
                                     self.viewModel.removeCard()
                                 }
                             }
+                            .allowsHitTesting(card == self.viewModel.cards.last)
                             .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count, initialOffset: self.initialOffset)
                         }
                     }
