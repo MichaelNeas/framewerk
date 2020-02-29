@@ -17,7 +17,7 @@ struct CardList: View {
     
     var body: some View {
         List(self.cards) { card in
-            NavigationLink(destination: CardDetail(card: card)) {
+            NavigationLink(destination: CardDetail(card: card, link: card.link.absoluteString)) {
                 Text(card.question)
             }
         }
