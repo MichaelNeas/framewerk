@@ -11,6 +11,7 @@ import SwiftUI
 struct CardView: View {
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
+    @State private var showDocumentation = false
     
     let card: Card
     var removal: (() -> Void)?
@@ -50,12 +51,15 @@ struct CardView: View {
                         HStack {
                             Spacer()
                             Button(action: {
-                                UIApplication.shared.open(self.card.link)
+                                self.showDocumentation = true
                             }) {
                                 Image(systemName: "info.circle")
                                     .font(.title)
                                     .foregroundColor(Color(UIColor.systemIndigo))
                             }.transition(.opacity)
+                                .sheet(isPresented: self.$showDocumentation) {
+                                WebView(request: URLRequest(url: self.card.link))
+                            }
                         }
                     }
                 }
