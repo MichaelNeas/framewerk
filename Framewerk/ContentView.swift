@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel = ContentViewModel()
+    @ObservedObject var viewModel: ContentViewModel
     @State var initialOffset: CGFloat = -1000.0
     
     var isLandscape: Bool {
@@ -20,13 +20,8 @@ struct ContentView: View {
         .isLandscape ?? false
     }
     
-    init() {
-        UINavigationBar.appearance().tintColor = .black
-        UINavigationBar.appearance().barTintColor = UIColor.systemGray
-        UINavigationBar.appearance().backgroundColor = UIColor.systemGray
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue", size: 26)!, .foregroundColor: UIColor.black]
-        UITableView.appearance().backgroundColor = .systemGray
-        UITableViewCell.appearance().backgroundColor = .systemGray
+    init(model: ContentViewModel) {
+        self.viewModel = model
     }
     
     var body: some View {
@@ -65,13 +60,6 @@ struct ContentView: View {
             .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
 

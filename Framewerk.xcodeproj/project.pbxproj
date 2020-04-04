@@ -21,6 +21,7 @@
 		68437076240AAE120018B2F9 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68437075240AAE120018B2F9 /* TextView+Extensions.swift */; };
 		68EAB2CA2408A32C000D0AF1 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAB2C92408A32C000D0AF1 /* CardList.swift */; };
 		68F08AC52438FE6400C4F91B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC42438FE6400C4F91B /* WebView.swift */; };
+		68F08AC72439094A00C4F91B /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC62439094A00C4F91B /* CardStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		68437075240AAE120018B2F9 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
 		68EAB2C92408A32C000D0AF1 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		68F08AC42438FE6400C4F91B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		68F08AC62439094A00C4F91B /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				6827E0DF23DBF491008F60E4 /* Card.swift */,
 				68437073240AA9880018B2F9 /* CardDetail.swift */,
 				68EAB2C92408A32C000D0AF1 /* CardList.swift */,
+				68F08AC62439094A00C4F91B /* CardStore.swift */,
 				6827E0DD23DBF468008F60E4 /* CardView.swift */,
 				6827E0E323DCC4F0008F60E4 /* ContentViewModel.swift */,
 				6827E0CD23DBF3A4008F60E4 /* ContentView.swift */,
@@ -180,6 +183,7 @@
 				6827E0E023DBF491008F60E4 /* Card.swift in Sources */,
 				6827E0CE23DBF3A4008F60E4 /* ContentView.swift in Sources */,
 				6827E0DE23DBF468008F60E4 /* CardView.swift in Sources */,
+				68F08AC72439094A00C4F91B /* CardStore.swift in Sources */,
 				68EAB2CA2408A32C000D0AF1 /* CardList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

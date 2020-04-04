@@ -9,26 +9,29 @@
 import SwiftUI
 
 class ContentViewModel: ObservableObject {
-    
     @Published var cards = [Card]()
     @Published var bank = [Card]()
     @Published var all = [Card]()
+    private let cardStore: CardStore
     
-    let decoder = JSONDecoder()
-    
-    init() {
+    init(store: CardStore) {
+        self.cardStore = store
         fetchCards()
     }
     
     func fetchCards() {
-        if let localJSONURL = Bundle.main.url(forResource: "db", withExtension: "json"),
-            let jsonData = try? Data(contentsOf: localJSONURL),
-            let framewerkData = try? decoder.decode(FramewerkCardData.self, from: jsonData) {
-            let shuffled = framewerkData.allCards.shuffled()
-            self.cards = Array(shuffled.prefix(upTo: 10))
-            self.bank = Array(shuffled.suffix(from: 10))
+        let shuffled: [Card]
+        if let cards: [Card] = cardStore.loadData(), !cards.isEmpty {
+            shuffled = cards.shuffled()
+            self.all = cards.sorted()
+        } else if let framewerkData = cardStore.fetchLocalCards() {
+            shuffled = framewerkData.allCards.shuffled()
             self.all = framewerkData.allCards.sorted()
+        } else {
+            return
         }
+        self.cards = Array(shuffled.prefix(upTo: 10))
+        self.bank = Array(shuffled.suffix(from: 10))
     }
     
     func removeCard() {
