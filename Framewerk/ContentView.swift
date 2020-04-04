@@ -24,7 +24,7 @@ struct ContentView: View {
         UINavigationBar.appearance().tintColor = .black
         UINavigationBar.appearance().barTintColor = UIColor.systemGray
         UINavigationBar.appearance().backgroundColor = UIColor.systemGray
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue", size: 24)!, .foregroundColor: UIColor.black]
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue", size: 26)!, .foregroundColor: UIColor.black]
         UITableView.appearance().backgroundColor = .systemGray
         UITableViewCell.appearance().backgroundColor = .systemGray
     }
@@ -53,16 +53,16 @@ struct ContentView: View {
             }
             .navigationBarItems(leading: NavigationLink(destination: CardList(cards: $viewModel.all)) {
                 Image(systemName: "square.stack.3d.up")
-                    .font(Font(UIFont(name: "HelveticaNeue", size: 20)!))
+                    .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
             }, trailing: Button(action: self.viewModel.fetchCards) {
                 Image(systemName: "goforward")
-                .font(Font(UIFont(name: "HelveticaNeue", size: 18)!))
+                .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
                 .foregroundColor(.black)
                 .padding(.bottom, 8)
             })
-            .navigationBarTitle("Frameworks", displayMode: .inline)
+            .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
     }

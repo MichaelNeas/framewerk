@@ -62,5 +62,6 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
         lhs.id == rhs.id
     }
     
-    static let test: Card = Card(question: "Test", answer: "test answer", link: URL(string: "google.com")!)
+    static let test: Card = Card(question: "Test", answer: "test answer", link: URL(string: "mikeneas.com")!)
+    static let blank: Card = Card(question: "", answer: "", link: URL(string: "mikeneas.com")!)
 }

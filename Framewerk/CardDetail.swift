@@ -17,16 +17,21 @@ struct CardDetail: View {
     var body: some View {
         Form {
             Section(header: CardDetailTitle(title: "Title")) {
-                TextField("Title", text: $card.question).padding()
+                TextField("Title", text: $card.question)
+                    .foregroundColor(Color(.systemGray4))
+                    .padding()
             }
             Section(header:  CardDetailTitle(title: "Description")) {
                 ScrollView {
                     TextView(placeholder: "Card Solution", text: $card.answer, minHeight: 100.0, calculatedHeight: $textHeight)
-                        .frame(minHeight: self.textHeight, maxHeight: self.textHeight).padding()
+                        .frame(minHeight: self.textHeight, maxHeight: self.textHeight)
+                        .padding()
                 }
             }
             Section(header: CardDetailTitle(title: "Link")) {
-                TextField("Link", text: $link).padding()
+                TextField("Link", text: $link)
+                    .foregroundColor(Color(.systemGray4))
+                    .padding()
             }
         }
         .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.bottom)
@@ -37,6 +42,7 @@ struct CardDetail: View {
                 Text("Save")
             }
         )
+            .navigationBarTitle($card.question.wrappedValue)
     }
 }
 

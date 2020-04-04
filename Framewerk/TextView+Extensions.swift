@@ -38,6 +38,8 @@ struct TextView: UIViewRepresentable {
         textView.isEditable = true
         textView.isUserInteractionEnabled = true
         textView.backgroundColor = .clear
+        textView.textColor = .systemGray4
+        textView.font = UIFont(name: "HelveticaNeue", size: 16)!
         // Set the placeholder
         textView.text = placeholder
 
@@ -84,14 +86,12 @@ struct TextView: UIViewRepresentable {
         func textViewDidBeginEditing(_ textView: UITextView) {
             if textView.textColor == UIColor.lightGray {
                 textView.text = nil
-                textView.textColor = UIColor.black
             }
         }
 
         func textViewDidEndEditing(_ textView: UITextView) {
             if textView.text.isEmpty {
                 textView.text = parent.placeholder
-                textView.textColor = UIColor.lightGray
             }
         }
     }
