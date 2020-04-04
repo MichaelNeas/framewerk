@@ -19,16 +19,23 @@ class ContentViewModel: ObservableObject {
         fetchCards()
     }
     
+    func refreshCards() {
+        let shuffled = all.shuffled()
+        self.cards = Array(shuffled.prefix(upTo: 10))
+        self.bank = Array(shuffled.suffix(from: 10))
+    }
+    
     func fetchCards() {
         let shuffled: [Card]
         if let cards: [Card] = cardStore.loadData(), !cards.isEmpty {
             shuffled = cards.shuffled()
-            self.all = cards.sorted()
+            all = cards.sorted()
         } else if let framewerkData = cardStore.fetchLocalCards() {
             shuffled = framewerkData.allCards.shuffled()
-            self.all = framewerkData.allCards.sorted()
+            all = framewerkData.allCards.sorted()
+            cardStore.save(data: all)
         } else {
-            return
+            fatalError("No cards")
         }
         self.cards = Array(shuffled.prefix(upTo: 10))
         self.bank = Array(shuffled.suffix(from: 10))

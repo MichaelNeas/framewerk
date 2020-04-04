@@ -59,7 +59,7 @@ struct CardList: View {
         }.foregroundColor(.black)
         .navigationBarTitle("Cards", displayMode: .inline)
         .navigationBarItems(leading: Button(action: {
-           self.presentationMode.wrappedValue.dismiss()
+            self.presentationMode.wrappedValue.dismiss()
         }) {
             Image(systemName: "rectangle.stack")
                 .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))

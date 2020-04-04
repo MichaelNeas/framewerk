@@ -13,7 +13,7 @@ struct CardView: View {
     @State private var offset = CGSize.zero
     @State private var showDocumentation = false
     
-    let card: Card
+    @ObservedObject var card: Card
     var removal: (() -> Void)?
 
     var body: some View {

@@ -51,11 +51,11 @@ struct ContentView: View {
                     .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
-            }, trailing: Button(action: self.viewModel.fetchCards) {
+            }, trailing: Button(action: self.viewModel.refreshCards) {
                 Image(systemName: "goforward")
-                .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
-                .foregroundColor(.black)
-                .padding(.bottom, 8)
+                    .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    .foregroundColor(.black)
+                    .padding(.bottom, 8)
             })
             .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)

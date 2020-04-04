@@ -37,7 +37,7 @@ struct CardDetail: View {
         .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.bottom)
         .navigationBarItems(trailing:
             Button(action: {
-               self.presentationMode.wrappedValue.dismiss()
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Save")
             }
