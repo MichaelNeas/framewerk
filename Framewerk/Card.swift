@@ -27,9 +27,10 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
     @Published var question: String
     @Published var answer: String
     @Published var link: URL
+    @Published var favorite: Bool = false
     
     enum CodingKeys: CodingKey {
-        case question, answer, link
+        case question, answer, link, favorite
     }
     
     init(question: String, answer: String, link: URL) {
@@ -44,6 +45,7 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
         question = try container.decode(String.self, forKey: .question)
         answer = try container.decode(String.self, forKey: .answer)
         link = try container.decode(URL.self, forKey: .link)
+        favorite = try container.decodeIfPresent(Bool.self, forKey: .favorite) ?? false
     }
     
     func encode(to encoder: Encoder) throws {
@@ -52,6 +54,7 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
         try container.encode(question, forKey: .question)
         try container.encode(answer, forKey: .answer)
         try container.encode(link, forKey: .link)
+        try container.encode(favorite, forKey: .favorite)
     }
     
     static func < (lhs: Card, rhs: Card) -> Bool {

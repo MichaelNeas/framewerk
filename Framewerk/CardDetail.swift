@@ -42,7 +42,7 @@ struct CardDetail: View {
                 Text("Save")
             }
         )
-            .navigationBarTitle($card.question.wrappedValue)
+        .navigationBarTitle($card.question.wrappedValue)
     }
 }
 

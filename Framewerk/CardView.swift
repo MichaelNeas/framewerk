@@ -49,6 +49,13 @@ struct CardView: View {
                             .frame(width: max(geometry.size.width - 500, 350) - 50, height: max(geometry.size.height/2, 250) - 100)
                             .transition(.opacity)
                         HStack {
+                            Button(action: {
+                                self.card.favorite.toggle()
+                            }) {
+                                Image(systemName: self.card.favorite ? "star.fill" : "star")
+                                    .font(.title)
+                                    .foregroundColor(Color(UIColor.systemIndigo))
+                            }
                             Spacer()
                             Button(action: {
                                 self.showDocumentation = true
@@ -57,7 +64,7 @@ struct CardView: View {
                                     .font(.title)
                                     .foregroundColor(Color(UIColor.systemIndigo))
                             }.transition(.opacity)
-                                .sheet(isPresented: self.$showDocumentation) {
+                            .sheet(isPresented: self.$showDocumentation) {
                                 WebView(request: URLRequest(url: self.card.link))
                             }
                         }
