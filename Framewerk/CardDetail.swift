@@ -17,7 +17,7 @@ struct CardDetail: View {
     var body: some View {
         Form {
             Section(header: CardDetailTitle(title: "Title")) {
-                TextField("Title", text: $card.question)
+                TextField("Title", text: $card.question, onEditingChanged: changed, onCommit: commit)
                     .foregroundColor(Color(.systemGray4))
                     .padding()
             }
@@ -35,14 +35,20 @@ struct CardDetail: View {
             }
         }
         .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.bottom)
-        .navigationBarItems(trailing:
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("Save")
-            }
-        )
         .navigationBarTitle($card.question.wrappedValue)
+    }
+    
+    
+    func changed(change: Bool) {
+        if !change {
+            commit()
+        }
+    }
+    
+    // commit fires on 'done' and manually from change finishing
+    func commit() {
+        print("COMMIT")
+        card.updated()
     }
 }
 

@@ -15,10 +15,6 @@ struct CardList: View {
     @State private var clearAllAlert = false
     @State private var showNewCard = false
     
-    init(cards: Binding<[Card]>){
-        self._cards = cards
-    }
-    
     var body: some View {
         List {
             if editMode?.wrappedValue.isEditing ?? false {
@@ -53,8 +49,8 @@ struct CardList: View {
             }
             ForEach(self.cards, id: \.id) { card in
                 NavigationLink(destination: CardDetail(card: card, link: card.link.absoluteString)) {
-                    Text(card.question)
-                }
+                        Text(card.question)
+                    }
             }.onDelete(perform: delete)
         }.foregroundColor(.black)
         .navigationBarTitle("Cards", displayMode: .inline)
