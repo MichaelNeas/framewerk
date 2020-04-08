@@ -30,8 +30,6 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
     @Published var link: URL
     @Published var favorite: Bool = false
     
-    let publisher: PassthroughSubject<Card, Never> = PassthroughSubject()
-    
     enum CodingKeys: CodingKey {
         case question, answer, link, favorite
     }
@@ -58,10 +56,6 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
         try container.encode(answer, forKey: .answer)
         try container.encode(link, forKey: .link)
         try container.encode(favorite, forKey: .favorite)
-    }
-    
-    func updated() {
-        publisher.send(self)
     }
     
     static func < (lhs: Card, rhs: Card) -> Bool {

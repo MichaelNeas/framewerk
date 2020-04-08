@@ -15,14 +15,14 @@ class ContentViewModel: ObservableObject {
     @Published var all = [Card]()
     
     private let cardStore: CardStore
-    private var cardCancellable = [AnyCancellable]()
+    //private var cardCancellable = [AnyCancellable]()
     
     init(store: CardStore) {
         self.cardStore = store
         fetchCards()
-        cardCancellable = all.map({ card in
-            card.publisher.sink(receiveValue: { print($0) })
-        })
+//        $all.sink(receiveValue: { cards in
+//            print("change")
+//        })
     }
     
     func refreshCards() {
@@ -31,7 +31,7 @@ class ContentViewModel: ObservableObject {
         self.bank = Array(shuffled.suffix(from: 10))
     }
     
-    func fetchCards() {
+    private func fetchCards() {
         if let cards: [Card] = cardStore.loadData(), !cards.isEmpty {
             all = cards.sorted()
         } else if let framewerkData = cardStore.fetchLocalCards() {
@@ -43,6 +43,10 @@ class ContentViewModel: ObservableObject {
         let shuffled = all.shuffled()
         self.cards = Array(shuffled.prefix(upTo: 10))
         self.bank = Array(shuffled.suffix(from: 10))
+    }
+    
+    func save() {
+        cardStore.save(data: all)
     }
     
     func removeCard() {
@@ -57,9 +61,5 @@ class ContentViewModel: ObservableObject {
     func addCard() {
         guard !bank.isEmpty else { return }
         cards.insert(bank.removeFirst(), at: 0)
-    }
-    
-    deinit {
-        cardCancellable.forEach({ $0.cancel() })
     }
 }

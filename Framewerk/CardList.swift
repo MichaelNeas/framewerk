@@ -11,7 +11,7 @@ import SwiftUI
 struct CardList: View {
     @Environment(\.editMode) var editMode: Binding<EditMode>?
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Binding var cards: [Card]
+    @ObservedObject var model: ContentViewModel
     @State private var clearAllAlert = false
     @State private var showNewCard = false
     
@@ -28,7 +28,7 @@ struct CardList: View {
                             .bold()
                             .foregroundColor(Color(UIColor.systemGreen))
                     }.sheet(isPresented: $showNewCard) {
-                        CardDetail(card: Card.blank, link: "")
+                        CardDetail(card: Card.blank)
                     }
                     Spacer()
                     Button(action: {
@@ -47,10 +47,13 @@ struct CardList: View {
                     Spacer()
                 }.buttonStyle(BorderlessButtonStyle())
             }
-            ForEach(self.cards, id: \.id) { card in
-                NavigationLink(destination: CardDetail(card: card, link: card.link.absoluteString)) {
-                        Text(card.question)
-                    }
+            ForEach(self.model.all, id: \.id) { card in
+                NavigationLink(destination: CardDetail(card: card, commited: { card in
+                    print("Save me \(card)")
+                    self.model.save()
+                })) {
+                    Text(card.question)
+                }
             }.onDelete(perform: delete)
         }.foregroundColor(.black)
         .navigationBarTitle("Cards", displayMode: .inline)
@@ -64,10 +67,10 @@ struct CardList: View {
     }
     
     func deleteAll() {
-        cards.removeAll()
+        model.all.removeAll()
     }
     
     func delete(at offsets: IndexSet) {
-        cards.remove(atOffsets: offsets)
+        model.all.remove(atOffsets: offsets)
     }
 }

@@ -38,7 +38,7 @@ class CardStore {
     func save<T: Encodable>(data: T) {
         do {
             let data = try encoder.encode(data)
-            try data.write(to: getDocumentsDirectory(with: .cards), options: [.atomicWrite, .completeFileProtection])
+            try data.write(to: getDocumentsDirectory(with: .cards), options: [.atomicWrite])
         } catch {
             print(error.localizedDescription)
         }

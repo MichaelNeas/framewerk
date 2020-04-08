@@ -12,7 +12,7 @@ struct CardDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var card: Card
     @State var textHeight: CGFloat = 150
-    @State var link: String
+    var commited: ((Card) -> ())?
     
     var body: some View {
         Form {
@@ -29,7 +29,14 @@ struct CardDetail: View {
                 }
             }
             Section(header: CardDetailTitle(title: "Link")) {
-                TextField("Link", text: $link)
+                TextField("Link", text: Binding(
+                    get: {
+                        self.card.link.absoluteString
+                    },
+                    set: { potentialURL in
+                        guard let url = URL(string: potentialURL) else { return }
+                        self.card.link = url
+                    }))
                     .foregroundColor(Color(.systemGray4))
                     .padding()
             }
@@ -37,7 +44,6 @@ struct CardDetail: View {
         .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.bottom)
         .navigationBarTitle($card.question.wrappedValue)
     }
-    
     
     func changed(change: Bool) {
         if !change {
@@ -48,7 +54,7 @@ struct CardDetail: View {
     // commit fires on 'done' and manually from change finishing
     func commit() {
         print("COMMIT")
-        card.updated()
+        commited?(card)
     }
 }
 
@@ -64,6 +70,6 @@ struct CardDetailTitle: View {
 
 struct CardDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CardDetail(card: Card.test, link: Card.test.link.absoluteString)
+        CardDetail(card: Card.test)
     }
 }
