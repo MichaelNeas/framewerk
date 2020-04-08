@@ -32,7 +32,7 @@ struct ContentView: View {
                         ForEach(self.viewModel.cards) { card in
                             CardView(card: card) {
                                 withAnimation {
-                                    self.viewModel.removeCard()
+                                    self.viewModel.removeCardFromStack()
                                 }
                             }
                             .allowsHitTesting(card == self.viewModel.cards.last)

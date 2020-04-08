@@ -28,7 +28,10 @@ struct CardList: View {
                             .bold()
                             .foregroundColor(Color(UIColor.systemGreen))
                     }.sheet(isPresented: $showNewCard) {
-                        CardDetail(card: Card.blank)
+                        CardDetail(card: Card.blank, commited: { card in
+                            print("Add me \(card)")
+                            self.model.add(card: card)
+                        }, isNewCard: true)
                     }
                     Spacer()
                     Button(action: {
@@ -42,7 +45,7 @@ struct CardList: View {
                     .alert(isPresented: $clearAllAlert) {
                         Alert(title: Text("Woah There!"), message: Text("Ready to start a new and delete all the cards in this list?"),
                             primaryButton: .cancel(Text("No Thanks!")),
-                            secondaryButton: .destructive(Text("Make it so!"), action: deleteAll))
+                            secondaryButton: .destructive(Text("Make it so!"), action: model.clearAll))
                     }
                     Spacer()
                 }.buttonStyle(BorderlessButtonStyle())
@@ -54,7 +57,7 @@ struct CardList: View {
                 })) {
                     Text(card.question)
                 }
-            }.onDelete(perform: delete)
+            }.onDelete(perform: model.remove)
         }.foregroundColor(.black)
         .navigationBarTitle("Cards", displayMode: .inline)
         .navigationBarItems(leading: Button(action: {
@@ -64,13 +67,5 @@ struct CardList: View {
                 .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
                 .padding(.bottom, 8)
         }, trailing: EditButton())
-    }
-    
-    func deleteAll() {
-        model.all.removeAll()
-    }
-    
-    func delete(at offsets: IndexSet) {
-        model.all.remove(atOffsets: offsets)
     }
 }

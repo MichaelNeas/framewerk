@@ -6,7 +6,6 @@
 //  Copyright © 2020 Neas Lease. All rights reserved.
 //
 
-import Combine
 import SwiftUI
 
 class ContentViewModel: ObservableObject {
@@ -15,14 +14,10 @@ class ContentViewModel: ObservableObject {
     @Published var all = [Card]()
     
     private let cardStore: CardStore
-    //private var cardCancellable = [AnyCancellable]()
     
     init(store: CardStore) {
         self.cardStore = store
         fetchCards()
-//        $all.sink(receiveValue: { cards in
-//            print("change")
-//        })
     }
     
     func refreshCards() {
@@ -49,16 +44,40 @@ class ContentViewModel: ObservableObject {
         cardStore.save(data: all)
     }
     
-    func removeCard() {
-        cards.removeLast()
-        addCard()
+    func clearAll() {
+        all.removeAll()
+    }
+    
+    func resetGame() {
+        if let framewerkData = cardStore.fetchLocalCards() {
+            all = framewerkData.allCards.sorted()
+            cardStore.save(data: all)
+        }
+    }
+    
+    func remove(at set: IndexSet) {
+        all.remove(atOffsets: set)
+        //all.remove(at: set)
+        //remove from the bank too
+        save()
+    }
+    
+    func add(card: Card) {
+        all.insert(card, at: 0)
+        bank.append(card)
+        save()
     }
     
     func indexOf(_ card: Card) -> Int {
         return cards.firstIndex(where: { $0 == card }) ?? -1
     }
     
-    func addCard() {
+    func removeCardFromStack() {
+        cards.removeLast()
+        addCardToStack()
+    }
+    
+    func addCardToStack() {
         guard !bank.isEmpty else { return }
         cards.insert(bank.removeFirst(), at: 0)
     }
