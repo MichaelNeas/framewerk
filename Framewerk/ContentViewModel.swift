@@ -57,7 +57,6 @@ class ContentViewModel: ObservableObject {
     
     func remove(at set: IndexSet) {
         all.remove(atOffsets: set)
-        //all.remove(at: set)
         //remove from the bank too
         save()
     }
@@ -79,6 +78,6 @@ class ContentViewModel: ObservableObject {
     
     func addCardToStack() {
         guard !bank.isEmpty else { return }
-        cards.insert(bank.removeFirst(), at: 0)
+        //cards.insert(bank.removeFirst(), at: 0)
     }
 }

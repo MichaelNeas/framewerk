@@ -29,6 +29,11 @@ struct ContentView: View {
             GeometryReader { geometry in
                 VStack {
                     ZStack {
+                        if self.viewModel.cards.isEmpty {
+                            withAnimation{
+                                Text("🤩 Woohoo! 🥳").font(Font(UIFont(name: "HelveticaNeue-Bold", size: 24)!))
+                            }
+                        }
                         ForEach(self.viewModel.cards) { card in
                             CardView(card: card) {
                                 withAnimation {
