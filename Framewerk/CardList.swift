@@ -16,7 +16,7 @@ struct CardList: View {
     @State private var showNewCard = false
     
     var body: some View {
-        List {
+        VStack {
             if editMode?.wrappedValue.isEditing ?? false {
                 HStack {
                     Spacer()
@@ -49,23 +49,27 @@ struct CardList: View {
                     }
                     Spacer()
                 }.buttonStyle(BorderlessButtonStyle())
+                .padding(.top, 20.0)
+                Divider()
             }
-            ForEach(self.model.all, id: \.id) { card in
-                NavigationLink(destination: CardDetail(card: card, commited: { card in
-                    print("Save me \(card)")
-                    self.model.save()
-                })) {
-                    Text(card.question)
-                }
-            }.onDelete(perform: model.remove)
-        }.foregroundColor(.black)
-        .navigationBarTitle("Cards", displayMode: .inline)
-        .navigationBarItems(leading: Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
-            Image(systemName: "rectangle.stack")
-                .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
-                .padding(.bottom, 8)
-        }, trailing: EditButton())
+            List {
+                ForEach(self.model.all, id: \.id) { card in
+                    NavigationLink(destination: CardDetail(card: card, commited: { card in
+                        print("Save me \(card)")
+                        self.model.save()
+                    })) {
+                        Text(card.question)
+                    }
+                }.onDelete(perform: model.remove)
+            }.foregroundColor(.black)
+            .navigationBarTitle("Cards", displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "rectangle.stack")
+                    .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    .padding(.bottom, 8)
+            }, trailing: EditButton())
+        }.background(Color(UIColor.systemGray))
     }
 }
