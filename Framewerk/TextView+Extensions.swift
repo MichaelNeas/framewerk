@@ -14,13 +14,15 @@ struct TextView: UIViewRepresentable {
     @Binding var text: String
 
     var minHeight: CGFloat
+    var callback: ((String) -> ())?
     @Binding var calculatedHeight: CGFloat
 
-    init(placeholder: String, text: Binding<String>, minHeight: CGFloat, calculatedHeight: Binding<CGFloat>) {
+    init(placeholder: String, text: Binding<String>, minHeight: CGFloat, calculatedHeight: Binding<CGFloat>, finished: ((String) -> ())? = nil) {
         self.placeholder = placeholder
         self._text = text
         self.minHeight = minHeight
         self._calculatedHeight = calculatedHeight
+        self.callback = finished
     }
 
     func makeCoordinator() -> Coordinator {
@@ -76,23 +78,23 @@ struct TextView: UIViewRepresentable {
         }
 
         func textViewDidChange(_ textView: UITextView) {
-            // This is needed for multistage text input (eg. Chinese, Japanese)
-            if textView.markedTextRange == nil {
-                parent.text = textView.text ?? String()
-                parent.recalculateHeight(view: textView)
-            }
+            parent.text = textView.text
+            parent.recalculateHeight(view: textView)
         }
 
         func textViewDidBeginEditing(_ textView: UITextView) {
+            // clear placeholder
             if textView.textColor == UIColor.lightGray {
                 textView.text = nil
             }
         }
 
         func textViewDidEndEditing(_ textView: UITextView) {
-            if textView.text.isEmpty {
+            guard let text = textView.text, !text.isEmpty else {
                 textView.text = parent.placeholder
+                return
             }
+            parent.callback?(text)
         }
     }
 }

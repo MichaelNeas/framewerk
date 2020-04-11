@@ -25,7 +25,7 @@ struct CardDetail: View {
                 }
                 Section(header:  CardDetailTitle(title: "Description")) {
                     ScrollView {
-                        TextView(placeholder: "Card Solution", text: $card.answer, minHeight: 100.0, calculatedHeight: $textHeight)
+                        TextView(placeholder: "Card Solution", text: $card.answer, minHeight: 100.0, calculatedHeight: $textHeight, finished: commit)
                             .frame(minHeight: self.textHeight, maxHeight: self.textHeight)
                             .padding()
                     }
@@ -38,7 +38,7 @@ struct CardDetail: View {
                         set: { potentialURL in
                             guard let url = URL(string: potentialURL) else { return }
                             self.card.link = url
-                        }))
+                        }), onEditingChanged: changed, onCommit: commit)
                         .foregroundColor(Color(.systemGray4))
                         .padding()
                 }
@@ -60,6 +60,10 @@ struct CardDetail: View {
         if !change {
             commit()
         }
+    }
+    
+    func commit(description: String) {
+        commit()
     }
     
     // commit fires on 'done' and manually from change finishing
