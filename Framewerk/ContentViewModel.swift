@@ -22,8 +22,8 @@ class ContentViewModel: ObservableObject {
     
     func refreshCards() {
         let shuffled = all.shuffled()
-        self.cards = Array(shuffled.prefix(upTo: 10))
-        self.bank = Array(shuffled.suffix(from: 10))
+        self.cards = Array(shuffled.prefix(upTo: min(shuffled.count, 10)))
+        self.bank = Array(shuffled.suffix(from: min(shuffled.count, 10)))
     }
     
     private func fetchCards() {
@@ -46,6 +46,9 @@ class ContentViewModel: ObservableObject {
     
     func clearAll() {
         all.removeAll()
+        bank.removeAll()
+        cards.removeAll()
+        save()
     }
     
     func resetGame() {
@@ -57,7 +60,7 @@ class ContentViewModel: ObservableObject {
     
     func remove(at set: IndexSet) {
         all.remove(atOffsets: set)
-        //remove from the bank too
+        refreshCards()
         save()
     }
     
@@ -78,6 +81,6 @@ class ContentViewModel: ObservableObject {
     
     func addCardToStack() {
         guard !bank.isEmpty else { return }
-        //cards.insert(bank.removeFirst(), at: 0)
+        cards.insert(bank.removeFirst(), at: 0)
     }
 }
