@@ -63,6 +63,7 @@ struct CardDetail: View {
     }
     
     func commit(description: String) {
+        card.answer = description
         commit()
     }
     

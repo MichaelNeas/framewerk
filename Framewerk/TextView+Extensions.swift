@@ -42,15 +42,20 @@ struct TextView: UIViewRepresentable {
         textView.backgroundColor = .clear
         textView.textColor = .systemGray4
         textView.font = UIFont(name: "HelveticaNeue", size: 16)!
-        // Set the placeholder
-        textView.text = placeholder
+        
+        if text.isEmpty {
+            // Set the placeholder
+            textView.text = placeholder
+        } else {
+            textView.text = text
+        }
 
         return textView
     }
 
     func updateUIView(_ textView: UITextView, context: Context) {
         if textView.text != self.text {
-            textView.text = self.text
+            self.text = textView.text
         }
 
         recalculateHeight(view: textView)
@@ -94,6 +99,7 @@ struct TextView: UIViewRepresentable {
                 textView.text = parent.placeholder
                 return
             }
+            parent.text = textView.text
             parent.callback?(text)
         }
     }
