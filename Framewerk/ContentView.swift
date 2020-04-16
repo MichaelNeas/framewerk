@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel: ContentViewModel
     @State var initialOffset: CGFloat = -1000.0
+    @State private var tutorial = UserDefaults.standard.bool(forKey: "tutorial")
     
     var isLandscape: Bool {
         UIApplication.shared.windows
@@ -66,10 +67,15 @@ struct ContentView: View {
             .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
+        .overlay(Tutorial().isHidden($tutorial.wrappedValue))
     }
 }
 
 extension View {
+    func isHidden(_ hide: Bool) -> some View {
+        hide ? AnyView(self.hidden()) : AnyView(self)
+    }
+    
     func stacked(at position: Int, in total: Int, initialOffset: CGFloat) -> some View {
         let offset = CGFloat(total - position)
         return self.offset(CGSize(width: initialOffset, height: -(1/offset) * 50))
