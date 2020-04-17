@@ -9,27 +9,30 @@
 import SwiftUI
 
 struct Tutorial: View {
+    var closeAction: ()->()
+    
     var body: some View {
         GeometryReader { geo in
-            ZStack {
-                Rectangle()
-                    .stroke(Color.black, lineWidth: 2)
-                    .frame(width: 36, height: 36)
-                    .position(x: 32, y: 64)
-                Rectangle()
-                    .stroke(Color.black, lineWidth: 2)
-                    .frame(width: 36, height: 36)
-                    .position(x: geo.size.width - 32, y: 64)
-            }
-            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+            VStack {
+                Spacer()
+                HStack {
+                    Text("Tap on the card list button to see all cards, update, add, or delete as you please!")
+                    Spacer()
+                    Text("Refresh the cards list")
+                }
+                Spacer()
+                Text("Cards are swipe and tappable")
+                    .frame(width: geo.size.width / 2, height: geo.size.height / 1.8)
+                Spacer()
+                Button(action: {
+                    self.closeAction()
+                }, label: {
+                    Text("Dismiss")
+                })
+            }.frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+            
         }
         .background(Color(UIColor.systemIndigo.withAlphaComponent(0.9)))
         .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct Tutorial_Previews: PreviewProvider {
-    static var previews: some View {
-        Tutorial()
     }
 }

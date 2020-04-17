@@ -67,17 +67,9 @@ struct ContentView: View {
             .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
-        .overlay(Tutorial().isHidden($tutorial.wrappedValue))
-    }
-}
-
-extension View {
-    func isHidden(_ hide: Bool) -> some View {
-        hide ? AnyView(self.hidden()) : AnyView(self)
-    }
-    
-    func stacked(at position: Int, in total: Int, initialOffset: CGFloat) -> some View {
-        let offset = CGFloat(total - position)
-        return self.offset(CGSize(width: initialOffset, height: -(1/offset) * 50))
+            .overlay(Tutorial(closeAction: {
+                self.$tutorial.wrappedValue = true
+                UserDefaults.standard.set(true, forKey: "tutorial")
+            }).isHidden($tutorial.wrappedValue))
     }
 }
