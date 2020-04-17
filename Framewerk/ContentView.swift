@@ -36,7 +36,7 @@ struct ContentView: View {
                             }
                         }
                         ForEach(self.viewModel.cards) { card in
-                            CardView(card: card) {
+                            CardView(card: card, model: self.viewModel) {
                                 withAnimation {
                                     self.viewModel.removeCardFromStack()
                                 }

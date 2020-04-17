@@ -14,6 +14,7 @@ struct CardView: View {
     @State private var showDocumentation = false
     
     @ObservedObject var card: Card
+    @ObservedObject var model: ContentViewModel
     var removal: (() -> Void)?
 
     var body: some View {
@@ -51,6 +52,7 @@ struct CardView: View {
                         HStack {
                             Button(action: {
                                 self.card.favorite.toggle()
+                                self.model.save()
                             }) {
                                 Image(systemName: self.card.favorite ? "star.fill" : "star")
                                     .font(.title)
@@ -97,11 +99,5 @@ struct CardView: View {
                 self.isShowingAnswer.toggle()
             }
         }
-    }
-}
-
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(card: Card(question: "Preview Question?", answer: "Preview Answer", link: URL(string: "google.com")!))
     }
 }
