@@ -1,6 +1,6 @@
 # Framewerk
 
-<img src="Framewerk/app/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200">
+<img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200">
 
 #### There are so many frameworks provided by apple today, do you know about them all?
 
