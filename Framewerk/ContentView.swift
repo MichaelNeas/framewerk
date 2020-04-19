@@ -67,9 +67,13 @@ struct ContentView: View {
             .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
-            .overlay(Tutorial(closeAction: {
+        .overlay(Tutorial(closeAction: {
+            withAnimation {
                 self.$tutorial.wrappedValue = true
-                UserDefaults.standard.set(true, forKey: "tutorial")
-            }).isHidden($tutorial.wrappedValue))
+            }
+            UserDefaults.standard.set(true, forKey: "tutorial")
+        }, TutorialCard: CardView(card: Card.tutorial, model: self.viewModel))
+            .opacity($tutorial.wrappedValue ? 0 : 1))
+            .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.4)))
     }
 }

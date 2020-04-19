@@ -66,6 +66,7 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
         lhs.id == rhs.id
     }
     
+    static let tutorial = Card(question: "Tap for more info, swipe to remove", answer: "Each card has a description, link, and an ability to favorite!", link: URL(string: "mikeneas.com")!)
     static let test: Card = Card(question: "Test", answer: "test answer", link: URL(string: "mikeneas.com")!)
     static var blank: Card {
         Card(question: "New Card", answer: "", link: URL(string: "mikeneas.com")!)

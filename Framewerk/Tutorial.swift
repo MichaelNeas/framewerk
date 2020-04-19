@@ -10,29 +10,34 @@ import SwiftUI
 
 struct Tutorial: View {
     var closeAction: ()->()
+    var TutorialCard: CardView
     
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Spacer()
+                Spacer(minLength: 40.0)
                 HStack {
-                    Text("Tap on the card list button to see all cards, update, add, or delete as you please!")
-                    Spacer()
-                    Text("Refresh the cards list")
-                }
-                Spacer()
-                Text("Cards are swipe and tappable")
-                    .frame(width: geo.size.width / 2, height: geo.size.height / 1.8)
-                Spacer()
+                    Image(systemName: "square.stack.3d.up").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    Text("See all cards, update, add, or delete as you please!").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                }.padding()
+                HStack {
+                    Image(systemName: "goforward").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    Text("Refresh the cards list!").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                }.padding()
+                self.TutorialCard
+                Spacer(minLength: 100.0)
                 Button(action: {
                     self.closeAction()
                 }, label: {
                     Text("Dismiss")
+                        .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                        .foregroundColor(Color(UIColor.black))
                 })
-            }.frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+                Spacer(minLength: 40.0)
+            }.padding().frame(width: geo.size.width, height: geo.size.height, alignment: .center)
             
         }
-        .background(Color(UIColor.systemIndigo.withAlphaComponent(0.9)))
+        .background(Color(UIColor.systemTeal.withAlphaComponent(0.97)))
         .edgesIgnoringSafeArea(.all)
     }
 }

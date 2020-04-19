@@ -36,7 +36,7 @@ struct CardView: View {
                         .foregroundColor(Color(UIColor() { (trait) -> UIColor in
                             trait.userInterfaceStyle == .dark ? .white : .black
                         }))
-                        .lineLimit(1)
+                        .lineLimit(nil)
                         .allowsTightening(true)
                         .minimumScaleFactor(0.3)
 
@@ -88,7 +88,8 @@ struct CardView: View {
                         if (abs(self.offset.width) > 150 ||
                             abs(self.offset.height) > 150) ||
                             abs(gesture.predictedEndTranslation.width) > 200 ||
-                            abs(gesture.predictedEndTranslation.height) > 200 {
+                            abs(gesture.predictedEndTranslation.height) > 200,
+                            self.removal != nil {
                             self.removal?()
                         } else {
                             self.offset = .zero

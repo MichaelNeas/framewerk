@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView(model: viewModel)
         
-        UserDefaults.standard.set(false, forKey: "tutorial")
+        //UserDefaults.standard.set(false, forKey: "tutorial")
         
         
         UINavigationBar.appearance().tintColor = .black
