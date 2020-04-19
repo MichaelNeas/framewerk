@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: ContentViewModel
-    @State var initialOffset: CGFloat = -1000.0
     @State private var tutorial = UserDefaults.standard.bool(forKey: "tutorial")
     
     var isLandscape: Bool {
@@ -27,30 +26,26 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            GeometryReader { geometry in
-                VStack {
-                    ZStack {
-                        if self.viewModel.cards.isEmpty {
-                            withAnimation{
-                                Text("🤩 Woohoo! 🥳").font(Font(UIFont(name: "HelveticaNeue-Bold", size: 24)!))
-                            }
-                        }
-                        ForEach(self.viewModel.cards) { card in
-                            CardView(card: card, model: self.viewModel) {
-                                withAnimation {
-                                    self.viewModel.removeCardFromStack()
-                                }
-                            }
-                            .allowsHitTesting(card == self.viewModel.cards.last)
-                            .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count, initialOffset: self.initialOffset)
+            ZStack {
+                if self.viewModel.cards.isEmpty {
+                    withAnimation{
+                        Text("🤩 Woohoo! 🥳").font(Font(UIFont(name: "HelveticaNeue-Bold", size: 24)!))
+                    }
+                }
+                ForEach(0..<self.viewModel.cards.count) { index in
+                    CardView(card: self.viewModel.cards[index], model: self.viewModel) {
+                        withAnimation {
+                            self.viewModel.removeCardFromStack()
                         }
                     }
-                    .onAppear {
-                        withAnimation(Animation.spring()) {
-                            self.initialOffset = 0.0
-                        }
-                    }
-                }.frame(width: geometry.size.width, height: geometry.size.height)
+                    .allowsHitTesting(self.viewModel.cards[index] == self.viewModel.cards.last)
+                    .stacked(at: index, in: self.viewModel.cards.count, initialOffset: self.viewModel.offsets[index])
+                }
+            }
+            .onAppear {
+                withAnimation {
+                    self.viewModel.updateOffsets()
+                }
             }
             .navigationBarItems(leading:
                 NavigationLink(destination: CardList(model: viewModel)){

@@ -12,6 +12,7 @@ class ContentViewModel: ObservableObject {
     @Published var cards = [Card]()
     @Published var bank = [Card]()
     @Published var all = [Card]()
+    @Published var offsets: [CGFloat] = [CGFloat]()
     
     private let cardStore: CardStore
     
@@ -24,6 +25,8 @@ class ContentViewModel: ObservableObject {
         let shuffled = all.shuffled()
         self.cards = Array(shuffled.prefix(upTo: min(shuffled.count, 10)))
         self.bank = Array(shuffled.suffix(from: min(shuffled.count, 10)))
+        self.offsets = Array(repeating: CGFloat(-1000.0), count: self.cards.count)
+        updateOffsets()
     }
     
     private func fetchCards() {
@@ -38,6 +41,16 @@ class ContentViewModel: ObservableObject {
         let shuffled = all.shuffled()
         self.cards = Array(shuffled.prefix(upTo: 10))
         self.bank = Array(shuffled.suffix(from: 10))
+        self.offsets = Array(repeating: CGFloat(-1000.0), count: self.cards.count)
+    }
+    
+    func updateOffsets() {
+        for index in 0..<offsets.count {
+            // workaround for ForEach animations not working
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1 * Double(index)) {
+                self.offsets[index] = 0
+            }
+        }
     }
     
     func save() {
@@ -71,7 +84,7 @@ class ContentViewModel: ObservableObject {
     }
     
     func indexOf(_ card: Card) -> Int {
-        return cards.firstIndex(where: { $0 == card }) ?? -1
+        cards.firstIndex(where: { $0 == card }) ?? -1
     }
     
     func removeCardFromStack() {
