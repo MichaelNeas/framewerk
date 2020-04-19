@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import os.log
 
 class CardStore {
     let decoder = JSONDecoder()
@@ -40,7 +41,7 @@ class CardStore {
             let data = try encoder.encode(data)
             try data.write(to: getDocumentsDirectory(with: .cards), options: [.atomicWrite])
         } catch {
-            print(error.localizedDescription)
+            os_log("Error writing data: %s", log: Log.app, type: .error, error.localizedDescription)
         }
     }
     

@@ -23,7 +23,7 @@ struct FramewerkCardData: Codable {
     }
 }
 
-class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
+class Card: ObservableObject, CustomStringConvertible, Codable, Equatable, Identifiable, Comparable {
     let id = UUID()
     @Published var question: String
     @Published var answer: String
@@ -56,6 +56,10 @@ class Card: ObservableObject, Codable, Equatable, Identifiable, Comparable {
         try container.encode(answer, forKey: .answer)
         try container.encode(link, forKey: .link)
         try container.encode(favorite, forKey: .favorite)
+    }
+    
+    var description: String {
+        "\(id): \(question) - \(answer)"
     }
     
     static func < (lhs: Card, rhs: Card) -> Bool {

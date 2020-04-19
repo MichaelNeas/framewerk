@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import os.log
 
 struct CardDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -43,11 +44,9 @@ struct CardDetail: View {
                         .padding()
                 }
             }
-            .navigationBarTitle(Text($card.question.wrappedValue), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                 self.presentationMode.wrappedValue.dismiss()
                 self.commited?(self.card)
-                print("Dismissing sheet view...")
             }) {
                 Text("Save")
             })
@@ -70,7 +69,7 @@ struct CardDetail: View {
     // commit fires on 'done' and manually from change finishing
     func commit() {
         guard !isNewCard else { return }
-        print("COMMIT")
+        os_log("COMMIT changed card")
         commited?(card)
     }
 }

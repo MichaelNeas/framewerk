@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import os.log
 
 struct CardList: View {
     @Environment(\.editMode) var editMode: Binding<EditMode>?
@@ -29,7 +30,7 @@ struct CardList: View {
                             .foregroundColor(Color(UIColor.systemGreen))
                     }.sheet(isPresented: $showNewCard) {
                         CardDetail(card: Card.blank, commited: { card in
-                            print("Add me \(card)")
+                            os_log("Add New Card: %s", log: Log.app, type: .info, card.description)
                             self.model.add(card: card)
                         }, isNewCard: true)
                     }
@@ -55,7 +56,7 @@ struct CardList: View {
             List {
                 ForEach(self.model.all, id: \.id) { card in
                     NavigationLink(destination: CardDetail(card: card, commited: { card in
-                        print("Save me \(card)")
+                        os_log("Save New Card: %s", log: Log.app, type: .info, card.description)
                         self.model.save()
                     })) {
                         Text(card.question)
