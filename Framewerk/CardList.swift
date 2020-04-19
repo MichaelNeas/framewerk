@@ -25,8 +25,7 @@ struct CardList: View {
                         self.showNewCard = true
                     }) {
                         Text("Add New")
-                            .font(Font(UIFont(name: "HelveticaNeue", size: 18)!))
-                            .bold()
+                            .font(FramewerkStyle.mediumFont.font).bold()
                             .foregroundColor(Color(UIColor.systemGreen))
                     }.sheet(isPresented: $showNewCard) {
                         CardDetail(card: Card.blank, commited: { card in
@@ -39,8 +38,7 @@ struct CardList: View {
                         self.clearAllAlert = true
                     }) {
                         Text("Clear All")
-                            .font(Font(UIFont(name: "HelveticaNeue", size: 18)!))
-                            .bold()
+                            .font(FramewerkStyle.mediumFont.font).bold()
                             .foregroundColor(Color(UIColor.systemPink))
                     }
                     .alert(isPresented: $clearAllAlert) {
@@ -68,7 +66,7 @@ struct CardList: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "rectangle.stack")
-                    .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    .font(FramewerkStyle.bigFont.font)
                     .padding(.bottom, 8)
             }, trailing: EditButton())
         }.background(Color(UIColor.systemGray))

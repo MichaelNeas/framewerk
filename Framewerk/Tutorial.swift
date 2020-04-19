@@ -17,12 +17,12 @@ struct Tutorial: View {
             VStack {
                 Spacer(minLength: 40.0)
                 HStack {
-                    Image(systemName: "square.stack.3d.up").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
-                    Text("See all cards, update, add, or delete as you please!").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    Image(systemName: "square.stack.3d.up").font(FramewerkStyle.bigFont.font)
+                    Text("See all cards, update, add, or delete as you please!").font(FramewerkStyle.bigFont.font)
                 }.padding()
                 HStack {
-                    Image(systemName: "goforward").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
-                    Text("Refresh the cards list!").font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    Image(systemName: "goforward").font(FramewerkStyle.bigFont.font)
+                    Text("Refresh the cards list!").font(FramewerkStyle.bigFont.font)
                 }.padding()
                 self.TutorialCard
                 Spacer(minLength: 100.0)
@@ -30,12 +30,11 @@ struct Tutorial: View {
                     self.closeAction()
                 }, label: {
                     Text("Dismiss")
-                        .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                        .font(FramewerkStyle.bigFont.font)
                         .foregroundColor(Color(UIColor.black))
                 })
                 Spacer(minLength: 40.0)
             }.padding().frame(width: geo.size.width, height: geo.size.height, alignment: .center)
-            
         }
         .background(Color(UIColor.systemTeal.withAlphaComponent(0.97)))
         .edgesIgnoringSafeArea(.all)

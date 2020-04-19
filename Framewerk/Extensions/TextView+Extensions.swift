@@ -41,7 +41,7 @@ struct TextView: UIViewRepresentable {
         textView.isUserInteractionEnabled = true
         textView.backgroundColor = .clear
         textView.textColor = .systemGray4
-        textView.font = UIFont(name: "HelveticaNeue", size: 16)!
+        textView.font = FramewerkStyle.smallFont
         
         if text.isEmpty {
             // Set the placeholder

@@ -10,7 +10,6 @@ import SwiftUI
 import WebKit
 
 struct WebView: UIViewRepresentable {
-    
     let request: URLRequest
 
     func makeUIView(context: UIViewRepresentableContext<WebView>) -> WebView.UIViewType {

@@ -29,7 +29,7 @@ struct ContentView: View {
             ZStack {
                 if self.viewModel.cards.isEmpty {
                     withAnimation{
-                        Text("🤩 Woohoo! 🥳").font(Font(UIFont(name: "HelveticaNeue-Bold", size: 24)!))
+                        Text("🤩 Woohoo! 🥳").font(FramewerkStyle.bigFont.font)
                     }
                 }
                 ForEach(self.viewModel.cards) { card in
@@ -50,12 +50,12 @@ struct ContentView: View {
             .navigationBarItems(leading:
                 NavigationLink(destination: CardList(model: viewModel)){
                 Image(systemName: "square.stack.3d.up")
-                    .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    .font(FramewerkStyle.bigFont.font)
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
             }, trailing: Button(action: self.viewModel.refreshCards) {
                 Image(systemName: "goforward")
-                    .font(Font(UIFont(name: "HelveticaNeue", size: 24)!))
+                    .font(FramewerkStyle.bigFont.font)
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
             })
