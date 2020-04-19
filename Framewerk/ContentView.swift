@@ -32,14 +32,14 @@ struct ContentView: View {
                         Text("🤩 Woohoo! 🥳").font(Font(UIFont(name: "HelveticaNeue-Bold", size: 24)!))
                     }
                 }
-                ForEach(0..<self.viewModel.cards.count) { index in
-                    CardView(card: self.viewModel.cards[index], model: self.viewModel) {
+                ForEach(self.viewModel.cards) { card in
+                    CardView(card: card, model: self.viewModel) {
                         withAnimation {
                             self.viewModel.removeCardFromStack()
                         }
                     }
-                    .allowsHitTesting(self.viewModel.cards[index] == self.viewModel.cards.last)
-                    .stacked(at: index, in: self.viewModel.cards.count, initialOffset: self.viewModel.offsets[index])
+                    .allowsHitTesting(card == self.viewModel.cards.last)
+                    .stacked(at: self.viewModel.indexOf(card), in: self.viewModel.cards.count, initialOffset: self.viewModel.offsets[self.viewModel.indexOf(card)])
                 }
             }
             .onAppear {
