@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Framewerk
 //
 //  Created by Michael Neas on 1/24/20.
@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject var viewModel: ContentViewModel
+struct HomeView: View {
+    @ObservedObject var viewModel: HomeViewModel
     @State private var tutorial = UserDefaults.standard.bool(forKey: "tutorial")
     
     var isLandscape: Bool {
@@ -20,7 +20,7 @@ struct ContentView: View {
         .isLandscape ?? false
     }
     
-    init(model: ContentViewModel) {
+    init(model: HomeViewModel) {
         self.viewModel = model
     }
     
@@ -62,7 +62,7 @@ struct ContentView: View {
             .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
-        .overlay(Tutorial(closeAction: {
+        .overlay(TutorialView(closeAction: {
             withAnimation {
                 self.$tutorial.wrappedValue = true
             }

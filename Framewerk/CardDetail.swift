@@ -73,19 +73,3 @@ struct CardDetail: View {
         commited?(card)
     }
 }
-
-struct CardDetailTitle: View {
-    var title: String
-    var body: some View {
-        Text(title)
-            .bold()
-            .foregroundColor(.black)
-            .font(.headline)
-    }
-}
-
-struct CardDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        CardDetail(card: Card.test)
-    }
-}

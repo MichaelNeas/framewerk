@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  HomeViewModel.swift
 //  Framewerk
 //
 //  Created by Michael Neas on 1/25/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class ContentViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     @Published var cards = [Card]()
     @Published var bank = [Card]()
     @Published var all = [Card]()

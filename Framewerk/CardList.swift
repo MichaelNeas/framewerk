@@ -12,7 +12,7 @@ import os.log
 struct CardList: View {
     @Environment(\.editMode) var editMode: Binding<EditMode>?
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @ObservedObject var model: ContentViewModel
+    @ObservedObject var model: HomeViewModel
     @State private var clearAllAlert = false
     @State private var showNewCard = false
     

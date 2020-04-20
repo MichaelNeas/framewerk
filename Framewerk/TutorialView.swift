@@ -1,5 +1,5 @@
 //
-//  Tutorial.swift
+//  TutorialView.swift
 //  Framewerk
 //
 //  Created by Michael Neas on 4/15/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Tutorial: View {
+struct TutorialView: View {
     var closeAction: ()->()
     var TutorialCard: CardView
     
@@ -17,12 +17,12 @@ struct Tutorial: View {
             VStack {
                 Spacer(minLength: 40.0)
                 HStack {
-                    Image(systemName: "square.stack.3d.up").font(FramewerkStyle.bigFont.font)
-                    Text("See all cards, update, add, or delete as you please!").font(FramewerkStyle.bigFont.font)
+                    Image(systemName: "square.stack.3d.up").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
+                    Text("See all cards, update, add, or delete as you please!").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
                 }.padding()
                 HStack {
-                    Image(systemName: "goforward").font(FramewerkStyle.bigFont.font)
-                    Text("Refresh the cards list!").font(FramewerkStyle.bigFont.font)
+                    Image(systemName: "goforward").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
+                    Text("Refresh the cards list!").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
                 }.padding()
                 self.TutorialCard
                 Spacer(minLength: 100.0)

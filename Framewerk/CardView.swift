@@ -14,7 +14,7 @@ struct CardView: View {
     @State private var showDocumentation = false
     
     @ObservedObject var card: Card
-    @ObservedObject var model: ContentViewModel
+    @ObservedObject var model: HomeViewModel
     var removal: (() -> Void)?
 
     var body: some View {

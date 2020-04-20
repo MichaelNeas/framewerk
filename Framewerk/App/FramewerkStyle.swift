@@ -15,6 +15,16 @@ struct FramewerkStyle {
     static let smallFont = UIFont(name: "HelveticaNeue", size: 16)!
 }
 
+struct CardDetailTitle: View {
+    var title: String
+    var body: some View {
+        Text(title)
+            .bold()
+            .foregroundColor(.black)
+            .font(.headline)
+    }
+}
+
 extension UIFont {
     var font: Font {
         Font(self)
