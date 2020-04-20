@@ -17,11 +17,17 @@ struct TutorialView: View {
             VStack {
                 Spacer(minLength: 40.0)
                 HStack {
-                    Image(systemName: "square.stack.3d.up").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
+                    Image(systemName: "square.stack.3d.up")
+                        .font(FramewerkStyle.bigFont.font)
+                        .foregroundColor(.black)
+                        .accessibility(label: Text("List Cards"))
                     Text("See all cards, update, add, or delete as you please!").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
                 }.padding()
                 HStack {
-                    Image(systemName: "goforward").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
+                    Image(systemName: "goforward")
+                        .font(FramewerkStyle.bigFont.font)
+                        .foregroundColor(.black)
+                        .accessibility(label: Text("Refresh List"))
                     Text("Refresh the cards list!").font(FramewerkStyle.bigFont.font).foregroundColor(.black)
                 }.padding()
                 self.TutorialCard

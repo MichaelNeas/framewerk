@@ -68,6 +68,7 @@ struct CardList: View {
                 Image(systemName: "rectangle.stack")
                     .font(FramewerkStyle.bigFont.font)
                     .padding(.bottom, 8)
+                    .accessibility(label: Text("Back to single card view"))
             }, trailing: EditButton())
         }.background(Color(UIColor.systemGray))
     }

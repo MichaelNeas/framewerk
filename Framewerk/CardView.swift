@@ -65,6 +65,7 @@ struct CardView: View {
                                 Image(systemName: self.card.favorite ? "star.fill" : "star")
                                     .font(.title)
                                     .foregroundColor(Color(UIColor.systemIndigo))
+                                    .accessibility(label: Text("Card \(self.card.favorite ? "" :  "Not") favorited"))
                             }
                             Spacer()
                             Button(action: {
@@ -73,6 +74,7 @@ struct CardView: View {
                                 Image(systemName: "info.circle")
                                     .font(.title)
                                     .foregroundColor(Color(UIColor.systemIndigo))
+                                    .accessibility(label: Text("Information web view"))
                             }.transition(.opacity)
                             .sheet(isPresented: self.$showDocumentation) {
                                 WebView(request: URLRequest(url: self.card.link))

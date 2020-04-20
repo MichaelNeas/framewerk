@@ -53,11 +53,13 @@ struct HomeView: View {
                     .font(FramewerkStyle.bigFont.font)
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
+                    .accessibility(label: Text("View list of cards"))
             }, trailing: Button(action: self.viewModel.refreshCards) {
                 Image(systemName: "goforward")
                     .font(FramewerkStyle.bigFont.font)
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
+                    .accessibility(label: Text("Refresh List"))
             })
             .navigationBarTitle("Framewerk", displayMode: .inline)
             .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
