@@ -38,7 +38,7 @@ struct CardView: View {
                         }))
                         .lineLimit(nil)
                         .allowsTightening(true)
-                        .minimumScaleFactor(0.3)
+                        .minimumScaleFactor(0.7)
 
                     if self.isShowingAnswer {
                         Spacer()
@@ -47,7 +47,7 @@ struct CardView: View {
                             .foregroundColor(.secondary)
                             .lineLimit(nil)
                             .allowsTightening(true)
-                            .minimumScaleFactor(0.5)
+                            .minimumScaleFactor(0.9)
                             .transition(.opacity)
                         Spacer()
                         Text(self.card.sdkDescription)
@@ -55,7 +55,7 @@ struct CardView: View {
                             .foregroundColor(.secondary)
                             .lineLimit(2)
                             .allowsTightening(true)
-                            .minimumScaleFactor(0.5)
+                            .minimumScaleFactor(0.75)
                         Spacer(minLength: 30.0)
                         HStack {
                             Button(action: {
