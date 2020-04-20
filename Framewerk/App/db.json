@@ -1,1031 +1,1251 @@
 {
-    "appFrameworks": [
-        {
+    "appFrameworks": [{
             "question": "AppKit",
             "answer": "Construct and manage a graphical, event-driven user interface for your macOS app.",
-            "link": "https://developer.apple.com/documentation/appkit"
+            "link": "https://developer.apple.com/documentation/appkit",
+            "sdks": ["macOS 10.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Bundle Resources",
             "answer": "Resources located in an app, framework, or plugin bundle.",
-            "link": "https://developer.apple.com/documentation/bundleresources"
+            "link": "https://developer.apple.com/documentation/bundleresources",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "tvOS 13.0+", "watchOS 6.0+"]
         },
         {
             "question": "Foundation",
             "answer": "Access essential data types, collections, and operating-system services to define the base layer of functionality for your app.",
-            "link": "https://developer.apple.com/documentation/foundation"
+            "link": "https://developer.apple.com/documentation/foundation",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Swift",
             "answer": "Build apps using a powerful open language.",
-            "link": "https://developer.apple.com/documentation/swift"
+            "link": "https://developer.apple.com/documentation/swift",
+            "sdks": ["Xcode 6.0.1+"]
         },
         {
             "question": "SwiftUI",
             "answer": "Declare the user interface and behavior for your app on every platform.",
-            "link": "https://developer.apple.com/documentation/swiftui"
+            "link": "https://developer.apple.com/documentation/swiftui",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
         },
         {
             "question": "TVML",
             "answer": "Use Apple TV Markup Language to create individual pages inside of a client-server app.",
-            "link": "https://developer.apple.com/documentation/tvml"
+            "link": "https://developer.apple.com/documentation/tvml",
+            "sdks": []
         },
         {
             "question": "TVMLKit",
             "answer": "Create client-server apps by incorporating JavaScript and TVML files in your binary app.",
-            "link": "https://developer.apple.com/documentation/tvmlkit"
+            "link": "https://developer.apple.com/documentation/tvmlkit",
+            "sdks": ["tvOS 9.0+"]
         },
         {
             "question": "TVMLKit JS",
             "answer": "Create tvOS client-server apps using web technologies to stream media and respond to events.",
-            "link": "https://developer.apple.com/documentation/tvmljs"
+            "link": "https://developer.apple.com/documentation/tvmljs",
+            "sdks": ["tvOS 10.0+"]
         },
         {
             "question": "TVUIKit",
             "answer": "Show common user interface elements from Apple TV in your native app.",
-            "link": "https://developer.apple.com/documentation/tvuikit"
+            "link": "https://developer.apple.com/documentation/tvuikit",
+            "sdks": ["tvOS 12.0+"]
         },
         {
             "question": "UIKit",
             "answer": "Construct and manage a graphical, event-driven user interface for your iOS or tvOS app.",
-            "link": "https://developer.apple.com/documentation/uikit"
+            "link": "https://developer.apple.com/documentation/uikit",
+            "sdks": ["iOS 2.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "WatchKit",
             "answer": "Build apps that leverage watchOS features like background tasks, extended runtime sessions, and access to the Digital Crown.",
-            "link": "https://developer.apple.com/documentation/watchkit"
+            "link": "https://developer.apple.com/documentation/watchkit",
+            "sdks": ["watchOS 2.0+"]
         }
     ],
-    "appServices": [
-        {
+    "appServices": [{
             "question": "Accounts",
             "answer": "Help users access and manage their external accounts from within your app, without requiring them to enter login credentials.",
-            "link": "https://developer.apple.com/documentation/accounts"
+            "link": "https://developer.apple.com/documentation/accounts",
+            "sdks": ["iOS 5.0+", "macOS 10.8+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "AddressBook",
             "answer": "Access the centralized database for storing users’ contacts.",
-            "link": "https://developer.apple.com/documentation/addressbook"
+            "link": "https://developer.apple.com/documentation/addressbook",
+            "sdks": ["iOS 2.0+", "macOS 10.2+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "AddressBookUI",
             "answer": "Access users’ contacts and display them in a graphical interface.",
-            "link": "https://developer.apple.com/documentation/addressbookui"
+            "link": "https://developer.apple.com/documentation/addressbookui",
+            "sdks": ["iOS 2.0+"]
         },
         {
             "question": "AdSupport",
             "answer": "Provide apps with access to an advertising identifier and a flag indicating whether a device is using limited ad tracking.",
-            "link": "https://developer.apple.com/documentation/adsupport"
+            "link": "https://developer.apple.com/documentation/adsupport",
+            "sdks": ["iOS 6.0+", "macOS 10.14+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "App Store Receipts",
             "answer": "Validate app and in-app purchase receipts with the App Store.",
-            "link": "https://developer.apple.com/documentation/appstorereceipts"
+            "link": "https://developer.apple.com/documentation/appstorereceipts",
+            "sdks": []
         },
         {
             "question": "App Store Server Notifications",
             "answer": "Monitor subscription events in real time with server notifications from the App Store.",
-            "link": "https://developer.apple.com/documentation/appstoreservernotifications"
+            "link": "https://developer.apple.com/documentation/appstoreservernotifications",
+            "sdks": []
         },
         {
             "question": "ApplicationServices",
             "answer": "Perform common application tasks.",
-            "link": "https://developer.apple.com/documentation/applicationservices"
+            "link": "https://developer.apple.com/documentation/applicationservices",
+            "sdks": ["macOS 10.0+", "Mac Catalyst 13.0+"]
+        },
+        {
+            "question": "AutomaticAssessmentConfiguration",
+            "answer": "Prevent users from accessing specific system features during high-stakes assessment activities, such as administering an exam.",
+            "link": "https://developer.apple.com/documentation/automaticassessmentconfiguration",
+            "sdks": ["iOS 13.4+", "macOS 10.15.4+", "Mac Catalyst 13.4+"]
         },
         {
             "question": "BackgroundTasks",
             "answer": "Request the system to launch your app in the background to run tasks.",
-            "link": "https://developer.apple.com/documentation/backgroundtasks"
+            "link": "https://developer.apple.com/documentation/backgroundtasks",
+            "sdks": ["iOS 13.0+", "Mac Catalyst 13.0+", "tvOS 13.0+"]
         },
         {
             "question": "Business Chat",
             "answer": "Chat with your customers using the Messages app.",
-            "link": "https://developer.apple.com/documentation/businesschat"
+            "link": "https://developer.apple.com/documentation/businesschat",
+            "sdks": ["iOS 11.3+", "macOS 10.14+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Business Chat REST API",
             "answer": "Support your clients and their customers by integrating your messaging platform with the Business Chat service.",
-            "link": "https://developer.apple.com/documentation/businesschatapi"
+            "link": "https://developer.apple.com/documentation/businesschatapi",
+            "sdks": []
         },
         {
             "question": "CallKit",
             "answer": "Display the system-calling UI for your app’s VoIP services, and coordinate your calling services with other apps and the system.",
-            "link": "https://developer.apple.com/documentation/callkit"
+            "link": "https://developer.apple.com/documentation/callkit",
+            "sdks": ["iOS 10.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "CareKit",
             "answer": "Create apps that help people better understand and manage their health.",
-            "link": "https://developer.apple.com/documentation/carekit"
+            "link": "https://developer.apple.com/documentation/carekit",
+            "sdks": ["CareKit 2.0+"]
         },
         {
             "question": "CarPlay",
             "answer": "Add CarPlay support to your navigation app.",
-            "link": "https://developer.apple.com/documentation/carplay"
+            "link": "https://developer.apple.com/documentation/carplay",
+            "sdks": ["iOS 12.0+"]
         },
         {
             "question": "ClassKit",
             "answer": "Enable teachers to assign activities from your app’s content and to view student progress.",
-            "link": "https://developer.apple.com/documentation/classkit"
+            "link": "https://developer.apple.com/documentation/classkit",
+            "sdks": ["iOS 11.4+"]
         },
         {
             "question": "ClockKit",
             "answer": "Display app-specific data in the complications on the clock face.",
-            "link": "https://developer.apple.com/documentation/clockkit"
+            "link": "https://developer.apple.com/documentation/clockkit",
+            "sdks": ["watchOS 2.0+"]
         },
         {
             "question": "CloudKit",
             "answer": "Store structured app and user data in iCloud containers that can be shared by all users of your app.",
-            "link": "https://developer.apple.com/documentation/cloudkit"
+            "link": "https://developer.apple.com/documentation/cloudkit",
+            "sdks": ["iOS 8.0+", "macOS 10.10+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 3.0+"]
         },
         {
             "question": "Combine",
             "answer": "Customize handling of asynchronous events by combining event-processing operators.",
-            "link": "https://developer.apple.com/documentation/combine"
+            "link": "https://developer.apple.com/documentation/combine",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
         },
         {
             "question": "Contacts",
             "answer": "Access the user's contacts and format and localize contact information.",
-            "link": "https://developer.apple.com/documentation/contacts"
+            "link": "https://developer.apple.com/documentation/contacts",
+            "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "watchOS 2.0+"]
         },
         {
             "question": "ContactsUI",
             "answer": "Display information about users’ contacts in a graphical interface.",
-            "link": "https://developer.apple.com/documentation/contactsui"
+            "link": "https://developer.apple.com/documentation/contactsui",
+            "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core Data",
             "answer": "Persist or cache data and support undo on a single device.",
-            "link": "https://developer.apple.com/documentation/coredata"
+            "link": "https://developer.apple.com/documentation/coredata",
+            "sdks": ["iOS 3.0+", "macOS 10.4+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Core Foundation",
             "answer": "Access low-level functions, primitive data types, and various collection types that are bridged seamlessly with the Foundation framework.",
-            "link": "https://developer.apple.com/documentation/corefoundation"
+            "link": "https://developer.apple.com/documentation/corefoundation",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Core Location",
             "answer": "Obtain the geographic location and orientation of a device.",
-            "link": "https://developer.apple.com/documentation/corelocation"
+            "link": "https://developer.apple.com/documentation/corelocation",
+            "sdks": ["iOS 2.0+", "macOS 10.6+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Core ML",
             "answer": "Integrate machine learning models into your app.",
-            "link": "https://developer.apple.com/documentation/coreml"
+            "link": "https://developer.apple.com/documentation/coreml",
+            "sdks": ["iOS 11.0+", "macOS 10.13+", "Mac Catalyst 13.0+", "tvOS 11.0+", "watchOS 4.0+"]
         },
         {
             "question": "Core Motion",
             "answer": "Process accelerometer, gyroscope, pedometer, and environment-related events.",
-            "link": "https://developer.apple.com/documentation/coremotion"
+            "link": "https://developer.apple.com/documentation/coremotion",
+            "sdks": ["iOS 4.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "watchOS 2.0+"]
         },
         {
             "question": "Core Spotlight",
             "answer": "Index your app so users can search the content from Spotlight and Safari.",
-            "link": "https://developer.apple.com/documentation/corespotlight"
+            "link": "https://developer.apple.com/documentation/corespotlight",
+            "sdks": ["iOS 9.0+", "macOS 10.13+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core Text",
             "answer": "Create text layouts, optimize font handling, and access font metrics and glyph data.",
-            "link": "https://developer.apple.com/documentation/coretext"
+            "link": "https://developer.apple.com/documentation/coretext",
+            "sdks": ["iOS 3.2+", "macOS 10.8+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Create ML",
             "answer": "Create machine learning models for use in your app.",
-            "link": "https://developer.apple.com/documentation/createml"
+            "link": "https://developer.apple.com/documentation/createml",
+            "sdks": ["macOS 10.14+"]
         },
         {
             "question": "DeviceCheck",
             "answer": "Access per-device, per-developer data that your associated server can use in its business logic.",
-            "link": "https://developer.apple.com/documentation/devicecheck"
+            "link": "https://developer.apple.com/documentation/devicecheck",
+            "sdks": ["iOS 11.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 11.0+"]
         },
         {
             "question": "EventKit",
             "answer": "Create, view, and edit calendar and reminder events.",
-            "link": "https://developer.apple.com/documentation/eventkit"
+            "link": "https://developer.apple.com/documentation/eventkit",
+            "sdks": ["iOS 4.0+", "macOS 10.8+", "Mac Catalyst 13.0+", "watchOS 2.0+"]
         },
         {
             "question": "EventKitUI",
             "answer": "Display an interface for viewing, selecting, and editing calendar events and reminders.",
-            "link": "https://developer.apple.com/documentation/eventkitui"
+            "link": "https://developer.apple.com/documentation/eventkitui",
+            "sdks": ["iOS 4.0+", "macOS 10.8+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "FileProvider",
             "answer": "Implement a File Provider extension so that other apps can access the documents and directories stored and managed by your containing app.",
-            "link": "https://developer.apple.com/documentation/fileprovider"
+            "link": "https://developer.apple.com/documentation/fileprovider",
+            "sdks": ["iOS 11.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "FileProviderUI",
             "answer": "Add actions to the document browser's context menu.",
-            "link": "https://developer.apple.com/documentation/fileproviderui"
+            "link": "https://developer.apple.com/documentation/fileproviderui",
+            "sdks": ["iOS 11.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "HealthKit",
             "answer": "Access and share health and fitness data while maintaining the user’s privacy and control.",
-            "link": "https://developer.apple.com/documentation/healthkit"
+            "link": "https://developer.apple.com/documentation/healthkit",
+            "sdks": ["iOS 8.0+", "Mac Catalyst 13.0+", "watchOS 2.0+"]
         },
         {
             "question": "HomeKit",
             "answer": "Communicate with, configure, and control home automation accessories.",
-            "link": "https://developer.apple.com/documentation/homekit"
+            "link": "https://developer.apple.com/documentation/homekit",
+            "sdks": ["iOS 8.0+", "tvOS 10.0+", "watchOS 2.0+"]
         },
         {
             "question": "iAd",
             "answer": "Track and attribute app downloads that originate from Apple Search Ads campaigns.",
-            "link": "https://developer.apple.com/documentation/iad"
+            "link": "https://developer.apple.com/documentation/iad",
+            "sdks": ["iOS 4.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "JavaScriptCore",
             "answer": "Evaluate JavaScript programs from within an app, and support JavaScript scripting of your app.",
-            "link": "https://developer.apple.com/documentation/javascriptcore"
+            "link": "https://developer.apple.com/documentation/javascriptcore",
+            "sdks": ["iOS 7.0+", "macOS 10.5+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "MapKit",
             "answer": "Display map or satellite imagery from your app's interface, call out points of interest, and determine placemark information for map coordinates.",
-            "link": "https://developer.apple.com/documentation/mapkit"
+            "link": "https://developer.apple.com/documentation/mapkit",
+            "sdks": ["iOS 3.0+", "macOS 10.9+", "Mac Catalyst 13.0+", "tvOS 9.2+", "watchOS 2.0+"]
         },
         {
             "question": "Messages",
             "answer": "Create app extensions that allow users to send text, stickers, media files, and interactive messages.",
-            "link": "https://developer.apple.com/documentation/messages"
+            "link": "https://developer.apple.com/documentation/messages",
+            "sdks": ["iOS 10.0+"]
         },
         {
             "question": "MessageUI",
             "answer": "Create a user interface for composing email and text messages, so users can edit and send messages without leaving your app.",
-            "link": "https://developer.apple.com/documentation/messageui"
+            "link": "https://developer.apple.com/documentation/messageui",
+            "sdks": ["iOS 3.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "MultipeerConnectivity",
             "answer": "Support peer-to-peer connectivity and the discovery of nearby devices.",
-            "link": "https://developer.apple.com/documentation/multipeerconnectivity"
+            "link": "https://developer.apple.com/documentation/multipeerconnectivity",
+            "sdks": ["iOS 7.0+", "macOS 10.10+", "Mac Catalyst 13.0+", "tvOS 10.0+"]
         },
         {
             "question": "Natural Language",
             "answer": "Analyze natural language text and deduce its language-specific metadata.",
-            "link": "https://developer.apple.com/documentation/naturallanguage"
+            "link": "https://developer.apple.com/documentation/naturallanguage",
+            "sdks": ["iOS 12.0+", "macOS 10.14+", "Mac Catalyst 13.0+", "tvOS 12.0+", "watchOS 5.0+"]
         },
         {
             "question": "NewsstandKit",
             "answer": "Browse and download newspaper and magazine assets in the background.",
-            "link": "https://developer.apple.com/documentation/newsstandkit"
+            "link": "https://developer.apple.com/documentation/newsstandkit",
+            "sdks": ["iOS 5.0+"]
         },
         {
             "question": "NotificationCenter",
             "answer": "Create and manage widgets for the Today view.",
-            "link": "https://developer.apple.com/documentation/notificationcenter"
+            "link": "https://developer.apple.com/documentation/notificationcenter",
+            "sdks": ["iOS 8.0+", "macOS 10.10+"]
         },
         {
             "question": "PassKit (Apple Pay and Wallet)",
             "answer": "Request and process Apple Pay payments in your app. Create, distribute, and update passes for the Wallet app.",
-            "link": "https://developer.apple.com/documentation/passkit"
+            "link": "https://developer.apple.com/documentation/passkit",
+            "sdks": ["iOS 6.0+", "Mac Catalyst 13.0+", "watchOS 2.0+"]
         },
         {
             "question": "PreferencePanes",
             "answer": "Integrate your app's custom preferences into the System Preferences app.",
-            "link": "https://developer.apple.com/documentation/preferencepanes"
+            "link": "https://developer.apple.com/documentation/preferencepanes",
+            "sdks": ["macOS 10.1+"]
         },
         {
             "question": "PushKit",
             "answer": "Respond to push notifications related to your app’s complications, file providers, and VoIP services.",
-            "link": "https://developer.apple.com/documentation/pushkit"
+            "link": "https://developer.apple.com/documentation/pushkit",
+            "sdks": ["iOS 8.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "watchOS 6.0+"]
         },
         {
             "question": "QuickLook",
-            "answer": "",
-            "link": "https://developer.apple.com/documentation/quicklook"
+            "answer": "Create previews of files to use inside your app, or perform simple edits on previews.",
+            "link": "https://developer.apple.com/documentation/quicklook",
+            "sdks": ["iOS 4.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "QuickLookThumbnailing",
             "answer": "Generate thumbnails for common file types and add a Thumbnail Extension to your app to enable others to create thumbnails of your custom files.",
-            "link": "https://developer.apple.com/documentation/quicklookthumbnailing"
+            "link": "https://developer.apple.com/documentation/quicklookthumbnailing",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "SafariServices",
             "answer": "Enable web views and services in your app.",
-            "link": "https://developer.apple.com/documentation/safariservices"
+            "link": "https://developer.apple.com/documentation/safariservices",
+            "sdks": ["iOS 7.0+", "macOS 10.12+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "SiriKit",
             "answer": "Handle user requests for your app’s services that originate from Siri or Maps.",
-            "link": "https://developer.apple.com/documentation/sirikit"
+            "link": "https://developer.apple.com/documentation/sirikit",
+            "sdks": ["iOS 10.0+", "Mac Catalyst 13.0+", "watchOS 3.2+"]
         },
         {
             "question": "SMS and Call Reporting",
             "answer": "SMS and Call Reporting provides extensions to manage unwanted communication.",
-            "link": "https://developer.apple.com/documentation/sms_and_call_reporting"
+            "link": "https://developer.apple.com/documentation/sms_and_call_reporting",
+            "sdks": ["iOS 11.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Social",
             "answer": "Post content to supported social networking services, using standard system interfaces.",
-            "link": "https://developer.apple.com/documentation/social"
+            "link": "https://developer.apple.com/documentation/social",
+            "sdks": ["iOS 6.0+", "macOS 10.8+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Speech",
             "answer": "Perform speech recognition on live or prerecorded audio, receive transcriptions, alternative interpretations, and confidence levels of the results.",
-            "link": "https://developer.apple.com/documentation/speech"
+            "link": "https://developer.apple.com/documentation/speech",
+            "sdks": ["iOS 10.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "StoreKit",
             "answer": "Support in-app purchases and interactions with the App Store.",
-            "link": "https://developer.apple.com/documentation/storekit"
+            "link": "https://developer.apple.com/documentation/storekit",
+            "sdks": ["iOS 3.0+", "macOS 10.17+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 6.2+"]
         },
         {
             "question": "TVServices",
             "answer": "Help users discover your app by providing top shelf content and a description of your tvOS app.",
-            "link": "https://developer.apple.com/documentation/tvservices"
+            "link": "https://developer.apple.com/documentation/tvservices",
+            "sdks": ["tvOS 9.0+"]
         },
         {
             "question": "UserNotifications",
             "answer": "Push user-facing notifications to the user's device from a server, or generate them locally from your app.",
-            "link": "https://developer.apple.com/documentation/usernotifications"
+            "link": "https://developer.apple.com/documentation/usernotifications",
+            "sdks": ["iOS 10.0+", "macOS 10.14+", "Mac Catalyst 13.0+", "tvOS 10.0+", "watchOS 3.0+"]
         },
         {
             "question": "UserNotificationsUI",
             "answer": "Customize the interface that displays local and remote notifications.",
-            "link": "https://developer.apple.com/documentation/usernotificationsui"
+            "link": "https://developer.apple.com/documentation/usernotificationsui",
+            "sdks": ["iOS 10.0+"]
+        },
+        {
+            "question": "Wallet Passes",
+            "answer": "GET POST DELETE various wallet and device information",
+            "link": "https://developer.apple.com/documentation/walletpasses",
+            "sdks": []
         },
         {
             "question": "WatchConnectivity",
             "answer": "Implement two-way communication between an iOS app and its paired watchOS app.",
-            "link": "https://developer.apple.com/documentation/watchconnectivity"
+            "link": "https://developer.apple.com/documentation/watchconnectivity",
+            "sdks": ["iOS 9.0+", "Mac Catalyst 13.0+", "watchOS 2.0+"]
         },
         {
             "question": "WebKit",
             "answer": "Display web content in windows. Implement browser features such as following user-activated links, managing a back-forward list, and managing a history of recently visited pages.",
-            "link": "https://developer.apple.com/documentation/webkit"
+            "link": "https://developer.apple.com/documentation/webkit",
+            "sdks": ["iOS 8.0+", "macOS 10.2+", "Mac Catalyst 13.0+"]
         }
     ],
-    "developerTools": [
-        {
+    "developerTools": [{
             "question": "Automator",
             "answer": "Develop actions that can be loaded and run by the Automator app. View, edit, and run Automator workflows in your app.",
-            "link": "https://developer.apple.com/documentation/automator"
+            "link": "https://developer.apple.com/documentation/automator",
+            "sdks": ["macOS 10.4+"]
         },
         {
             "question": "Code Diagnostics",
             "answer": "Enable runtime checks to detect and avoid bugs in your code.",
-            "link": "https://developer.apple.com/documentation/code_diagnostics"
+            "link": "https://developer.apple.com/documentation/code_diagnostics",
+            "sdks": ["Xcode 7.0+"]
         },
         {
             "question": "InstallerJS",
             "answer": "Manage and customize the installation and distribution experience.",
-            "link": "https://developer.apple.com/documentation/installerjs"
+            "link": "https://developer.apple.com/documentation/installerjs",
+            "sdks": []
         },
         {
             "question": "Playground Support",
             "answer": "Share playground data, manage live views, and control the execution of a playground.",
-            "link": "https://developer.apple.com/documentation/playgroundsupport"
+            "link": "https://developer.apple.com/documentation/playgroundsupport",
+            "sdks": ["macOS 10.12+", "Swift Playgrounds 2.0+"]
         },
         {
             "question": "PlaygroundBluetooth",
             "answer": "Display and manage connections to Bluetooth peripherals in Swift Playgrounds.",
-            "link": "https://developer.apple.com/documentation/playgroundbluetooth"
+            "link": "https://developer.apple.com/documentation/playgroundbluetooth",
+            "sdks": ["Swift Playgrounds 2.0+"]
         },
         {
             "question": "ScriptingBridge",
             "answer": "Automate scriptable apps by sending and receiving Apple events.",
-            "link": "https://developer.apple.com/documentation/scriptingbridge"
+            "link": "https://developer.apple.com/documentation/scriptingbridge",
+            "sdks": ["macOS 10.5+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Swift Packages",
             "answer": "Create reusable code, organize it in a lightweight way, and share it across Xcode projects and with other developers.",
-            "link": "https://developer.apple.com/documentation/swift_packages"
+            "link": "https://developer.apple.com/documentation/swift_packages",
+            "sdks": ["Xcode 9.0+"]
         },
         {
             "question": "Swift Playgrounds",
             "answer": "Create interactive learning experiences for the Swift Playgrounds app.",
-            "link": "https://developer.apple.com/documentation/swift_playgrounds"
+            "link": "https://developer.apple.com/documentation/swift_playgrounds",
+            "sdks": []
         },
         {
             "question": "Xcode",
             "answer": "Build, test, and submit your app with Apple's integrated development environment.",
-            "link": "https://developer.apple.com/documentation/xcode"
+            "link": "https://developer.apple.com/documentation/xcode",
+            "sdks": []
         },
         {
             "question": "XcodeKit",
             "answer": "Create extensions to add commands to the Xcode source editor.",
-            "link": "https://developer.apple.com/documentation/xcodekit"
+            "link": "https://developer.apple.com/documentation/xcodekit",
+            "sdks": ["macOS 10.12+"]
+        },
+        {
+            "question": "xcselect",
+            "answer": "A function that finds the path to a macOS SDK version on disk.",
+            "link": "https://developer.apple.com/documentation/xcselect",
+            "sdks": ["macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "XCTest",
             "answer": "Create and run unit tests, performance tests, and UI tests for your Xcode project.",
-            "link": "https://developer.apple.com/documentation/xctest"
+            "link": "https://developer.apple.com/documentation/xctest",
+            "sdks": ["Xcode 5.0+"]
         }
     ],
-    "graphicsAndGames": [
-        {
+    "graphicsAndGames": [{
             "question": "AGL",
             "answer": "Create and manage OpenGL rendering contexts for use in macOS, and perform operations on drawable objects.",
-            "link": "https://developer.apple.com/documentation/agl"
+            "link": "https://developer.apple.com/documentation/agl",
+            "sdks": ["macOS 10.0+"]
         },
         {
             "question": "ARKit",
             "answer": "Integrate iOS device camera and motion features to produce augmented reality experiences in your app or game.",
-            "link": "https://developer.apple.com/documentation/arkit"
+            "link": "https://developer.apple.com/documentation/arkit",
+            "sdks": ["iOS 11.0+"]
         },
         {
             "question": "ColorSync",
             "answer": "",
-            "link": "https://developer.apple.com/documentation/colorsync"
+            "link": "https://developer.apple.com/documentation/colorsync",
+            "sdks": ["macOS 10.13+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core Animation",
             "answer": "Render, compose, and animate visual elements.",
-            "link": "https://developer.apple.com/documentation/quartzcore"
+            "link": "https://developer.apple.com/documentation/quartzcore",
+            "sdks": ["iOS 2.0+", "macOS 10.3+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "Core Graphics",
             "answer": "Harness the power of Quartz technology to perform lightweight 2D rendering with high-fidelity output. Handle path-based drawing, antialiased rendering, gradients, images, color management, PDF documents, and more.",
-            "link": "https://developer.apple.com/documentation/coregraphics"
+            "link": "https://developer.apple.com/documentation/coregraphics",
+            "sdks": ["iOS 2.0+", "macOS 10.8+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Core Image",
             "answer": "Use built-in or custom filters to process still and video images.",
-            "link": "https://developer.apple.com/documentation/coreimage"
+            "link": "https://developer.apple.com/documentation/coreimage",
+            "sdks": ["iOS 5.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "Game Controller",
             "answer": "Support hardware game controllers in your game.",
-            "link": "https://developer.apple.com/documentation/gamecontroller"
+            "link": "https://developer.apple.com/documentation/gamecontroller",
+            "sdks": ["iOS 7.0+", "macOS 10.9+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "GameKit",
             "answer": "Create experiences that keep players coming back to your game. Add leaderboards, achievements, matchmaking, challenges, and more.",
-            "link": "https://developer.apple.com/documentation/gamekit"
+            "link": "https://developer.apple.com/documentation/gamekit",
+            "sdks": ["iOS 3.0+", "macOS 10.8+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 3.0+"]
         },
         {
             "question": "GameplayKit",
             "answer": "Architect and organize your game logic. Incorporate common gameplay behaviors such as random number generation, artificial intelligence, pathfinding, and agent behavior.",
-            "link": "https://developer.apple.com/documentation/gameplaykit"
+            "link": "https://developer.apple.com/documentation/gameplaykit",
+            "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "GLKit",
             "answer": "Speed up OpenGL ES or OpenGL app development. Use math libraries, background texture loading, pre-created shader effects, and a standard view and view controller to implement your rendering loop.",
-            "link": "https://developer.apple.com/documentation/glkit"
+            "link": "https://developer.apple.com/documentation/glkit",
+            "sdks": ["iOS 5.0+", "macOS 10.8+", "tvOS 9.0+"]
         },
         {
             "question": "Image I/O",
             "answer": "Read and write most image file formats. Manage color and access image metadata.",
-            "link": "https://developer.apple.com/documentation/imageio"
+            "link": "https://developer.apple.com/documentation/imageio",
+            "sdks": ["iOS 4.0+", "macOS 10.8+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Metal",
             "answer": "Render advanced 3D graphics and perform data-parallel computations using graphics processors.",
-            "link": "https://developer.apple.com/documentation/metal"
+            "link": "https://developer.apple.com/documentation/metal",
+            "sdks": ["iOS 8.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "Metal Performance Shaders",
             "answer": "Optimize graphics and compute performance with kernels that are fine-tuned for the unique characteristics of each Metal GPU family.",
-            "link": "https://developer.apple.com/documentation/metalperformanceshaders"
+            "link": "https://developer.apple.com/documentation/metalperformanceshaders",
+            "sdks": ["iOS 9.0+", "macOS 10.13+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "MetalKit",
             "answer": "Build Metal apps quicker and easier, using far less code. Render graphics in a standard Metal view, load textures from many sources, and work efficiently with models provided by Model I/O.",
-            "link": "https://developer.apple.com/documentation/metalkit"
+            "link": "https://developer.apple.com/documentation/metalkit",
+            "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "Model I/O",
             "answer": "Import, export, and manipulate 3D models using a common infrastructure that integrates MetalKit, GLKit, and SceneKit.",
-            "link": "https://developer.apple.com/documentation/modelio"
+            "link": "https://developer.apple.com/documentation/modelio",
+            "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "OpenGL ES",
             "answer": "Create 3D and 2D graphics effects with this compact, efficient subset of OpenGL.",
-            "link": "https://developer.apple.com/documentation/opengles"
+            "link": "https://developer.apple.com/documentation/opengles",
+            "sdks": ["iOS 2.0+", "tvOS 9.0+"]
         },
         {
             "question": "PDFKit",
             "answer": "Display and manipulate PDF documents in your applications.",
-            "link": "https://developer.apple.com/documentation/pdfkit"
+            "link": "https://developer.apple.com/documentation/pdfkit",
+            "sdks": ["iOS 11.0+", "tvOS 10.4+"]
         },
         {
             "question": "PencilKit",
             "answer": "Capture touch input as an opaque drawing and display that content from your app.",
-            "link": "https://developer.apple.com/documentation/pencilkit"
+            "link": "https://developer.apple.com/documentation/pencilkit",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Quartz",
             "answer": "Allow users to browse, edit, and save images, using slideshows and Core Image filters.",
-            "link": "https://developer.apple.com/documentation/quartz"
+            "link": "https://developer.apple.com/documentation/quartz",
+            "sdks": ["macOS 10.4+"]
         },
         {
             "question": "RealityKit",
             "answer": "Simulate and render 3D content for use in your augmented reality apps.",
-            "link": "https://developer.apple.com/documentation/realitykit"
+            "link": "https://developer.apple.com/documentation/realitykit",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "ReplayKit",
             "answer": "Record or stream video from the screen, and audio from the app and microphone.",
-            "link": "https://developer.apple.com/documentation/replaykit"
+            "link": "https://developer.apple.com/documentation/replaykit",
+            "sdks": ["iOS 9.0+", "Mac Catalyst 13.0+", "tvOS 10.10+"]
         },
         {
             "question": "SceneKit",
             "answer": "Create 3D games and add 3D content to apps using high-level scene descriptions. Easily add animations, physics simulation, particle effects, and realistic physically based rendering.",
-            "link": "https://developer.apple.com/documentation/scenekit"
+            "link": "https://developer.apple.com/documentation/scenekit",
+            "sdks": ["iOS 8.0+", "macOS 10.8+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 3.0+"]
         },
         {
             "question": "SpriteKit",
             "answer": "Add high-performance 2D content with smooth animations to your app, or create a game with a high-level set of 2D game-based tools.",
-            "link": "https://developer.apple.com/documentation/spritekit"
+            "link": "https://developer.apple.com/documentation/spritekit",
+            "sdks": ["iOS 7.0+", "macOS 10.9+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 3.0+"]
         },
         {
             "question": "Vision",
             "answer": "Apply computer vision algorithms to perform a variety of tasks on input images and video.",
-            "link": "https://developer.apple.com/documentation/vision"
+            "link": "https://developer.apple.com/documentation/vision",
+            "sdks": ["iOS 11.0+", "macOS 10.13+", "Mac Catalyst 13.0+", "tvOS 11.0+"]
         }
     ],
-    "media": [
-        {
+    "media": [{
             "question": "Apple News",
             "answer": "Design, create, and publish signature content for Apple News.",
-            "link": "https://developer.apple.com/documentation/apple_news"
+            "link": "https://developer.apple.com/documentation/apple_news",
+            "sdks": []
         },
         {
             "question": "Apple Search Ads",
             "answer": "Drive app discovery by creating and managing campaigns with the Apple Search Ads Campaign Management API.",
-            "link": "https://developer.apple.com/documentation/apple_search_ads"
+            "link": "https://developer.apple.com/documentation/apple_search_ads",
+            "sdks": []
         },
         {
             "question": "AssetsLibrary",
             "answer": "Access the assets in a user’s media library.",
-            "link": "https://developer.apple.com/documentation/assetslibrary"
+            "link": "https://developer.apple.com/documentation/assetslibrary",
+            "sdks": ["iOS 4.0+"]
         },
         {
             "question": "AudioToolbox",
             "answer": "Record or play audio, convert formats, parse audio streams, and configure your audio session.",
-            "link": "https://developer.apple.com/documentation/audiotoolbox"
+            "link": "https://developer.apple.com/documentation/audiotoolbox",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "AudioUnit",
             "answer": "Add sophisticated audio manipulation and processing capabilities to your app. Create audio unit extensions that generate or modify audio in a host app.",
-            "link": "https://developer.apple.com/documentation/audiounit"
+            "link": "https://developer.apple.com/documentation/audiounit",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "AVFoundation",
             "answer": "Work with audiovisual assets, control device cameras, process audio, and configure system audio interactions.",
-            "link": "https://developer.apple.com/documentation/avfoundation"
+            "link": "https://developer.apple.com/documentation/avfoundation",
+            "sdks": ["iOS 2.2+", "macOS 10.7+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 3.0+"]
         },
         {
             "question": "AVKit",
             "answer": "Create view-level services for media playback, complete with user controls, chapter navigation, and support for subtitles and closed captioning.",
-            "link": "https://developer.apple.com/documentation/avkit"
+            "link": "https://developer.apple.com/documentation/avkit",
+            "sdks": ["iOS 8.0+", "macOS 10.9+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "Core Audio",
             "answer": "Use the Core Audio framework to interact with device’s audio hardware.",
-            "link": "https://developer.apple.com/documentation/coreaudio"
+            "link": "https://developer.apple.com/documentation/coreaudio",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 3.0+"]
         },
         {
             "question": "Core Audio Kit",
             "answer": "Add user interfaces to audio units.",
-            "link": "https://developer.apple.com/documentation/coreaudiokit"
+            "link": "https://developer.apple.com/documentation/coreaudiokit",
+            "sdks": ["iOS 8.0+", "macOS 10.4+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core Audio Types",
             "answer": "Use specialized data types to interact with audio streams, complex buffers, and audiovisual timestamps.",
-            "link": "https://developer.apple.com/documentation/coreaudiotypes"
+            "link": "https://developer.apple.com/documentation/coreaudiotypes",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
         },
         {
             "question": "Core Haptics",
             "answer": "Compose and play haptic patterns to customize your iOS app's haptic feedback.",
-            "link": "https://developer.apple.com/documentation/corehaptics"
+            "link": "https://developer.apple.com/documentation/corehaptics",
+            "sdks": ["iOS 13.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core Media",
             "answer": "Represent time-based audio-visual assets with essential data types.",
-            "link": "https://developer.apple.com/documentation/coremedia"
+            "link": "https://developer.apple.com/documentation/coremedia",
+            "sdks": ["iOS 4.0+", "macOS 10.7+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 6.0+"]
         },
         {
             "question": "Core MIDI",
             "answer": "Communicate with MIDI devices such as hardware keyboards and synthesizers.",
-            "link": "https://developer.apple.com/documentation/coremidi"
+            "link": "https://developer.apple.com/documentation/coremidi",
+            "sdks": ["iOS 4.2+", "macOS 10.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core Video",
             "answer": "Process digital video—including manipulation of individual frames—using a pipeline-based API and support for both Metal and OpenGL.",
-            "link": "https://developer.apple.com/documentation/corevideo"
-        },
-        {
-            "question": "ImageCaptureCore",
-            "answer": "ImageCaptureCore enables your app to browse for media devices and control them programatically.",
-            "link": "https://developer.apple.com/documentation/imagecapturecore"
-        },
-        {
-            "question": "iTunesLibrary",
-            "answer": "Retrieve the properties of the media in the user’s iTunes library.",
-            "link": "https://developer.apple.com/documentation/ituneslibrary"
-        },
-        {
-            "question": "Media Player",
-            "answer": "Find and play songs, audio podcasts, audio books, and more from within your app.",
-            "link": "https://developer.apple.com/documentation/mediaplayer"
-        },
-        {
-            "question": "MediaAccessibility",
-            "answer": "Coordinate the presentation of closed-captioned data for your app's media files.",
-            "link": "https://developer.apple.com/documentation/mediaaccessibility"
-        },
-        {
-            "question": "MediaLibrary",
-            "answer": "Access read-only collections of the user’s multimedia content.",
-            "link": "https://developer.apple.com/documentation/medialibrary"
-        },
-        {
-            "question": "PhotoKit",
-            "answer": "Work with image and video assets managed by the Photos app, including those from iCloud Photos and Live Photos.",
-            "link": "https://developer.apple.com/documentation/photokit"
-        },
-        {
-            "question": "Professional Video Applications",
-            "answer": "Exchange data with Final Cut Pro X, and create effects plug-ins for Final Cut Pro and Motion.",
-            "link": "https://developer.apple.com/documentation/professional_video_applications"
-        },
-        {
-            "question": "QTKit",
-            "answer": "Perform basic manipulation of media such as movie playback and editing. Import and export standard media formats.",
-            "link": "https://developer.apple.com/documentation/qtkit"
-        },
-        {
-            "question": "ScreenSaver",
-            "answer": "Animate screen savers, and interact with the screen saver infrastructure. Use functions that help you produce random values and centering rectangles.",
-            "link": "https://developer.apple.com/documentation/screensaver"
-        },
-        {
-            "question": "SoundAnalysis",
-            "answer": "Analyze streamed and file-based audio to classify it as a particular type.",
-            "link": "https://developer.apple.com/documentation/soundanalysis"
-        },
-        {
-            "question": "VideoToolbox",
-            "answer": "Work directly with hardware-accelerated video encoding and decoding capabilities.",
-            "link": "https://developer.apple.com/documentation/videotoolbox"
-        },
-        {
-            "question": "VisionKit",
-            "answer": "Use the iOS camera to scan documents like those you capture in the Notes app.",
-            "link": "https://developer.apple.com/documentation/visionkit"
+            "link": "https://developer.apple.com/documentation/corevideo",
+            "sdks": ["iOS 4.0+", "macOS 10.4+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 4.0+"]
         },
         {
             "question": "HTTP Live Streaming",
             "answer": "Send audio and video to iOS, tvOS, and macOS devices.",
-            "link": "https://developer.apple.com/documentation/http_live_streaming"
-        }
-    ],
-    "system": [
-        {
-            "question": "Accelerate",
-            "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption.",
-            "link": "https://developer.apple.com/documentation/accelerate"
+            "link": "https://developer.apple.com/documentation/http_live_streaming",
+            "sdks": []
         },
         {
-            "question": "CryptoKit",
+            "question": "ImageCaptureCore",
+            "answer": "ImageCaptureCore enables your app to browse for media devices and control them programatically.",
+            "link": "https://developer.apple.com/documentation/imagecapturecore",
+            "sdks": ["iOS 13.0+", "macOS 10.6+", "Mac Catalyst 13.0+"]
+        },
+        {
+            "question": "iTunesLibrary",
+            "answer": "Retrieve the properties of the media in the user’s iTunes library.",
+            "link": "https://developer.apple.com/documentation/ituneslibrary",
+            "sdks": ["macOS 10.13+"]
+        },
+        {
+            "question": "Media Player",
+            "answer": "Find and play songs, audio podcasts, audio books, and more from within your app.",
+            "link": "https://developer.apple.com/documentation/mediaplayer",
+            "sdks": ["iOS 2.0+", "macOS 10.12.1+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 5.0+"]
+        },
+        {
+            "question": "MediaAccessibility",
+            "answer": "Coordinate the presentation of closed-captioned data for your app's media files.",
+            "link": "https://developer.apple.com/documentation/mediaaccessibility",
+            "sdks": ["iOS 7.0+", "macOS 10.9+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
+        },
+        {
+            "question": "MediaLibrary",
+            "answer": "Access read-only collections of the user’s multimedia content.",
+            "link": "https://developer.apple.com/documentation/medialibrary",
+            "sdks": ["macOS 10.9+", "Mac Catalyst 13.0+"]
+        },
+        {
+            "question": "PhotoKit",
+            "answer": "Work with image and video assets managed by the Photos app, including those from iCloud Photos and Live Photos.",
+            "link": "https://developer.apple.com/documentation/photokit",
+            "sdks": ["iOS 8.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 10.0+"]
+        },
+        {
+            "question": "Professional Video Applications",
+            "answer": "Exchange data with Final Cut Pro X, and create effects plug-ins for Final Cut Pro and Motion.",
+            "link": "https://developer.apple.com/documentation/professional_video_applications",
+            "sdks": ["FxPlug 3.1+"]
+        },
+        {
+            "question": "QTKit",
+            "answer": "Perform basic manipulation of media such as movie playback and editing. Import and export standard media formats.",
+            "link": "https://developer.apple.com/documentation/qtkit",
+            "sdks": ["macOS 10.3+"]
+        },
+        {
+            "question": "ScreenSaver",
+            "answer": "Animate screen savers, and interact with the screen saver infrastructure. Use functions that help you produce random values and centering rectangles.",
+            "link": "https://developer.apple.com/documentation/screensaver",
+            "sdks": ["macOS 10.0+"]
+        },
+        {
+            "question": "SoundAnalysis",
+            "answer": "Analyze streamed and file-based audio to classify it as a particular type.",
+            "link": "https://developer.apple.com/documentation/soundanalysis",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
+        },
+        {
+            "question": "VideoToolbox",
+            "answer": "Work directly with hardware-accelerated video encoding and decoding capabilities.",
+            "link": "https://developer.apple.com/documentation/videotoolbox",
+            "sdks": ["iOS 6.0+", "macOS 10.8+", "Mac Catalyst 13.0+", "tvOS 10.2+"]
+        },
+        {
+            "question": "VisionKit",
+            "answer": "Use the iOS camera to scan documents like those you capture in the Notes app.",
+            "link": "https://developer.apple.com/documentation/visionkit",
+            "sdks": ["iOS 13.0+", "Mac Catalyst 13.0+"]
+        }
+    ],
+    "system": [{
+            "question": "Accelerate",
+            "answer": "Make large-scale mathematical computations and image calculations, optimized for high performance and low-energy consumption.",
+            "link": "https://developer.apple.com/documentation/accelerate",
+            "sdks": ["iOS 4.0+", "macOS 10.3+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 4.0+"]
+        },
+        {
+            "question": "Apple CryptoKit",
             "answer": "Perform cryptographic operations securely and efficiently.",
-            "link": "https://developer.apple.com/documentation/cryptokit"
+            "link": "https://developer.apple.com/documentation/cryptokit",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
         },
         {
             "question": "AuthenticationServices",
             "answer": "Make it easy for users to log into apps and services.",
-            "link": "https://developer.apple.com/documentation/authenticationservices"
+            "link": "https://developer.apple.com/documentation/authenticationservices",
+            "sdks": ["iOS 12.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
         },
         {
             "question": "CFNetwork",
             "answer": "Access network services and handle changes in network configurations. Build on abstractions of network protocols to simplify tasks such as working with BSD sockets, administering HTTP and FTP servers, and managing Bonjour services.",
-            "link": "https://developer.apple.com/documentation/cfnetwork"
+            "link": "https://developer.apple.com/documentation/cfnetwork",
+            "sdks": ["iOS 2.0+", "macOS 10.8+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "Collaboration",
             "answer": "Find and access identities, that is, users and groups. Display the Identity Picker, which lets users create and select identities.",
-            "link": "https://developer.apple.com/documentation/collaboration"
+            "link": "https://developer.apple.com/documentation/collaboration",
+            "sdks": ["macOS 10.5+"]
         },
         {
             "question": "Compression",
             "answer": "Leverage common compression algorithms for lossless data compression.",
-            "link": "https://developer.apple.com/documentation/compression"
+            "link": "https://developer.apple.com/documentation/compression",
+            "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Core Bluetooth",
             "answer": "Communicate with Bluetooth low energy and BR/EDR (“Classic”) Devices.",
-            "link": "https://developer.apple.com/documentation/corebluetooth"
+            "link": "https://developer.apple.com/documentation/corebluetooth",
+            "sdks": ["iOS 5.0+", "macOS 10.10+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 4.0+"]
         },
         {
             "question": "Core NFC",
             "answer": "Detect NFC tags, read messages that contain NDEF data, and save data to writable tags.",
-            "link": "https://developer.apple.com/documentation/corenfc"
+            "link": "https://developer.apple.com/documentation/corenfc",
+            "sdks": ["iOS 11.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core Services",
             "answer": "Access and manage key operating system services, such as launch and identity services.",
-            "link": "https://developer.apple.com/documentation/coreservices"
+            "link": "https://developer.apple.com/documentation/coreservices",
+            "sdks": ["iOS 12.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 12.0+", "watchOS 5.0+"]
         },
         {
             "question": "Core Telephony",
             "answer": "Access information about a user’s cellular service provider, such as its unique identifier and whether the carrier allows VoIP.",
-            "link": "https://developer.apple.com/documentation/coretelephony"
+            "link": "https://developer.apple.com/documentation/coretelephony",
+            "sdks": ["iOS 4.0+", "macOS 10.10+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Core WLAN",
             "answer": "Query AirPort interfaces and choose wireless networks.",
-            "link": "https://developer.apple.com/documentation/corewlan"
+            "link": "https://developer.apple.com/documentation/corewlan",
+            "sdks": ["macOS 10.6+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "CryptoTokenKit",
             "answer": "Access security tokens and the cryptographic assets they store.",
-            "link": "https://developer.apple.com/documentation/cryptotokenkit"
+            "link": "https://developer.apple.com/documentation/cryptotokenkit",
+            "sdks": ["iOS 13.0+", "macOS 10.10+", "Mac Catalyst 13.0+", "tvOS 13.0+"]
         },
         {
             "question": "DarwinNotify",
             "answer": "Send and receive Darwin notifications.",
-            "link": "https://developer.apple.com/documentation/darwinnotify"
+            "link": "https://developer.apple.com/documentation/darwinnotify",
+            "sdks": ["iOS 9.3+", "macOS 10.14+", "Mac Catalyst 13.0+", "tvOS 9.2+", "watchOS 2.2+"]
         },
         {
             "question": "Device Management",
             "answer": "Manage your organization's devices remotely.",
-            "link": "https://developer.apple.com/documentation/devicemanagement"
+            "link": "https://developer.apple.com/documentation/devicemanagement",
+            "sdks": []
         },
         {
             "question": "DiskArbitration",
             "answer": "Provides mechanisms for registering for mount/unmount notification and blocking mount/unmount events.",
-            "link": "https://developer.apple.com/documentation/diskarbitration"
+            "link": "https://developer.apple.com/documentation/diskarbitration",
+            "sdks": ["macOS 10.4+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Dispatch",
             "answer": "Execute code concurrently on multicore hardware by submitting work to dispatch queues managed by the system.",
-            "link": "https://developer.apple.com/documentation/dispatch"
+            "link": "https://developer.apple.com/documentation/dispatch",
+            "sdks": ["iOS 8.0+", "macOS 10.10+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "dnssd",
             "answer": "Discover, publish, and resolve network services on a local area or wide area network.",
-            "link": "https://developer.apple.com/documentation/dnssd?language=objc"
+            "link": "https://developer.apple.com/documentation/dnssd?language=objc",
+            "sdks": ["iOS 10.0+", "macOS 10.12+", "Mac Catalyst 13.0+", "tvOS 10.0+", "watchOS 3.0+"]
         },
         {
             "question": "DriverKit",
             "answer": "Develop device drivers that run in user space.",
-            "link": "https://developer.apple.com/documentation/driverkit"
+            "link": "https://developer.apple.com/documentation/driverkit",
+            "sdks": ["macOS 10.15+", "DriverKit 19.0+"]
         },
         {
             "question": "EndpointSecurity",
             "answer": "Develop system extensions that enhance user security.",
-            "link": "https://developer.apple.com/documentation/endpointsecurity"
+            "link": "https://developer.apple.com/documentation/endpointsecurity",
+            "sdks": ["macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "ExceptionHandling",
             "answer": "Monitor and debug exceptional conditions in code.",
-            "link": "https://developer.apple.com/documentation/exceptionhandling"
+            "link": "https://developer.apple.com/documentation/exceptionhandling",
+            "sdks": ["macOS 10.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "ExecutionPolicy",
             "answer": "",
-            "link": "https://developer.apple.com/documentation/executionpolicy"
+            "link": "https://developer.apple.com/documentation/executionpolicy",
+            "sdks": ["macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "ExternalAccessory",
             "answer": "Communicate with accessories connected to a device by the Apple Lightning connector, or connected wirelessly through Bluetooth.",
-            "link": "https://developer.apple.com/documentation/externalaccessory"
+            "link": "https://developer.apple.com/documentation/externalaccessory",
+            "sdks": ["iOS 3.0+", "macOS 10.13+", "Mac Catalyst 13.0+", "tvOS 10.0+"]
         },
         {
             "question": "FinderSync",
             "answer": "Enhance the Finder’s user interface by adding badges, shortcut menu items, and toolbar buttons.",
-            "link": "https://developer.apple.com/documentation/findersync"
+            "link": "https://developer.apple.com/documentation/findersync",
+            "sdks": ["macOS 10.10+"]
         },
         {
             "question": "ForceFeedback",
             "answer": "Control force feedback devices attached to the system. Develop plug-ins that enable communication with force feedback hardware.",
-            "link": "https://developer.apple.com/documentation/forcefeedback"
+            "link": "https://developer.apple.com/documentation/forcefeedback",
+            "sdks": ["macOS 10.2+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "FWAUserLib",
             "answer": "Interface with FireWire audio devices to manage connections, audio engines, and audio and MIDI streams.",
-            "link": "https://developer.apple.com/documentation/fwauserlib"
+            "link": "https://developer.apple.com/documentation/fwauserlib",
+            "sdks": ["macOS 5.0+", "macOS 10.14+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "GSS",
             "answer": "Conduct secure, authenticated network transactions.",
-            "link": "https://developer.apple.com/documentation/gss"
+            "link": "https://developer.apple.com/documentation/gss",
+            "sdks": ["macOS 10.2+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "HIDDriverKit",
             "answer": "Develop drivers for human-interface devices, such as keyboards, pointing devices, and digitizers like pens and touch pads.",
-            "link": "https://developer.apple.com/documentation/hiddriverkit"
+            "link": "https://developer.apple.com/documentation/hiddriverkit",
+            "sdks": ["macOS 10.15+", "DriverKit 19.0+"]
         },
         {
             "question": "Hypervisor",
             "answer": "Build virtualization solutions on top of a lightweight hypervisor, without the need for third-party kernel extensions.",
-            "link": "https://developer.apple.com/documentation/hypervisor"
+            "link": "https://developer.apple.com/documentation/hypervisor",
+            "sdks": ["macOS 10.10+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "InputMethodKit",
             "answer": "Develop input methods and manage communication with client applications, candidates windows, and input method modes.",
-            "link": "https://developer.apple.com/documentation/inputmethodkit"
+            "link": "https://developer.apple.com/documentation/inputmethodkit",
+            "sdks": ["macOS 10.5+"]
         },
         {
             "question": "IOBluetooth",
             "answer": "Gain user-space access to Bluetooth devices.",
-            "link": "https://developer.apple.com/documentation/iobluetooth"
+            "link": "https://developer.apple.com/documentation/iobluetooth",
+            "sdks": ["macOS 10.2+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "IOBluetoothUI",
             "answer": "Present an interface through which users can pair their devices with other Bluetooth devices.",
-            "link": "https://developer.apple.com/documentation/iobluetoothui"
+            "link": "https://developer.apple.com/documentation/iobluetoothui",
+            "sdks": ["macOS 10.2+"]
         },
         {
             "question": "IOKit",
             "answer": "Gain user-space access to hardware devices and drivers.",
-            "link": "https://developer.apple.com/documentation/iokit"
+            "link": "https://developer.apple.com/documentation/iokit",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "IOSurface",
             "answer": "Share hardware-accelerated buffer data (framebuffers and textures) across multiple processes. Manage image memory more efficiently.",
-            "link": "https://developer.apple.com/documentation/iosurface"
+            "link": "https://developer.apple.com/documentation/iosurface",
+            "sdks": ["iOS 11.0+", "macOS 10.6+", "Mac Catalyst 13.0+", "tvOS 11.0+"]
         },
         {
             "question": "IOUSBHost",
             "answer": "Find and access identities, that is, users and groups. Display the Identity Picker, which lets users create and select identities.",
-            "link": "https://developer.apple.com/documentation/iousbhost"
+            "link": "https://developer.apple.com/documentation/iousbhost",
+            "sdks": ["macOS 10.15+"]
         },
         {
             "question": "Kernel",
             "answer": "Develop kernel-resident device drivers and kernel extensions.",
-            "link": "https://developer.apple.com/documentation/kernel"
+            "link": "https://developer.apple.com/documentation/kernel",
+            "sdks": ["macOS 10.10+"]
         },
         {
             "question": "LatentSemanticMapping",
             "answer": "The Latent Semantic Mapping framework supports the classification of text and other token-based content into developer-defined categories.",
-            "link": "https://developer.apple.com/documentation/latentsemanticmapping"
+            "link": "https://developer.apple.com/documentation/latentsemanticmapping",
+            "sdks": ["macOS 10.5+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "Local Authentication",
             "answer": "Authenticate users biometrically or with a passphrase they already know.",
-            "link": "https://developer.apple.com/documentation/localauthentication"
+            "link": "https://developer.apple.com/documentation/localauthentication",
+            "sdks": ["iOS 8.0+", "macOS 10.10+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "MetricKit",
             "answer": "Aggregate and analyze per-device reports on power and performance metrics.",
-            "link": "https://developer.apple.com/documentation/metrickit"
+            "link": "https://developer.apple.com/documentation/metrickit",
+            "sdks": ["iOS 13.0+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "MobileCoreServices",
             "answer": "Use uniform type identifier (UTI) information to create and manipulate data that can be exchanged between your app and other apps and services.",
-            "link": "https://developer.apple.com/documentation/mobilecoreservices"
+            "link": "https://developer.apple.com/documentation/mobilecoreservices",
+            "sdks": ["iOS 3.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "Network",
             "answer": "Create network connections to send and receive data using transport and security protocols.",
-            "link": "https://developer.apple.com/documentation/network"
+            "link": "https://developer.apple.com/documentation/network",
+            "sdks": ["iOS 12.0+", "macOS 10.14+", "Mac Catalyst 13.0+", "tvOS 12.0+", "watchOS 6.0+"]
         },
         {
             "question": "NetworkExtension",
             "answer": "Customize and extend core networking features.",
-            "link": "https://developer.apple.com/documentation/networkextension"
+            "link": "https://developer.apple.com/documentation/networkextension",
+            "sdks": ["iOS 8.0+", "macOS 10.10+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "NetworkingDriverKit",
             "answer": "Develop drivers for Ethernet networking devices.",
-            "link": "https://developer.apple.com/documentation/networkingdriverkit"
+            "link": "https://developer.apple.com/documentation/networkingdriverkit",
+            "sdks": ["DriverKit 19.0+"]
         },
         {
             "question": "Objective-C Runtime",
             "answer": "Gain low-level access to the Objective-C runtime and the Objective-C root types.",
-            "link": "https://developer.apple.com/documentation/objectivec"
+            "link": "https://developer.apple.com/documentation/objectivec",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "OpenDirectory",
             "answer": "Authenticate users, and search for contact information in Open Directory and LDAP directories.",
-            "link": "https://developer.apple.com/documentation/opendirectory"
+            "link": "https://developer.apple.com/documentation/opendirectory",
+            "sdks": ["macOS 10.6+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "os",
             "answer": "Initiate activity tracing and unified logging operations that make problem diagnosis easier when debugging.",
-            "link": "https://developer.apple.com/documentation/os"
+            "link": "https://developer.apple.com/documentation/os",
+            "sdks": ["iOS 8.0+", "macOS 10.10+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "OSLog",
             "answer": "A unified logging system for the reading of historical data.",
-            "link": "https://developer.apple.com/documentation/os"
+            "link": "https://developer.apple.com/documentation/os",
+            "sdks": ["macOS 10.15+", "Mac Catalyst 13.0+"]
+        },
+        {
+            "question": "PCIDriverKit",
+            "answer": "Develop device drivers for Peripheral Component Interconnect (PCI) accessories.",
+            "link": "https://developer.apple.com/documentation/pcidriverkit",
+            "sdks": ["DriverKit 19.0+"]
         },
         {
             "question": "Security",
             "answer": "Secure the data your app manages, and control access to your app.",
-            "link": "https://developer.apple.com/documentation/security"
+            "link": "https://developer.apple.com/documentation/security",
+            "sdks": ["iOS 2.0+", "macOS 10.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "SecurityFoundation",
             "answer": "Restrict a user’s access to particular features in your Mac app or daemon.",
-            "link": "https://developer.apple.com/documentation/securityfoundation"
+            "link": "https://developer.apple.com/documentation/securityfoundation",
+            "sdks": ["macOS 10.3+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "SecurityInterface",
             "answer": "Provide user interface elements for security features such as authorization, access to digital certificates, and access to items in keychains.",
-            "link": "https://developer.apple.com/documentation/securityinterface"
+            "link": "https://developer.apple.com/documentation/securityinterface",
+            "sdks": ["macOS 10.3+"]
         },
         {
             "question": "SerialDriverKit",
-            "answer": "",
-            "link": "https://developer.apple.com/documentation/serialdriverkit"
+            "answer": "Develop drivers for serial I/O devices connected to your Mac.",
+            "link": "https://developer.apple.com/documentation/serialdriverkit",
+            "sdks": ["DriverKit 19.0+"]
         },
         {
             "question": "ServiceManagement",
             "answer": "Load and unload launchd services. Read and modify launchd dictionaries from within an app.",
-            "link": "https://developer.apple.com/documentation/servicemanagement"
+            "link": "https://developer.apple.com/documentation/servicemanagement",
+            "sdks": ["iOS 12.1+", "macOS 10.6+", "Mac Catalyst 13.0+", "tvOS 12.1+", "watchOS 5.1+"]
         },
         {
             "question": "simd",
             "answer": "Instruction set for processing multiple elements that perform the same operation on multiple data points simultaneously.",
-            "link": "https://developer.apple.com/documentation/simd"
+            "link": "https://developer.apple.com/documentation/simd",
+            "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
             "question": "SystemConfiguration",
             "answer": "Allow applications to access a device’s network configuration settings. Determine the reachability of the device, such as whether Wi-Fi or cell connectivity are active.",
-            "link": "https://developer.apple.com/documentation/systemconfiguration"
+            "link": "https://developer.apple.com/documentation/systemconfiguration",
+            "sdks": ["iOS 2.0+", "macOS 10.1+", "Mac Catalyst 13.0+", "tvOS 9.0+"]
         },
         {
             "question": "SystemExtensions",
             "answer": "Install and manage user space code that extends the capabilities of macOS.",
-            "link": "https://developer.apple.com/documentation/systemextensions"
+            "link": "https://developer.apple.com/documentation/systemextensions",
+            "sdks": ["macOS 10.15+"]
         },
         {
             "question": "USBDriverKit",
             "answer": "Develop drivers for USB-based devices.",
-            "link": "https://developer.apple.com/documentation/usbdriverkit"
+            "link": "https://developer.apple.com/documentation/usbdriverkit",
+            "sdks": ["DriverKit 19.0+"]
         },
         {
             "question": "USBSerialDriverKit",
             "answer": "Develop drivers for serial IO devices connected to your Mac.",
-            "link": "https://developer.apple.com/documentation/usbserialdriverkit"
+            "link": "https://developer.apple.com/documentation/usbserialdriverkit",
+            "sdks": ["DriverKit 19.0+"]
         },
         {
             "question": "vmnet",
             "answer": "Connect with network interfaces to read and write packets on guest operating systems.",
-            "link": "https://developer.apple.com/documentation/vmnet"
+            "link": "https://developer.apple.com/documentation/vmnet",
+            "sdks": ["macOS 10.10+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "XPC",
             "answer": "Access a low-level (libSystem) interprocess communication mechanism that is based on serialized property lists.",
-            "link": "https://developer.apple.com/documentation/xpc"
+            "link": "https://developer.apple.com/documentation/xpc",
+            "sdks": ["macOS 10.10+", "Mac Catalyst 13.0+"]
         }
     ],
-    "web": [
-        {
+    "web": [{
             "question": "App Store Connect API",
             "answer": "Automate tasks on the Apple Developer website and App Store Connect.",
-            "link": "https://developer.apple.com/documentation/appstoreconnectapi"
+            "link": "https://developer.apple.com/documentation/appstoreconnectapi",
+            "sdks": []
         },
         {
             "question": "Apple Music API",
             "answer": "Integrate streaming music with Apple Music content.",
-            "link": "https://developer.apple.com/documentation/applemusicapi"
+            "link": "https://developer.apple.com/documentation/applemusicapi",
+            "sdks": []
         },
         {
             "question": "Apple Pay on the Web",
             "answer": "Support Apple Pay on your website with JavaScript-based APIs.",
-            "link": "https://developer.apple.com/documentation/apple_pay_on_the_web"
+            "link": "https://developer.apple.com/documentation/apple_pay_on_the_web",
+            "sdks": ["Safari Desktop 10.0+", "Safari Mobile 10.0+"]
         },
         {
             "question": "CloudKit JS",
             "answer": "Provide access from your web app to your CloudKit app’s containers and databases.",
-            "link": "https://developer.apple.com/documentation/cloudkitjs"
+            "link": "https://developer.apple.com/documentation/cloudkitjs",
+            "sdks": ["CloudKit JS 1.0+"]
         },
         {
             "question": "LinkPresentation",
             "answer": "Fetch, provide, and present rich links in your app.",
-            "link": "https://developer.apple.com/documentation/linkpresentation"
+            "link": "https://developer.apple.com/documentation/linkpresentation",
+            "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
             "question": "LivePhotosKit JS",
             "answer": "Play Live Photos on the web.",
-            "link": "https://developer.apple.com/documentation/livephotoskitjs"
+            "link": "https://developer.apple.com/documentation/livephotoskitjs",
+            "sdks": ["LivePhotosKit JS 1.0.0+"]
         },
         {
             "question": "MapKit JS",
             "answer": "Embed interactive Apple maps on your website, annotate points of interest, and perform geo-related searches.",
-            "link": "https://developer.apple.com/documentation/mapkitjs"
+            "link": "https://developer.apple.com/documentation/mapkitjs",
+            "sdks": ["MapKit JS 5.0+"]
         },
         {
             "question": "Maps Web Snapshots",
             "answer": "Create a static image of a map from a URL.",
-            "link": "https://developer.apple.com/documentation/snapshots"
+            "link": "https://developer.apple.com/documentation/snapshots",
+            "sdks": []
         },
         {
             "question": "MusicKit JS",
             "answer": "Add an Apple Music player to your web app.",
-            "link": "https://developer.apple.com/documentation/musickitjs"
+            "link": "https://developer.apple.com/documentation/musickitjs",
+            "sdks": ["MusicKit JS 1.0+"]
         },
         {
             "question": "Safari Extensions JS",
             "answer": "Extend the browsing experience with injected scripts and style sheets for web content, custom buttons in the Safari toolbar, and contextual menu items.",
-            "link": "https://developer.apple.com/documentation/safariextensions"
+            "link": "https://developer.apple.com/documentation/safariextensions",
+            "sdks": ["Safari Desktop 9.0+"]
         },
         {
-            "question": "Sign in with Apple JS",
-            "answer": "Provide users a fast, secure way to sign into your web service with their Apple ID.",
-            "link": "https://developer.apple.com/documentation/signinwithapplejs"
+            "question": "Sign in with Apple",
+            "answer": "Provide users the ability to sign in to your apps and websites using their Apple ID.",
+            "link": "https://developer.apple.com/documentation/sign_in_with_apple",
+            "sdks": []
         },
         {
             "question": "Sign in with Apple REST API",
             "answer": "Communicate between your app servers and Apple’s authentication servers.",
-            "link": "https://developer.apple.com/documentation/signinwithapplerestapi"
+            "link": "https://developer.apple.com/documentation/signinwithapplerestapi",
+            "sdks": []
         },
         {
             "question": "WebKit JS",
             "answer": "Access and modify DOM elements within a webpage, including touch events and visual effects.",
-            "link": "https://developer.apple.com/documentation/webkitjs"
+            "link": "https://developer.apple.com/documentation/webkitjs",
+            "sdks": ["Safari Desktop 9.0+", "Safari Mobile 9.0+"]
         }
     ]
 }

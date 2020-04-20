@@ -49,6 +49,13 @@ struct CardView: View {
                             .minimumScaleFactor(0.5)
                             .frame(width: max(geometry.size.width - 500, 350) - 50, height: max(geometry.size.height/2, 250) - 100)
                             .transition(.opacity)
+                        Text(self.card.sdkDescription)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .lineLimit(nil)
+                            .allowsTightening(true)
+                            .minimumScaleFactor(0.5)
+                        Spacer(minLength: 10.0)
                         HStack {
                             Button(action: {
                                 self.card.favorite.toggle()

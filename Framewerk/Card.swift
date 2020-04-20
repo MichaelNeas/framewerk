@@ -29,15 +29,17 @@ class Card: ObservableObject, CustomStringConvertible, Codable, Equatable, Ident
     @Published var answer: String
     @Published var link: URL
     @Published var favorite: Bool = false
+    var sdks: [String]
     
     enum CodingKeys: CodingKey {
-        case question, answer, link, favorite
+        case question, answer, link, favorite, sdks
     }
     
-    init(question: String, answer: String, link: URL) {
+    init(question: String, answer: String, link: URL, sdks: [String] = []) {
         self.question = question
         self.answer = answer
         self.link = link
+        self.sdks = sdks
     }
     
     required init(from decoder: Decoder) throws {
@@ -47,6 +49,7 @@ class Card: ObservableObject, CustomStringConvertible, Codable, Equatable, Ident
         answer = try container.decode(String.self, forKey: .answer)
         link = try container.decode(URL.self, forKey: .link)
         favorite = try container.decodeIfPresent(Bool.self, forKey: .favorite) ?? false
+        sdks = try container.decodeIfPresent([String].self, forKey: .sdks) ?? []
     }
     
     func encode(to encoder: Encoder) throws {
@@ -56,10 +59,15 @@ class Card: ObservableObject, CustomStringConvertible, Codable, Equatable, Ident
         try container.encode(answer, forKey: .answer)
         try container.encode(link, forKey: .link)
         try container.encode(favorite, forKey: .favorite)
+        try container.encode(sdks, forKey: .sdks)
     }
     
     var description: String {
         "\(id): \(question) - \(answer)"
+    }
+    
+    var sdkDescription: String {
+        sdks.joined(separator: " ")
     }
     
     static func < (lhs: Card, rhs: Card) -> Bool {

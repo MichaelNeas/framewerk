@@ -27,6 +27,7 @@ class ContentViewModel: ObservableObject {
         self.bank = Array(shuffled.suffix(from: min(shuffled.count, 10)))
         self.offsets = Array(repeating: CGFloat(-1000.0), count: self.cards.count)
         updateOffsets()
+        resetGame()
     }
     
     private func fetchCards() {
