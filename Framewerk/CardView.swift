@@ -41,21 +41,22 @@ struct CardView: View {
                         .minimumScaleFactor(0.3)
 
                     if self.isShowingAnswer {
+                        Spacer()
                         Text(self.card.answer)
                             .font(.title)
                             .foregroundColor(.secondary)
                             .lineLimit(nil)
                             .allowsTightening(true)
                             .minimumScaleFactor(0.5)
-                            .frame(width: max(geometry.size.width - 500, 350) - 50, height: max(geometry.size.height/2, 250) - 100)
                             .transition(.opacity)
+                        Spacer()
                         Text(self.card.sdkDescription)
-                            .font(.subheadline)
+                            .font(.headline)
                             .foregroundColor(.secondary)
-                            .lineLimit(nil)
+                            .lineLimit(2)
                             .allowsTightening(true)
                             .minimumScaleFactor(0.5)
-                        Spacer(minLength: 10.0)
+                        Spacer(minLength: 30.0)
                         HStack {
                             Button(action: {
                                 self.card.favorite.toggle()
