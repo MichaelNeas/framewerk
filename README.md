@@ -18,7 +18,7 @@ The transpiled data driving this application is free and open to anyone at `Fram
 - Dark mode support
 - Always offline mode
 - SwiftUI implementation
-
+- iPad & iOS, landscape & portrait mode
 
 #### Terms
 

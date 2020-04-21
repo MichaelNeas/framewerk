@@ -11,6 +11,7 @@ import os.log
 
 struct CardDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedObject private var keyboard = KeyboardResponder()
     @ObservedObject var card: Card
     @State var textHeight: CGFloat = 150
     var commited: ((Card) -> ())?
@@ -40,10 +41,14 @@ struct CardDetail: View {
                             guard let url = URL(string: potentialURL) else { return }
                             self.card.link = url
                         }), onEditingChanged: changed, onCommit: commit)
+                        .disableAutocorrection(true)
                         .foregroundColor(Color(.systemGray4))
                         .padding()
                 }
             }
+            .padding(.bottom, keyboard.currentHeight + (keyboard.currentHeight > 50.0 ? 30.0 : 0.0 ))
+            .background(Color(UIColor.systemGray))
+            .animation(.easeOut(duration: 0.16))
             .navigationBarItems(trailing: Button(action: {
                 self.presentationMode.wrappedValue.dismiss()
                 self.commited?(self.card)

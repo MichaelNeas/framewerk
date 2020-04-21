@@ -25,6 +25,7 @@
 		68EAB2CA2408A32C000D0AF1 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAB2C92408A32C000D0AF1 /* CardList.swift */; };
 		68F08AC52438FE6400C4F91B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC42438FE6400C4F91B /* WebView.swift */; };
 		68F08AC72439094A00C4F91B /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC62439094A00C4F91B /* CardStore.swift */; };
+		68F8B188244E833400C16FE6 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8B187244E833400C16FE6 /* KeyboardResponder.swift */; };
 		68FF65EC2447E3E70019BB24 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF65EB2447E3E70019BB24 /* TutorialView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		68EAB2C92408A32C000D0AF1 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		68F08AC42438FE6400C4F91B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		68F08AC62439094A00C4F91B /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
+		68F8B187244E833400C16FE6 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		68FF65EB2447E3E70019BB24 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 		682D6FFC244D09BA008F08E7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				68F8B187244E833400C16FE6 /* KeyboardResponder.swift */,
 				68437075240AAE120018B2F9 /* TextView+Extensions.swift */,
 				687E5A7F244933220001572F /* View+Extensions.swift */,
 			);
@@ -215,6 +218,7 @@
 				68F08AC52438FE6400C4F91B /* WebView.swift in Sources */,
 				68437076240AAE120018B2F9 /* TextView+Extensions.swift in Sources */,
 				6827E0CA23DBF3A4008F60E4 /* AppDelegate.swift in Sources */,
+				68F8B188244E833400C16FE6 /* KeyboardResponder.swift in Sources */,
 				6827E0E423DCC4F0008F60E4 /* ContentViewModel.swift in Sources */,
 				6827E0CC23DBF3A4008F60E4 /* SceneDelegate.swift in Sources */,
 				6827E0E023DBF491008F60E4 /* Card.swift in Sources */,
