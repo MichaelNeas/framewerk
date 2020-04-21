@@ -1,6 +1,6 @@
 # Framewerk
 
-<img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200">
+<img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200"> 
 
 #### There are so many frameworks provided by apple today, do you know about them all?
 
@@ -19,6 +19,12 @@ The transpiled data driving this application is free and open to anyone at `Fram
 - Always offline mode
 - SwiftUI implementation
 - iPad & iOS, landscape & portrait mode
+
+#### App Images
+<img src="images/iphone6.5.jpg" width="200">
+<img src="images/iphone6.5.1.jpg" width="200">
+<img src="images/iphone6.5.2.jpg" width="200">
+
 
 #### Terms
 
