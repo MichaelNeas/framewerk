@@ -22,12 +22,69 @@
 		68437074240AA9880018B2F9 /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68437073240AA9880018B2F9 /* CardDetail.swift */; };
 		68437076240AAE120018B2F9 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68437075240AAE120018B2F9 /* TextView+Extensions.swift */; };
 		687E5A80244933220001572F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E5A7F244933220001572F /* View+Extensions.swift */; };
+		68B89FB92453941300EAE50B /* Framewerk-Watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 68B89FB82453941300EAE50B /* Framewerk-Watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		68B89FBF2453941300EAE50B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B89FBD2453941300EAE50B /* Interface.storyboard */; };
+		68B89FC12453941300EAE50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B89FC02453941300EAE50B /* Assets.xcassets */; };
+		68B89FC82453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68B89FC72453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		68B89FCD2453941400EAE50B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FCC2453941400EAE50B /* ContentView.swift */; };
+		68B89FCF2453941400EAE50B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FCE2453941400EAE50B /* HostingController.swift */; };
+		68B89FD12453941400EAE50B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FD02453941400EAE50B /* ExtensionDelegate.swift */; };
+		68B89FD32453941400EAE50B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FD22453941400EAE50B /* NotificationController.swift */; };
+		68B89FD52453941400EAE50B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FD42453941400EAE50B /* NotificationView.swift */; };
+		68B89FD72453941400EAE50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B89FD62453941400EAE50B /* Assets.xcassets */; };
+		68B89FDA2453941400EAE50B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B89FD92453941400EAE50B /* Preview Assets.xcassets */; };
+		68B89FE82453944F00EAE50B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827E0DF23DBF491008F60E4 /* Card.swift */; };
+		68B89FEA2453946700EAE50B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 6827E0E123DCC458008F60E4 /* db.json */; };
+		68B89FEC2453946900EAE50B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 6827E0E123DCC458008F60E4 /* db.json */; };
+		68B89FED2453946C00EAE50B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 6827E0E123DCC458008F60E4 /* db.json */; };
 		68EAB2CA2408A32C000D0AF1 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAB2C92408A32C000D0AF1 /* CardList.swift */; };
 		68F08AC52438FE6400C4F91B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC42438FE6400C4F91B /* WebView.swift */; };
 		68F08AC72439094A00C4F91B /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC62439094A00C4F91B /* CardStore.swift */; };
 		68F8B188244E833400C16FE6 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8B187244E833400C16FE6 /* KeyboardResponder.swift */; };
 		68FF65EC2447E3E70019BB24 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF65EB2447E3E70019BB24 /* TutorialView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68B89FBA2453941300EAE50B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6827E0BE23DBF3A4008F60E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68B89FB72453941300EAE50B;
+			remoteInfo = "Framewerk-Watch WatchKit App";
+		};
+		68B89FC92453941400EAE50B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6827E0BE23DBF3A4008F60E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68B89FC62453941400EAE50B;
+			remoteInfo = "Framewerk-Watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		68B89FDF2453941400EAE50B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				68B89FB92453941300EAE50B /* Framewerk-Watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B89FE22453941400EAE50B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				68B89FC82453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6827E0C623DBF3A4008F60E4 /* Framewerk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Framewerk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +104,21 @@
 		68437073240AA9880018B2F9 /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
 		68437075240AAE120018B2F9 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
 		687E5A7F244933220001572F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		68B89FB52453941300EAE50B /* Framewerk-Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Framewerk-Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B89FB82453941300EAE50B /* Framewerk-Watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Framewerk-Watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B89FBE2453941300EAE50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		68B89FC02453941300EAE50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68B89FC22453941300EAE50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B89FC72453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Framewerk-Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B89FCC2453941400EAE50B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68B89FCE2453941400EAE50B /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		68B89FD02453941400EAE50B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		68B89FD22453941400EAE50B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		68B89FD42453941400EAE50B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		68B89FD62453941400EAE50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68B89FD92453941400EAE50B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		68B89FDB2453941400EAE50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B89FDC2453941400EAE50B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		68EAB2C92408A32C000D0AF1 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		68F08AC42438FE6400C4F91B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		68F08AC62439094A00C4F91B /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
@@ -62,6 +134,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68B89FC42453941400EAE50B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				6827E0C823DBF3A4008F60E4 /* Framewerk */,
+				68B89FBC2453941300EAE50B /* Framewerk-Watch WatchKit App */,
+				68B89FCB2453941400EAE50B /* Framewerk-Watch WatchKit Extension */,
 				6827E0C723DBF3A4008F60E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				6827E0C623DBF3A4008F60E4 /* Framewerk.app */,
+				68B89FB52453941300EAE50B /* Framewerk-Watch.app */,
+				68B89FB82453941300EAE50B /* Framewerk-Watch WatchKit App.app */,
+				68B89FC72453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +225,40 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		68B89FBC2453941300EAE50B /* Framewerk-Watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				68B89FBD2453941300EAE50B /* Interface.storyboard */,
+				68B89FC02453941300EAE50B /* Assets.xcassets */,
+				68B89FC22453941300EAE50B /* Info.plist */,
+			);
+			path = "Framewerk-Watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		68B89FCB2453941400EAE50B /* Framewerk-Watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				68B89FCC2453941400EAE50B /* ContentView.swift */,
+				68B89FCE2453941400EAE50B /* HostingController.swift */,
+				68B89FD02453941400EAE50B /* ExtensionDelegate.swift */,
+				68B89FD22453941400EAE50B /* NotificationController.swift */,
+				68B89FD42453941400EAE50B /* NotificationView.swift */,
+				68B89FD62453941400EAE50B /* Assets.xcassets */,
+				68B89FDB2453941400EAE50B /* Info.plist */,
+				68B89FDC2453941400EAE50B /* PushNotificationPayload.apns */,
+				68B89FD82453941400EAE50B /* Preview Content */,
+			);
+			path = "Framewerk-Watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		68B89FD82453941400EAE50B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				68B89FD92453941400EAE50B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,18 +279,78 @@
 			productReference = 6827E0C623DBF3A4008F60E4 /* Framewerk.app */;
 			productType = "com.apple.product-type.application";
 		};
+		68B89FB42453941300EAE50B /* Framewerk-Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B89FE72453941400EAE50B /* Build configuration list for PBXNativeTarget "Framewerk-Watch" */;
+			buildPhases = (
+				68B89FB32453941300EAE50B /* Resources */,
+				68B89FDF2453941400EAE50B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68B89FBB2453941300EAE50B /* PBXTargetDependency */,
+			);
+			name = "Framewerk-Watch";
+			productName = "Framewerk-Watch";
+			productReference = 68B89FB52453941300EAE50B /* Framewerk-Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		68B89FB72453941300EAE50B /* Framewerk-Watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B89FE62453941400EAE50B /* Build configuration list for PBXNativeTarget "Framewerk-Watch WatchKit App" */;
+			buildPhases = (
+				68B89FB62453941300EAE50B /* Resources */,
+				68B89FE22453941400EAE50B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68B89FCA2453941400EAE50B /* PBXTargetDependency */,
+			);
+			name = "Framewerk-Watch WatchKit App";
+			productName = "Framewerk-Watch WatchKit App";
+			productReference = 68B89FB82453941300EAE50B /* Framewerk-Watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		68B89FC62453941400EAE50B /* Framewerk-Watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B89FE52453941400EAE50B /* Build configuration list for PBXNativeTarget "Framewerk-Watch WatchKit Extension" */;
+			buildPhases = (
+				68B89FC32453941400EAE50B /* Sources */,
+				68B89FC42453941400EAE50B /* Frameworks */,
+				68B89FC52453941400EAE50B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Framewerk-Watch WatchKit Extension";
+			productName = "Framewerk-Watch WatchKit Extension";
+			productReference = 68B89FC72453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		6827E0BE23DBF3A4008F60E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Neas Lease";
 				TargetAttributes = {
 					6827E0C523DBF3A4008F60E4 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					68B89FB42453941300EAE50B = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					68B89FB72453941300EAE50B = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					68B89FC62453941400EAE50B = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
@@ -190,6 +368,9 @@
 			projectRoot = "";
 			targets = (
 				6827E0C523DBF3A4008F60E4 /* Framewerk */,
+				68B89FB42453941300EAE50B /* Framewerk-Watch */,
+				68B89FB72453941300EAE50B /* Framewerk-Watch WatchKit App */,
+				68B89FC62453941400EAE50B /* Framewerk-Watch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +384,34 @@
 				6827E0E223DCC458008F60E4 /* db.json in Resources */,
 				6827E0D323DBF3A7008F60E4 /* Preview Assets.xcassets in Resources */,
 				6827E0D023DBF3A7008F60E4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B89FB32453941300EAE50B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B89FED2453946C00EAE50B /* db.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B89FB62453941300EAE50B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B89FEA2453946700EAE50B /* db.json in Resources */,
+				68B89FC12453941300EAE50B /* Assets.xcassets in Resources */,
+				68B89FBF2453941300EAE50B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B89FC52453941400EAE50B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B89FEC2453946900EAE50B /* db.json in Resources */,
+				68B89FDA2453941400EAE50B /* Preview Assets.xcassets in Resources */,
+				68B89FD72453941400EAE50B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +441,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68B89FC32453941400EAE50B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B89FCF2453941400EAE50B /* HostingController.swift in Sources */,
+				68B89FE82453944F00EAE50B /* Card.swift in Sources */,
+				68B89FCD2453941400EAE50B /* ContentView.swift in Sources */,
+				68B89FD32453941400EAE50B /* NotificationController.swift in Sources */,
+				68B89FD12453941400EAE50B /* ExtensionDelegate.swift in Sources */,
+				68B89FD52453941400EAE50B /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68B89FBB2453941300EAE50B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68B89FB72453941300EAE50B /* Framewerk-Watch WatchKit App */;
+			targetProxy = 68B89FBA2453941300EAE50B /* PBXContainerItemProxy */;
+		};
+		68B89FCA2453941400EAE50B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68B89FC62453941400EAE50B /* Framewerk-Watch WatchKit Extension */;
+			targetProxy = 68B89FC92453941400EAE50B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6827E0D423DBF3A7008F60E4 /* LaunchScreen.storyboard */ = {
@@ -241,6 +476,14 @@
 				6827E0D523DBF3A7008F60E4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		68B89FBD2453941300EAE50B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68B89FBE2453941300EAE50B /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -406,6 +649,118 @@
 			};
 			name = Release;
 		};
+		68B89FDD2453941400EAE50B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G246VB5CG;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neas.lease.Framewerk-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		68B89FDE2453941400EAE50B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G246VB5CG;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neas.lease.Framewerk-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		68B89FE02453941400EAE50B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6G246VB5CG;
+				IBSC_MODULE = Framewerk_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Framewerk-Watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "neas.lease.Framewerk-Watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		68B89FE12453941400EAE50B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6G246VB5CG;
+				IBSC_MODULE = Framewerk_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Framewerk-Watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "neas.lease.Framewerk-Watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		68B89FE32453941400EAE50B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Framewerk-Watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6G246VB5CG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Framewerk-Watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "neas.lease.Framewerk-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		68B89FE42453941400EAE50B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Framewerk-Watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6G246VB5CG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Framewerk-Watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "neas.lease.Framewerk-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +778,33 @@
 			buildConfigurations = (
 				6827E0DB23DBF3A7008F60E4 /* Debug */,
 				6827E0DC23DBF3A7008F60E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B89FE52453941400EAE50B /* Build configuration list for PBXNativeTarget "Framewerk-Watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B89FE32453941400EAE50B /* Debug */,
+				68B89FE42453941400EAE50B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B89FE62453941400EAE50B /* Build configuration list for PBXNativeTarget "Framewerk-Watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B89FE02453941400EAE50B /* Debug */,
+				68B89FE12453941400EAE50B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B89FE72453941400EAE50B /* Build configuration list for PBXNativeTarget "Framewerk-Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B89FDD2453941400EAE50B /* Debug */,
+				68B89FDE2453941400EAE50B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
