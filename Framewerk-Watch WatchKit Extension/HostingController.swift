@@ -11,7 +11,9 @@ import Foundation
 import SwiftUI
 
 class HostingController: WKHostingController<ContentView> {
+    let viewModel = HomeViewModel(store: CardStore())
+    
     override var body: ContentView {
-        return ContentView(card: Card.tutorial, removal: nil)
+        return ContentView(viewModel: viewModel)
     }
 }

@@ -26,7 +26,7 @@
 		68B89FBF2453941300EAE50B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B89FBD2453941300EAE50B /* Interface.storyboard */; };
 		68B89FC12453941300EAE50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B89FC02453941300EAE50B /* Assets.xcassets */; };
 		68B89FC82453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68B89FC72453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		68B89FCD2453941400EAE50B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FCC2453941400EAE50B /* ContentView.swift */; };
+		68B89FCD2453941400EAE50B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FCC2453941400EAE50B /* CardView.swift */; };
 		68B89FCF2453941400EAE50B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FCE2453941400EAE50B /* HostingController.swift */; };
 		68B89FD12453941400EAE50B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FD02453941400EAE50B /* ExtensionDelegate.swift */; };
 		68B89FD32453941400EAE50B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FD22453941400EAE50B /* NotificationController.swift */; };
@@ -37,6 +37,11 @@
 		68B89FEA2453946700EAE50B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 6827E0E123DCC458008F60E4 /* db.json */; };
 		68B89FEC2453946900EAE50B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 6827E0E123DCC458008F60E4 /* db.json */; };
 		68B89FED2453946C00EAE50B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 6827E0E123DCC458008F60E4 /* db.json */; };
+		68B89FEE2454C5D600EAE50B /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC62439094A00C4F91B /* CardStore.swift */; };
+		68B89FEF2454C5EE00EAE50B /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827E0E323DCC4F0008F60E4 /* ContentViewModel.swift */; };
+		68B89FF02454C6B400EAE50B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E5A7F244933220001572F /* View+Extensions.swift */; };
+		68B89FF12454C6E900EAE50B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682D6FF8244CFEA2008F08E7 /* Log.swift */; };
+		68B89FF32454C86B00EAE50B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B89FF22454C86B00EAE50B /* ContentView.swift */; };
 		68EAB2CA2408A32C000D0AF1 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAB2C92408A32C000D0AF1 /* CardList.swift */; };
 		68F08AC52438FE6400C4F91B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC42438FE6400C4F91B /* WebView.swift */; };
 		68F08AC72439094A00C4F91B /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F08AC62439094A00C4F91B /* CardStore.swift */; };
@@ -110,7 +115,7 @@
 		68B89FC02453941300EAE50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68B89FC22453941300EAE50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68B89FC72453941400EAE50B /* Framewerk-Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Framewerk-Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		68B89FCC2453941400EAE50B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68B89FCC2453941400EAE50B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		68B89FCE2453941400EAE50B /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		68B89FD02453941400EAE50B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		68B89FD22453941400EAE50B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 		68B89FD92453941400EAE50B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		68B89FDB2453941400EAE50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68B89FDC2453941400EAE50B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		68B89FF22454C86B00EAE50B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		68EAB2C92408A32C000D0AF1 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		68F08AC42438FE6400C4F91B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		68F08AC62439094A00C4F91B /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
@@ -238,7 +244,8 @@
 		68B89FCB2453941400EAE50B /* Framewerk-Watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				68B89FCC2453941400EAE50B /* ContentView.swift */,
+				68B89FCC2453941400EAE50B /* CardView.swift */,
+				68B89FF22454C86B00EAE50B /* ContentView.swift */,
 				68B89FCE2453941400EAE50B /* HostingController.swift */,
 				68B89FD02453941400EAE50B /* ExtensionDelegate.swift */,
 				68B89FD22453941400EAE50B /* NotificationController.swift */,
@@ -445,9 +452,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B89FEF2454C5EE00EAE50B /* ContentViewModel.swift in Sources */,
+				68B89FF32454C86B00EAE50B /* ContentView.swift in Sources */,
+				68B89FF02454C6B400EAE50B /* View+Extensions.swift in Sources */,
+				68B89FF12454C6E900EAE50B /* Log.swift in Sources */,
 				68B89FCF2453941400EAE50B /* HostingController.swift in Sources */,
+				68B89FEE2454C5D600EAE50B /* CardStore.swift in Sources */,
 				68B89FE82453944F00EAE50B /* Card.swift in Sources */,
-				68B89FCD2453941400EAE50B /* ContentView.swift in Sources */,
+				68B89FCD2453941400EAE50B /* CardView.swift in Sources */,
 				68B89FD32453941400EAE50B /* NotificationController.swift in Sources */,
 				68B89FD12453941400EAE50B /* ExtensionDelegate.swift in Sources */,
 				68B89FD52453941400EAE50B /* NotificationView.swift in Sources */,

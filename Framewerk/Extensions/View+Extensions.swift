@@ -15,6 +15,10 @@ extension View {
     
     func stacked(at position: Int, in total: Int, initialOffset: CGFloat) -> some View {
         let offset = CGFloat(total - position)
+        #if os(watchOS)
+        return self.offset(CGSize(width: initialOffset, height: -(1/offset) * 12))
+        #else
         return self.offset(CGSize(width: initialOffset, height: -(1/offset) * 50))
+        #endif
     }
 }

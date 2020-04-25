@@ -18,16 +18,24 @@ class HomeViewModel: ObservableObject {
     
     init(store: CardStore) {
         self.cardStore = store
+        #if os(watchOS)
+        localGame()
+        #else
         fetchCards()
+        #endif
     }
     
     func refreshCards() {
+        shuffle()
+        updateOffsets()
+        resetGame()
+    }
+    
+    private func shuffle() {
         let shuffled = all.shuffled()
         self.cards = Array(shuffled.prefix(upTo: min(shuffled.count, 10)))
         self.bank = Array(shuffled.suffix(from: min(shuffled.count, 10)))
         self.offsets = Array(repeating: CGFloat(-1000.0), count: self.cards.count)
-        updateOffsets()
-        resetGame()
     }
     
     private func fetchCards() {
@@ -39,10 +47,7 @@ class HomeViewModel: ObservableObject {
         } else {
             fatalError("No cards")
         }
-        let shuffled = all.shuffled()
-        self.cards = Array(shuffled.prefix(upTo: 10))
-        self.bank = Array(shuffled.suffix(from: 10))
-        self.offsets = Array(repeating: CGFloat(-1000.0), count: self.cards.count)
+        shuffle()
     }
     
     func updateOffsets() {
@@ -63,6 +68,14 @@ class HomeViewModel: ObservableObject {
         bank.removeAll()
         cards.removeAll()
         save()
+    }
+    
+    func localGame() {
+        if let framewerkData = cardStore.fetchLocalCards() {
+            all = framewerkData.allCards.shuffled()
+            shuffle()
+            updateOffsets()
+        }
     }
     
     func resetGame() {
