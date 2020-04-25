@@ -22,9 +22,11 @@ The transpiled data driving this application is free and open to anyone at `Fram
 - watchOS support
 
 #### App Images
-<img src="images/iphone6.5.jpg" width="200">
-<img src="images/iphone6.5.1.jpg" width="200">
-<img src="images/iphone6.5.2.jpg" width="200">
+<p float="left">
+	<img src="images/iphone6.5.jpg" width="200">
+	<img src="images/iphone6.5.1.jpg" width="200">
+	<img src="images/iphone6.5.2.jpg" width="200">
+</p>
 
 
 #### Terms
