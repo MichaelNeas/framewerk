@@ -19,6 +19,7 @@ The transpiled data driving this application is free and open to anyone at `Fram
 - Always offline mode
 - SwiftUI implementation
 - iPad & iOS, landscape & portrait mode
+- watchOS support
 
 #### App Images
 <img src="images/iphone6.5.jpg" width="200">
