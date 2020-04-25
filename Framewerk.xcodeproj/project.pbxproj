@@ -125,6 +125,7 @@
 		68B89FDB2453941400EAE50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68B89FDC2453941400EAE50B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		68B89FF22454C86B00EAE50B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68B89FF52454E63A00EAE50B /* Framewerk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Framewerk.entitlements; sourceTree = "<group>"; };
 		68EAB2C92408A32C000D0AF1 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		68F08AC42438FE6400C4F91B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		68F08AC62439094A00C4F91B /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		6827E0C823DBF3A4008F60E4 /* Framewerk */ = {
 			isa = PBXGroup;
 			children = (
+				68B89FF52454E63A00EAE50B /* Framewerk.entitlements */,
 				682D6FFE244D09F9008F08E7 /* App */,
 				682D6FFD244D09E5008F08E7 /* Representables */,
 				682D6FFC244D09BA008F08E7 /* Extensions */,
@@ -619,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Framewerk/Framewerk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Framewerk/Preview Content\"";
@@ -642,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Framewerk/Framewerk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Framewerk/Preview Content\"";
@@ -729,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Framewerk-Watch WatchKit Extension/Framewerk-Watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Framewerk-Watch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6G246VB5CG;
@@ -753,6 +758,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Framewerk-Watch WatchKit Extension/Framewerk-Watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Framewerk-Watch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6G246VB5CG;
