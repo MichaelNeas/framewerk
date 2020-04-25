@@ -12,6 +12,6 @@ import SwiftUI
 
 class HostingController: WKHostingController<ContentView> {
     override var body: ContentView {
-        return ContentView(card: Card.test, removal: nil)
+        return ContentView(card: Card.tutorial, removal: nil)
     }
 }

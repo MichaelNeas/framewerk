@@ -21,7 +21,7 @@ struct ContentView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .fill(
-                        Color.gray
+                        Color(red: 0.8, green: 0.8, blue: 0.8)
                             .opacity(1 - Double(abs(self.offset.width / 500)) - Double(abs(self.offset.height / 500)))
                     )
                     .background(
@@ -35,30 +35,23 @@ struct ContentView: View {
                         .foregroundColor(.black)
                         .lineLimit(nil)
                         .allowsTightening(true)
-                        .minimumScaleFactor(0.7)
+                        .minimumScaleFactor(0.3)
 
                     if self.isShowingAnswer {
                         Spacer()
                         Text(self.card.answer)
                             .font(.title)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
                             .lineLimit(nil)
                             .allowsTightening(true)
-                            .minimumScaleFactor(0.9)
+                            .minimumScaleFactor(0.4)
                             .transition(.opacity)
-                        Spacer()
-                        Text(self.card.sdkDescription)
-                            .font(.headline)
-                            .foregroundColor(.secondary)
-                            .lineLimit(2)
-                            .allowsTightening(true)
-                            .minimumScaleFactor(0.75)
                     }
                 }
                 .padding(20)
                 .multilineTextAlignment(.center)
             }
-            .frame(width: max(geometry.size.width - 500, 350), height: max(geometry.size.height/2, 250))
+            .frame(width: geometry.size.width, height: geometry.size.height)
             .rotationEffect(.degrees(Double(self.offset.width / 10)))
             .animation(.spring())
             .offset(self.offset)
