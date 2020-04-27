@@ -42,7 +42,6 @@ struct CardView: View {
                         Text(self.card.answer)
                             .font(.title)
                             .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
-                            .lineLimit(nil)
                             .allowsTightening(true)
                             .minimumScaleFactor(0.2)
                             .transition(.opacity)

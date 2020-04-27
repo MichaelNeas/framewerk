@@ -36,7 +36,6 @@ struct CardView: View {
                         .foregroundColor(Color(UIColor() { (trait) -> UIColor in
                             trait.userInterfaceStyle == .dark ? .white : .black
                         }))
-                        .lineLimit(nil)
                         .allowsTightening(true)
                         .minimumScaleFactor(0.7)
 
@@ -45,18 +44,19 @@ struct CardView: View {
                         Text(self.card.answer)
                             .font(.title)
                             .foregroundColor(.secondary)
-                            .lineLimit(nil)
                             .allowsTightening(true)
                             .minimumScaleFactor(0.9)
                             .transition(.opacity)
                         Spacer()
-                        Text(self.card.sdkDescription)
-                            .font(.headline)
-                            .foregroundColor(.secondary)
-                            .lineLimit(2)
-                            .allowsTightening(true)
-                            .minimumScaleFactor(0.75)
-                        Spacer(minLength: 30.0)
+                        if !self.card.sdks.isEmpty {
+                            Text(self.card.sdkDescription)
+                                .font(.headline)
+                                .foregroundColor(.secondary)
+                                .lineLimit(2)
+                                .allowsTightening(true)
+                                .minimumScaleFactor(0.75)
+                                .padding(.bottom, 10)
+                        }
                         HStack {
                             Button(action: {
                                 self.card.favorite.toggle()
