@@ -71,7 +71,7 @@ class HomeViewModel: NSObject, ObservableObject {
         save()
     }
     
-    // this will reset the local cards
+    // this will reset the locally saved cards
     func resetGame() {
         if let framewerkData = cardStore.fetchLocalCards() {
             all = framewerkData.allCards.sorted()
@@ -88,6 +88,7 @@ class HomeViewModel: NSObject, ObservableObject {
     func add(card: Card) {
         all.insert(card, at: 0)
         bank.append(card)
+        refreshCards()
         save()
     }
     
