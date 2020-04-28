@@ -29,7 +29,9 @@ struct HomeView: View {
             ZStack {
                 if self.viewModel.cards.isEmpty {
                     withAnimation{
-                        Text("🤩 Woohoo! 🥳").font(FramewerkStyle.bigFont.font)
+                        Text("🤩 Woohoo! 🥳")
+                            .font(FramewerkStyle.bigFont.font)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                 }
                 ForEach(self.viewModel.cards) { card in
@@ -62,7 +64,8 @@ struct HomeView: View {
                     .accessibility(label: Text("Refresh List"))
             })
             .navigationBarTitle("Framewerk", displayMode: .inline)
-            .background(Color(UIColor.systemGray)).edgesIgnoringSafeArea(.all)
+            .background(Color(UIColor.systemGray))
+            .edgesIgnoringSafeArea(.all)
         }.navigationViewStyle(StackNavigationViewStyle())
         .overlay(TutorialView(closeAction: {
             withAnimation {

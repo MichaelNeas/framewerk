@@ -9,7 +9,7 @@
 import Foundation
 import os.log
 
-class CardStore {
+class CardStore: NSObject {
     let decoder = JSONDecoder()
     let encoder = JSONEncoder()
     
@@ -25,7 +25,7 @@ class CardStore {
         }
     }
     
-    func getDocumentsDirectory(with component: Directory?) -> URL {
+    private func getDocumentsDirectory(with component: Directory?) -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         guard let pathComponent = component else { return paths[0] }
         return paths[0].appendingPathComponent(pathComponent.description)
@@ -40,34 +40,14 @@ class CardStore {
         do {
             let data = try encoder.encode(data)
             try data.write(to: getDocumentsDirectory(with: .cards), options: [.atomicWrite])
+//            if WCSession.isSupported() {
+//                // updateApplicationContext used to store state between watch
+//                //try session?.updateApplicationContext(["data": data])
+//            }
         } catch {
             os_log("Error writing data: %s", log: Log.app, type: .error, error.localizedDescription)
         }
     }
-    
-    func sharedGroupDirectory(with component: Directory?) -> URL {
-        let path = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "framewerk")!
-        guard let pathComponent = component else { return path }
-        return path.appendingPathComponent(pathComponent.description)
-    }
-    
-    // Save to group directory for watch extensions to use the same cards created by ios App
-    func saveShared<T: Encodable>(data: T) {
-        do {
-            let data = try encoder.encode(data)
-            try data.write(to: sharedGroupDirectory(with: .cards))
-        } catch {
-            os_log("Error writing data: %s", log: Log.app, type: .error, error.localizedDescription)
-        }
-    }
-    
-    // Load from the shared group
-    func loadShared<T: Decodable>() -> [T]? {
-        guard let data = try? Data(contentsOf: sharedGroupDirectory(with: .cards)) else { return nil }
-        return try? decoder.decode([T].self, from: data)
-    }
-
-    
     
     func fetchLocalCards() -> FramewerkCardData? {
         guard let localJSONURL = Bundle.main.url(forResource: Directory.db.description, withExtension: "json"),
@@ -75,3 +55,28 @@ class CardStore {
         return try? decoder.decode(FramewerkCardData.self, from: jsonData)
     }
 }
+
+
+//extension CardStore: WCSessionDelegate {
+//    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+//        if activationState == .activated {
+//            print("activateddddd")
+//           // Update application context here
+//        }
+//        print("activate")
+//    }
+//    
+//    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+//        print("app context - \(applicationContext)")
+//    }
+//    
+//    #if !os(watchOS)
+//    func sessionDidBecomeInactive(_ session: WCSession) {
+//        print("Inactive")
+//    }
+//    
+//    func sessionDidDeactivate(_ session: WCSession) {
+//        print("did deactivate")
+//    }
+//    #endif
+//}

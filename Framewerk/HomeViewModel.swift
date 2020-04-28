@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class HomeViewModel: ObservableObject {
+class HomeViewModel: NSObject, ObservableObject {
     @Published var cards = [Card]()
     @Published var bank = [Card]()
     @Published var all = [Card]()
@@ -18,6 +18,7 @@ class HomeViewModel: ObservableObject {
     
     init(store: CardStore) {
         self.cardStore = store
+        super.init()
         #if os(watchOS)
         localGame()
         #else
@@ -71,17 +72,17 @@ class HomeViewModel: ObservableObject {
     }
     
     func localGame() {
-        if let framewerkData = cardStore.fetchLocalCards() {
-            all = framewerkData.allCards.shuffled()
-            shuffle()
-            updateOffsets()
-        }
+//        if let framewerkData = cardStore.fetchLocalCards() {
+//            all = framewerkData.allCards.shuffled()
+//            shuffle()
+//            updateOffsets()
+//        }
     }
     
     func resetGame() {
         if let framewerkData = cardStore.fetchLocalCards() {
             all = framewerkData.allCards.sorted()
-            cardStore.save(data: all)
+            //cardStore.save(data: all)
         }
     }
     

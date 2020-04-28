@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  Framewerk-Watch WatchKit Extension
+//  FramwerkWatch Extension
 //
-//  Created by Michael Neas on 4/25/20.
+//  Created by Michael Neas on 4/27/20.
 //  Copyright © 2020 Neas Lease. All rights reserved.
 //
 
