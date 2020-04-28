@@ -7,11 +7,16 @@
 //
 
 import SwiftUI
+import WatchConnectivity
 
 class HomeViewModel: NSObject, ObservableObject {
     @Published var cards = [Card]()
     @Published var bank = [Card]()
-    @Published var all = [Card]()
+    @Published var all = [Card]() {
+        didSet {
+            shuffle()
+        }
+    }
     @Published var offsets: [CGFloat] = [CGFloat]()
     
     private let cardStore: CardStore
@@ -19,17 +24,13 @@ class HomeViewModel: NSObject, ObservableObject {
     init(store: CardStore) {
         self.cardStore = store
         super.init()
-        #if os(watchOS)
-        localGame()
-        #else
         fetchCards()
-        #endif
     }
     
     func refreshCards() {
         shuffle()
         updateOffsets()
-        resetGame()
+        //resetGame()
     }
     
     private func shuffle() {
@@ -44,11 +45,10 @@ class HomeViewModel: NSObject, ObservableObject {
             all = cards.sorted()
         } else if let framewerkData = cardStore.fetchLocalCards() {
             all = framewerkData.allCards.sorted()
-            cardStore.save(data: all)
+            save()
         } else {
             fatalError("No cards")
         }
-        shuffle()
     }
     
     func updateOffsets() {
@@ -71,18 +71,11 @@ class HomeViewModel: NSObject, ObservableObject {
         save()
     }
     
-    func localGame() {
-//        if let framewerkData = cardStore.fetchLocalCards() {
-//            all = framewerkData.allCards.shuffled()
-//            shuffle()
-//            updateOffsets()
-//        }
-    }
-    
+    // this will reset the local cards
     func resetGame() {
         if let framewerkData = cardStore.fetchLocalCards() {
             all = framewerkData.allCards.sorted()
-            //cardStore.save(data: all)
+            cardStore.save(data: all)
         }
     }
     

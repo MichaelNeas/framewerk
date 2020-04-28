@@ -10,8 +10,8 @@ import Foundation
 import os.log
 
 class CardStore: NSObject {
-    let decoder = JSONDecoder()
     let encoder = JSONEncoder()
+    let decoder = JSONDecoder()
     
     enum Directory: CustomStringConvertible {
         case cards
@@ -25,7 +25,7 @@ class CardStore: NSObject {
         }
     }
     
-    private func getDocumentsDirectory(with component: Directory?) -> URL {
+    func getDocumentsDirectory(with component: Directory?) -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         guard let pathComponent = component else { return paths[0] }
         return paths[0].appendingPathComponent(pathComponent.description)
@@ -39,11 +39,7 @@ class CardStore: NSObject {
     func save<T: Encodable>(data: T) {
         do {
             let data = try encoder.encode(data)
-            try data.write(to: getDocumentsDirectory(with: .cards), options: [.atomicWrite])
-//            if WCSession.isSupported() {
-//                // updateApplicationContext used to store state between watch
-//                //try session?.updateApplicationContext(["data": data])
-//            }
+            try data.write(to: getDocumentsDirectory(with: .cards), options: [.atomicWrite])            
         } catch {
             os_log("Error writing data: %s", log: Log.app, type: .error, error.localizedDescription)
         }
@@ -55,28 +51,3 @@ class CardStore: NSObject {
         return try? decoder.decode(FramewerkCardData.self, from: jsonData)
     }
 }
-
-
-//extension CardStore: WCSessionDelegate {
-//    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-//        if activationState == .activated {
-//            print("activateddddd")
-//           // Update application context here
-//        }
-//        print("activate")
-//    }
-//    
-//    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-//        print("app context - \(applicationContext)")
-//    }
-//    
-//    #if !os(watchOS)
-//    func sessionDidBecomeInactive(_ session: WCSession) {
-//        print("Inactive")
-//    }
-//    
-//    func sessionDidDeactivate(_ session: WCSession) {
-//        print("did deactivate")
-//    }
-//    #endif
-//}

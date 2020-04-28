@@ -17,7 +17,7 @@ struct ContentView: View {
                 withAnimation{
                     VStack {
                         Text("🤩 Woohoo! 🥳")
-                        Button(action: self.viewModel.localGame) {
+                        Button(action: self.viewModel.refreshCards) {
                             Image(systemName: "goforward")
                                 .foregroundColor(.black)
                                 .accessibility(label: Text("Refresh List"))

@@ -12,8 +12,15 @@ import SwiftUI
 import WatchConnectivity
 
 class HostingController: WKHostingController<ContentView> {
-    let viewModel = HomeViewModel(store: CardStore())
+    let cardStore: CardStore
+    let viewModel: HomeViewModel
     private var session: WCSession?
+    
+    override init() {
+        cardStore = CardStore()
+        viewModel = HomeViewModel(store: cardStore)
+        super.init()
+    }
     
     override func willActivate() {
         super.willActivate()
@@ -30,14 +37,13 @@ class HostingController: WKHostingController<ContentView> {
 
 extension HostingController: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        if activationState == .activated {
-            print("activateddddd")
-           // Update application context here
-        }
-        print("activate")
+        
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        print("app context - \(applicationContext)")
+        guard let data = applicationContext["data"] as? Data else { return }
+        guard let cards = try? cardStore.decoder.decode([Card].self, from: data) else { return }
+        viewModel.all = cards
+        cardStore.save(data: cards)
     }
 }
