@@ -24,9 +24,11 @@ class HostingController: WKHostingController<ContentView> {
     
     override func willActivate() {
         super.willActivate()
-        session = WCSession.default
-        session?.delegate = self
-        session?.activate()
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
     }
     
     override var body: ContentView {
@@ -37,13 +39,15 @@ class HostingController: WKHostingController<ContentView> {
 
 extension HostingController: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         guard let data = applicationContext["data"] as? Data else { return }
         guard let cards = try? cardStore.decoder.decode([Card].self, from: data) else { return }
-        viewModel.all = cards
+        DispatchQueue.main.async { [weak self] in
+            self?.viewModel.all = cards
+        }
         cardStore.save(data: cards)
     }
 }
