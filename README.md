@@ -1,6 +1,6 @@
 # Framewerk
 
-<img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200" style="border-radius:50%"> 
+<img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200" style="border-radius:10%"> 
 
 #### There are so many frameworks provided today, do you know about them all?
 
@@ -23,9 +23,9 @@ The transpiled data driving this application is free and open to anyone at `Fram
 
 #### App Images
 <p float="left">
-	<img src="images/iphone6.5.jpg" width="200" style="border-radius:50%">
-	<img src="images/iphone6.5.1.jpg" width="200" style="border-radius:50%">
-	<img src="images/iphone6.5.2.jpg" width="200" style="border-radius:50%">
+	<img src="images/iphone6.5.jpg" width="200" style="border-radius:10%">
+	<img src="images/iphone6.5.1.jpg" width="200" style="border-radius:10%">
+	<img src="images/iphone6.5.2.jpg" width="200" style="border-radius:10%">
 </p>
 
 
