@@ -26,7 +26,7 @@ struct CardList: View {
                     }) {
                         Text("Add New")
                             .font(FramewerkStyle.mediumFont.font).bold()
-                            .foregroundColor(Color(UIColor.systemGreen))
+                            .foregroundColor(Color(red: 0.0, green: 0.85, blue: 0.0))
                     }.sheet(isPresented: $showNewCard) {
                         CardDetail(card: Card.blank, commited: { card in
                             os_log("Add New Card: %s", log: Log.app, type: .info, card.description)
@@ -39,7 +39,7 @@ struct CardList: View {
                     }) {
                         Text("Clear All")
                             .font(FramewerkStyle.mediumFont.font).bold()
-                            .foregroundColor(Color(UIColor.systemPink))
+                            .foregroundColor(Color(red: 0.85, green: 0.0, blue: 0.0))
                     }
                     .alert(isPresented: $clearAllAlert) {
                         Alert(title: Text("Woah There!"), message: Text("Ready to start a new and delete all the cards in this list?"),
@@ -69,7 +69,7 @@ struct CardList: View {
                     .font(FramewerkStyle.massiveFont.font)
                     .padding(.bottom, 8)
                     .accessibility(label: Text("Back to single card view"))
-            }, trailing: EditButton())
+            }, trailing: EditButton().font(FramewerkStyle.bigFont.font))
         }.background(Color(UIColor.systemGray))
     }
 }
