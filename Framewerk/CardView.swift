@@ -36,8 +36,10 @@ struct CardView: View {
                         .foregroundColor(Color(UIColor() { (trait) -> UIColor in
                             trait.userInterfaceStyle == .dark ? .white : .black
                         }))
+                        .minimumScaleFactor(0.2)
+                        .lineLimit(2)
                         .allowsTightening(true)
-                        .minimumScaleFactor(0.7)
+                        .layoutPriority(1)
 
                     if self.isShowingAnswer {
                         Spacer()
@@ -45,7 +47,8 @@ struct CardView: View {
                             .font(.title)
                             .foregroundColor(.secondary)
                             .allowsTightening(true)
-                            .minimumScaleFactor(0.9)
+                            .minimumScaleFactor(0.6)
+                            .layoutPriority(1)
                             .transition(.opacity)
                         Spacer()
                         if !self.card.sdks.isEmpty {
@@ -54,7 +57,7 @@ struct CardView: View {
                                 .foregroundColor(.secondary)
                                 .lineLimit(2)
                                 .allowsTightening(true)
-                                .minimumScaleFactor(0.75)
+                                .minimumScaleFactor(0.45)
                                 .padding(.bottom, 10)
                         }
                         HStack {
@@ -85,7 +88,7 @@ struct CardView: View {
                 .padding(20)
                 .multilineTextAlignment(.center)
             }
-            .frame(width: max(geometry.size.width - 500, 350), height: max(geometry.size.height/2, 250))
+            .frame(width: max(geometry.size.width - 40, 300), height: max(geometry.size.height/2.2, 200))
             .rotationEffect(.degrees(Double(self.offset.width / 10)))
             .animation(.spring())
             .offset(self.offset)

@@ -52,13 +52,13 @@ struct HomeView: View {
             .navigationBarItems(leading:
                 NavigationLink(destination: CardList(model: viewModel)){
                 Image(systemName: "square.stack.3d.up")
-                    .font(FramewerkStyle.bigFont.font)
+                    .font(FramewerkStyle.massiveFont.font)
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
                     .accessibility(label: Text("View list of cards"))
             }, trailing: Button(action: self.viewModel.refreshCards) {
                 Image(systemName: "goforward")
-                    .font(FramewerkStyle.bigFont.font)
+                    .font(FramewerkStyle.massiveFont.font)
                     .foregroundColor(.black)
                     .padding(.bottom, 8)
                     .accessibility(label: Text("Refresh List"))

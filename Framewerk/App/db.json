@@ -109,7 +109,7 @@
             "sdks": ["macOS 10.0+", "Mac Catalyst 13.0+"]
         },
         {
-            "question": "AutomaticAssessmentConfiguration",
+            "question": "Automatic Assessment Configuration",
             "answer": "Prevent users from accessing specific system features during high-stakes assessment activities, such as administering an exam.",
             "link": "https://developer.apple.com/documentation/automaticassessmentconfiguration",
             "sdks": ["iOS 13.4+", "macOS 10.15.4+", "Mac Catalyst 13.4+"]
@@ -307,7 +307,7 @@
             "sdks": ["iOS 3.0+", "Mac Catalyst 13.0+"]
         },
         {
-            "question": "MultipeerConnectivity",
+            "question": "Multipeer Connectivity",
             "answer": "Support peer-to-peer connectivity and the discovery of nearby devices.",
             "link": "https://developer.apple.com/documentation/multipeerconnectivity",
             "sdks": ["iOS 7.0+", "macOS 10.10+", "Mac Catalyst 13.0+", "tvOS 10.0+"]
@@ -355,7 +355,7 @@
             "sdks": ["iOS 4.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
         },
         {
-            "question": "QuickLookThumbnailing",
+            "question": "QuickLook Thumbnailing",
             "answer": "Generate thumbnails for common file types and add a Thumbnail Extension to your app to enable others to create thumbnails of your custom files.",
             "link": "https://developer.apple.com/documentation/quicklookthumbnailing",
             "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+"]
@@ -458,7 +458,7 @@
             "sdks": ["macOS 10.12+", "Swift Playgrounds 2.0+"]
         },
         {
-            "question": "PlaygroundBluetooth",
+            "question": "Playground Bluetooth",
             "answer": "Display and manage connections to Bluetooth peripherals in Swift Playgrounds.",
             "link": "https://developer.apple.com/documentation/playgroundbluetooth",
             "sdks": ["Swift Playgrounds 2.0+"]
@@ -827,7 +827,7 @@
             "sdks": ["iOS 13.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
         },
         {
-            "question": "AuthenticationServices",
+            "question": "Authentication Services",
             "answer": "Make it easy for users to log into apps and services.",
             "link": "https://developer.apple.com/documentation/authenticationservices",
             "sdks": ["iOS 12.0+", "macOS 10.15+", "Mac Catalyst 13.0+", "tvOS 13.0+", "watchOS 6.0+"]
@@ -1025,7 +1025,7 @@
             "sdks": ["macOS 10.10+"]
         },
         {
-            "question": "LatentSemanticMapping",
+            "question": "Latent Semantic Mapping",
             "answer": "The Latent Semantic Mapping framework supports the classification of text and other token-based content into developer-defined categories.",
             "link": "https://developer.apple.com/documentation/latentsemanticmapping",
             "sdks": ["macOS 10.5+", "Mac Catalyst 13.0+"]
@@ -1043,7 +1043,7 @@
             "sdks": ["iOS 13.0+", "Mac Catalyst 13.0+"]
         },
         {
-            "question": "MobileCoreServices",
+            "question": "MobileCore Services",
             "answer": "Use uniform type identifier (UTI) information to create and manipulate data that can be exchanged between your app and other apps and services.",
             "link": "https://developer.apple.com/documentation/mobilecoreservices",
             "sdks": ["iOS 3.0+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
@@ -1115,13 +1115,13 @@
             "sdks": ["macOS 10.3+"]
         },
         {
-            "question": "SerialDriverKit",
+            "question": "SerialDriver Kit",
             "answer": "Develop drivers for serial I/O devices connected to your Mac.",
             "link": "https://developer.apple.com/documentation/serialdriverkit",
             "sdks": ["DriverKit 19.0+"]
         },
         {
-            "question": "ServiceManagement",
+            "question": "Service Management",
             "answer": "Load and unload launchd services. Read and modify launchd dictionaries from within an app.",
             "link": "https://developer.apple.com/documentation/servicemanagement",
             "sdks": ["iOS 12.1+", "macOS 10.6+", "Mac Catalyst 13.0+", "tvOS 12.1+", "watchOS 5.1+"]
@@ -1133,7 +1133,7 @@
             "sdks": ["iOS 9.0+", "macOS 10.11+", "Mac Catalyst 13.0+", "tvOS 9.0+", "watchOS 2.0+"]
         },
         {
-            "question": "SystemConfiguration",
+            "question": "System Configuration",
             "answer": "Allow applications to access a device’s network configuration settings. Determine the reachability of the device, such as whether Wi-Fi or cell connectivity are active.",
             "link": "https://developer.apple.com/documentation/systemconfiguration",
             "sdks": ["iOS 2.0+", "macOS 10.1+", "Mac Catalyst 13.0+", "tvOS 9.0+"]

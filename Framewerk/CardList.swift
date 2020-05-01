@@ -66,7 +66,7 @@ struct CardList: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "rectangle.stack")
-                    .font(FramewerkStyle.bigFont.font)
+                    .font(FramewerkStyle.massiveFont.font)
                     .padding(.bottom, 8)
                     .accessibility(label: Text("Back to single card view"))
             }, trailing: EditButton())
