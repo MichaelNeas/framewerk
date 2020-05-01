@@ -1,12 +1,18 @@
-# Framewerk
+# Framewerk ![Build Status](https://img.shields.io/badge/version-1.1-blue)
 
-<img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200" style="border-radius:8px"> 
+<img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200" style="border-radius:8px">
+
+<p align="left">
+	<a href="https://apps.apple.com/us/app/framewerk/id1496896308">
+		<img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-gb/appstore-lrg.svg"/>
+	</a>
+</p>
 
 #### There are so many frameworks provided today, do you know about them all?
 
 ## Motivation
 
-Learn SwiftUI and help discover new frameworks I've never used before
+Learn SwiftUI and help discover new frameworks I've never used before. Share with everyone else 🙂
 
 ## The Data
 
