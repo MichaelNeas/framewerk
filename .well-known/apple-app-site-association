@@ -6,7 +6,7 @@
 				"6G246VB5CG.neas.lease.Framewerk"
 			],
 			"components": [{
-		    	"*": "*",
+		    	"/": "*",
 			    "comment": "all content"
 			}]
 		},
