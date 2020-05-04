@@ -1,22 +1,19 @@
 {
 	"applinks": {
 		"apps": [],
-		"details": [
-		       {
-			   "appIDs": [
-			   "6G246VB5CG.neas.lease.Framewerk"
-			   ],
-			   "components": [
-			   {
-			       "/": "*",
-			       "comment": "all content"
-			   }]
-		        },
-			{
-				"appID": "6G246VB5CG.neas.lease.Framewerk",
-				"paths": [ "*" ]
-			}
-		]
+		"details": [{
+			"appIDs": [
+				"6G246VB5CG.neas.lease.Framewerk"
+			],
+			"components": [{
+		    	"/": "/*",
+			    "comment": "all content"
+			}]
+		},
+		{
+			"appID": "6G246VB5CG.neas.lease.Framewerk",
+			"paths": [ "*" ]
+		}]
 	}
 }
 
