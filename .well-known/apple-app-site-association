@@ -2,12 +2,14 @@
 	"applinks": {
 		"apps": [],
 		"details": [{
+			"appID": "6G246VB5CG.neas.lease.Framewerk"
 			"appIDs": [
 				"6G246VB5CG.neas.lease.Framewerk"
 			],
 			"components": [{
 		    	"/": "/*"
-			}]
+			}],
+			"paths": [ "*" ]
 		}]
 	}
 }
