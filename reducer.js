@@ -9,35 +9,31 @@ https.get(url, res => {
 	});
 	res.on("end", () => {
 		body = JSON.parse(body);
-		let content = body.sections[1].groups
-		let references = body.references
-		let output = {}
+		const content = body.sections[1].groups;
+		const { references } = body;
+		const output = {};
 		
-		for(let i=0;i<content.length; i++){
-			let technologies = content[i].technologies
-			output[content[i].name] = []
-			for(let j=0; j<technologies.length; j++){
-				let title = technologies[j].title // better title
-				let reference = technologies[j].destination.identifier
-				
-				let abstract = ""
-				let refURL = ""
-				if(references[reference]){
-					abstract = references[reference].abstract[0].text
-					refURL = "https://developer.apple.com" + references[reference].url
-				}
-
-				let tags = technologies[j].tags
-
-				output[content[i].name].push({
-					question: title,
-					answer: abstract,
-					link: refURL,
-					sdks: tags
-				})
-			}
+		content.forEach(group => {
+			const { technologies, name } = group;
 			
-		}
+			output[name] = technologies.map(technology => {
+				const { title: question, destination, tags: sdks } = technology;
+				const { identifier: reference } = destination;
+				let answer = '';
+                let link = 'https://developer.apple.com';
+                                
+				if (references[reference]) {
+					answer = references[reference].abstract[0].text;
+					link += references[reference].url;
+				}
+				return {
+					question,
+					answer,
+					link,
+					sdks,
+				};
+			});
+		});
 		
 		fs.writeFile('db2.json', JSON.stringify(output), (err) => {
 			if (err) throw err;
