@@ -15,6 +15,7 @@ struct CardList: View {
     @ObservedObject var model: HomeViewModel
     @State private var clearAllAlert = false
     @State private var showNewCard = false
+    @State private var resetAlert = false
     
     var body: some View {
         VStack {
@@ -33,6 +34,21 @@ struct CardList: View {
                             self.model.add(card: card)
                         }, isNewCard: true)
                     }
+                    Spacer()
+                    
+                    Button(action: {
+                        self.resetAlert = true
+                    }) {
+                        Text("Reset")
+                            .font(FramewerkStyle.mediumFont.font).bold()
+                            .foregroundColor(Color(red: 0.85, green: 0.55, blue: 0.0))
+                    }
+                    .alert(isPresented: $resetAlert) {
+                        Alert(title: Text("Woah There!"), message: Text("Ready to receive a fresh pack of dev cards?"),
+                            primaryButton: .cancel(Text("No Thanks!")),
+                            secondaryButton: .destructive(Text("Make it so!"), action: model.resetGame))
+                    }
+                    
                     Spacer()
                     Button(action: {
                         self.clearAllAlert = true

@@ -15,11 +15,25 @@ struct FramewerkCardData: Codable {
     let developerTools: [Card]
     let graphicsAndGames: [Card]
     let media: [Card]
+    let releaseNotes: [Card]
     let system: [Card]
     let web: [Card]
+    let design: [Card]
     
     var allCards: [Card] {
         appFrameworks + appServices + developerTools + graphicsAndGames + media + system + web
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case appFrameworks = "App Frameworks"
+        case appServices = "App Services"
+        case developerTools = "Developer Tools"
+        case graphicsAndGames = "Graphics and Games"
+        case media = "Media"
+        case releaseNotes = "Release Notes"
+        case system = "System"
+        case web = "Web"
+        case design = "Design"
     }
 }
 
@@ -47,7 +61,7 @@ class Card: ObservableObject, CustomStringConvertible, Codable, Equatable, Ident
         
         question = try container.decode(String.self, forKey: .question)
         answer = try container.decode(String.self, forKey: .answer)
-        link = try container.decode(URL.self, forKey: .link)
+        link = try container.decodeIfPresent(URL.self, forKey: .link) ?? URL(string: "developer.apple.com")!
         favorite = try container.decodeIfPresent(Bool.self, forKey: .favorite) ?? false
         sdks = try container.decodeIfPresent([String].self, forKey: .sdks) ?? []
     }

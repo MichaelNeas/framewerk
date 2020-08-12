@@ -16,11 +16,13 @@ class CardStore: NSObject {
     enum Directory: CustomStringConvertible {
         case cards
         case db
+        case generatedDB
         
         var description: String {
             switch self {
             case .cards: return "cards"
             case .db: return "db"
+            case .generatedDB: return "db2"
             }
         }
     }
@@ -46,7 +48,7 @@ class CardStore: NSObject {
     }
     
     func fetchLocalCards() -> FramewerkCardData? {
-        guard let localJSONURL = Bundle.main.url(forResource: Directory.db.description, withExtension: "json"),
+        guard let localJSONURL = Bundle.main.url(forResource: Directory.generatedDB.description, withExtension: "json"),
             let jsonData = try? Data(contentsOf: localJSONURL) else { return nil }
         return try? decoder.decode(FramewerkCardData.self, from: jsonData)
     }
