@@ -1,4 +1,4 @@
-# Framewerk ![Build Status](https://img.shields.io/badge/version-1.1-blue)
+# Framewerk ![Build Status](https://img.shields.io/badge/version-1.2-blue)
 
 <img src="Framewerk/App/Assets.xcassets/AppIcon.appiconset/Icon.png" width="200" style="border-radius:8px">
 
@@ -16,7 +16,7 @@ Learn SwiftUI and help discover new frameworks I've never used before. Share wit
 
 ## The Data
 
-The transpiled data driving this application is free and open to anyone at `Framewerk/db.json`, give a shout out if you find it useful 😁 I plan to expand and keep it updated with [releases](https://developer.apple.com/documentation/)
+The transpiled data driving this application is free and open to anyone at `db2.json`, give a shout out if you find it useful 😁 I plan to expand and keep it updated with [releases](https://developer.apple.com/documentation/)
 
 ## Features
 
