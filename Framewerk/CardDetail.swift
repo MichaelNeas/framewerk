@@ -22,7 +22,7 @@ struct CardDetail: View {
             Form {
                 Section(header: CardDetailTitle(title: "Title")) {
                     TextField("Title", text: $card.question, onEditingChanged: changed, onCommit: commit)
-                        .foregroundColor(Color(.systemGray4))
+                        .foregroundColor(.black)
                         .padding()
                 }
                 Section(header:  CardDetailTitle(title: "Description")) {
@@ -42,7 +42,7 @@ struct CardDetail: View {
                             self.card.link = url
                         }), onEditingChanged: changed, onCommit: commit)
                         .disableAutocorrection(true)
-                        .foregroundColor(Color(.systemGray4))
+                        .foregroundColor(.black)
                         .padding()
                 }
             }

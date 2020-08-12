@@ -29,6 +29,7 @@
 		68422C6C2457BCCB005F7743 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 6827E0E123DCC458008F60E4 /* db.json */; };
 		68437074240AA9880018B2F9 /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68437073240AA9880018B2F9 /* CardDetail.swift */; };
 		68437076240AAE120018B2F9 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68437075240AAE120018B2F9 /* TextView+Extensions.swift */; };
+		686C95F324E371C4006AE2B1 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C95F224E371C4006AE2B1 /* HostingController.swift */; };
 		687E5A80244933220001572F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E5A7F244933220001572F /* View+Extensions.swift */; };
 		68EAB2CA2408A32C000D0AF1 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAB2C92408A32C000D0AF1 /* CardList.swift */; };
 		68F06B8A245787EF00DD8DDB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F06B88245787EF00DD8DDB /* Interface.storyboard */; };
@@ -109,6 +110,7 @@
 		68422C692457B400005F7743 /* WatchifiedCardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchifiedCardStore.swift; sourceTree = "<group>"; };
 		68437073240AA9880018B2F9 /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
 		68437075240AAE120018B2F9 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
+		686C95F224E371C4006AE2B1 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		687E5A7F244933220001572F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		68B89FF52454E63A00EAE50B /* Framewerk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Framewerk.entitlements; sourceTree = "<group>"; };
 		68EAB2C92408A32C000D0AF1 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				6827E0C923DBF3A4008F60E4 /* AppDelegate.swift */,
 				6827E0E123DCC458008F60E4 /* db.json */,
 				682D6FFA244D0589008F08E7 /* FramewerkStyle.swift */,
+				686C95F224E371C4006AE2B1 /* HostingController.swift */,
 				6827E0D723DBF3A7008F60E4 /* Info.plist */,
 				6827E0D423DBF3A7008F60E4 /* LaunchScreen.storyboard */,
 				682D6FF8244CFEA2008F08E7 /* Log.swift */,
@@ -408,6 +411,7 @@
 				68437076240AAE120018B2F9 /* TextView+Extensions.swift in Sources */,
 				6827E0CA23DBF3A4008F60E4 /* AppDelegate.swift in Sources */,
 				68422C6A2457B400005F7743 /* WatchifiedCardStore.swift in Sources */,
+				686C95F324E371C4006AE2B1 /* HostingController.swift in Sources */,
 				68F8B188244E833400C16FE6 /* KeyboardResponder.swift in Sources */,
 				6827E0E423DCC4F0008F60E4 /* HomeViewModel.swift in Sources */,
 				6827E0CC23DBF3A4008F60E4 /* SceneDelegate.swift in Sources */,

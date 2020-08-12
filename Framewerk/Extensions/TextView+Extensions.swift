@@ -40,7 +40,7 @@ struct TextView: UIViewRepresentable {
         textView.isEditable = true
         textView.isUserInteractionEnabled = true
         textView.backgroundColor = .clear
-        textView.textColor = .systemGray4
+        textView.textColor = .black
         textView.font = FramewerkStyle.smallFont
         
         if text.isEmpty {
