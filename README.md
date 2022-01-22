@@ -10,6 +10,8 @@
 
 #### There are so many frameworks provided today, do you know about them all?
 
+## I have not been able to dedicate much work to this project since the beginning, and I'm sorry for that but I'll update some day!
+
 ## Motivation
 
 Learn SwiftUI and help discover new frameworks I've never used before. Share with everyone else 🙂
